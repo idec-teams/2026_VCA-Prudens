@@ -1,7 +1,20 @@
-import { copyFile, mkdir, readdir, readFile } from "node:fs/promises";
+import { access, copyFile, mkdir, readdir, readFile, rename, rm } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const output = resolve("dist/client");
+const repositoryName = process.env.GITHUB_REPOSITORY?.split("/").at(-1) ?? "2026_VCA-Prudens";
+const nestedNext = resolve(output, repositoryName, "_next");
+const rootNext = resolve(output, "_next");
+
+try {
+  await access(nestedNext);
+  await rm(rootNext, { recursive: true, force: true });
+  await rename(nestedNext, rootNext);
+  await rm(resolve(output, repositoryName), { recursive: true, force: true });
+} catch (error) {
+  if (error?.code !== "ENOENT") throw error;
+}
+
 const files = await readdir(output);
 
 for (const file of files) {
@@ -22,5 +35,7 @@ for (const required of ["description", "methods", "members", "results"]) {
   const html = await readFile(resolve(output, required, "index.html"), "utf8");
   if (!html.includes("VCA-Prudens")) throw new Error(`Static route ${required} was not generated correctly.`);
 }
+
+await access(resolve(rootNext, "static"));
 
 console.log("GitHub Pages clean URLs prepared and verified.");

@@ -1,0 +1,49 @@
+{
+  "source": "idec wiki文件第一部分（已降AI.docx",
+  "sourceSha256": "a1b4743edae8267ed4a7fb88f8b5a0d418141f41f684891b3dd9ff9f5c48a620",
+  "comparison": "Exact character sequence per section, ignoring whitespace introduced by paragraph layout only.",
+  "sections": [
+    {
+      "number": "1",
+      "heading": "1. Background",
+      "nonWhitespaceCharacters": 2534,
+      "sha256": "aeec9caba451b5cfd60b99564bb7650b40936078d5f7be56df24ecb21bb9bd61"
+    },
+    {
+      "number": "2",
+      "heading": "2. Challenge",
+      "nonWhitespaceCharacters": 2403,
+      "sha256": "bcc835b721f0c41b25509b9b6f1c0c42f4b325f4336727973783f2645f67ed5d"
+    },
+    {
+      "number": "4",
+      "heading": "4. Project Description",
+      "nonWhitespaceCharacters": 2481,
+      "sha256": "665a6b37b759cbe4e033414191498fa5761c9135a29679a62322918643fa9980"
+    },
+    {
+      "number": "3.1",
+      "heading": "3.1 Plasmid Construction and Verification",
+      "nonWhitespaceCharacters": 580,
+      "sha256": "81f639862f12dfb08f4d97d3b7a2fed3942eb5bb0a4b568bf4c7d6b3ea71fcbe"
+    },
+    {
+      "number": "3.2",
+      "heading": "3.2 Site-Directed Mutagenesis",
+      "nonWhitespaceCharacters": 422,
+      "sha256": "255043d1198b3956d4535fbf0f5505f517552ba32fb11eacdb2fe5b54241281d"
+    },
+    {
+      "number": "3.3",
+      "heading": "3.3 Transformation, Induction, and Plasmid Extraction",
+      "nonWhitespaceCharacters": 541,
+      "sha256": "3aa542006f89baf42ea50753f370212ded7c8bbf1f53659e277d7c5787cf341c"
+    },
+    {
+      "number": "3.4",
+      "heading": "3.4 qPCR Inversion Detection",
+      "nonWhitespaceCharacters": 650,
+      "sha256": "31e31993ad2078de46ab767b204c9ee6a68097d61c5bee10d1b670422457d905"
+    }
+  ]
+}

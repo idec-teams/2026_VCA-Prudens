@@ -1,0 +1,97 @@
+{
+  "description": {
+    "title": "Description",
+    "coverSlide": 14,
+    "sections": [
+      {
+        "number": "1",
+        "title": "Background",
+        "heading": "1. Background",
+        "paragraphs": [
+          "Genome editing technology has changed life science research and medicine in the past decade. CRISPR-Cas9 nucleases introduce double-strand breaks (DSBs) at specific genomic loci, and then use the cell's repair pathways—non-homologous end joining (NHEJ) or homology-directed repair (HDR)—to achieve gene knockout or sequence modification; many clinical trials for various genetic diseases are currently underway. Base editors and prime editors further increased editing precision to perform nucleotide conversions and small insertions/deletions without DSBs. However, these tools are good at \"disrupting\" or \"fine-tuning\" genes rather than \"inserting\" whole genes. For multi-allelic genetic diseases such as α-1 antitrypsin deficiency, Friedreich's ataxia and Duchenne muscular dystrophy, therapeutic strategies require the precise insertion of full gene-sized DNA fragments (>1 kb) at native genomic locations, and large-fragment site-specific insertion is thus a major bottleneck in this field.",
+          "Current strategies for large-fragment insertion all have significant limitations. HDR-dependent approaches rely on cell division and are inefficient in non-dividing cells. Serine recombinases (e.g., Bxb1, phiC31) catalyze irreversible integration without DSBs but recognize fixed attP/attB sites that cannot be reprogrammed. PASTE combines CRISPR targeting with integrase activity but suffers from bulky system components and unstable efficiency. CRISPR-associated transposases (CAST) achieve HDR-independent insertion but with low efficiency in mammalian cells. Overall, existing methods typically achieve only low single-digit percentages in cellular contexts, with off-target integration, genomic scarring, and delivery challenges. The field urgently needs a compact, fully programmable, DSB-independent tool for large-fragment rearrangement.",
+          "Bridge recombinases represent an emerging paradigm in this direction. In 2024, Durrant et al. reported that IS110-family transposons encode a novel class of RNA-guided recombinases. Unlike CRISPR-Cas, which uses a single guide RNA to recognize one DNA site, bridge recombinases utilize a bridge RNA (bRNA) to simultaneously recognize two DNA sites—a target and a donor—catalyzing insertion, deletion, or inversion in a single step through serine-mediated transesterification, with reprogrammable target specificity. However, the prototype enzyme IS621 shows extremely low activity in human cells, far from therapeutic application.",
+          "Directed evolution—iterative cycles of mutagenesis, screening, and enrichment that mimic natural selection—has successfully optimized numerous enzymes and represents a core strategy to close this gap. iDEC (International Directed Evolution Competition) provides a platform for high school and university students to practice directed evolution. This project focuses on directed evolution of bridge recombinases in the model host E. coli."
+        ],
+        "id": "background"
+      },
+      {
+        "number": "2",
+        "title": "Challenge",
+        "heading": "2. Challenge",
+        "paragraphs": [
+          "Bridge recombinases face multiple barriers between proof of concept and practical utility. In 2025, Perry et al. screened 72 IS110-family orthologs and identified ISCro4 from Citrobacter rodentium as showing robust activity in human cells. ISCro4 shares 88% amino acid identity with IS621, and its cryo-EM structure reveals additional substrate contacts explaining its superior activity. With optimized delivery, ISCro4 achieves over 10% inversion and deletion in reporter cell lines and over 6% donor insertion at endogenous loci. Splitting the bRNA into independent TBL and DBL guide RNAs nearly doubles activity. Nevertheless, these efficiencies remain insufficient for most therapeutic applications, particularly in non-dividing cells and in vivo.",
+          "To systematically improve ISCro4, Perry et al. performed a comprehensive deep mutational scan (DMS) in human K562 cells, covering all single amino acid substitutions across residues 2–326. They identified S30T, P54Q, and S243H as consistently activity-enhancing mutations, combined into the triple mutant MM168 with approximately 1.5-fold improvement. S30T stabilizes the tetramer, P54Q may improve folding, and S243H forms a new hydrogen bond with the DNA backbone. Combining MM168 with engineered bRNA achieved 20.2% insertion at the SBF2 locus. However, numerous uncombined positive fold-change mutations remain, and their epistatic interactions are unexplored—MM168 is far from the fitness landscape peak.",
+          "ISCro4 shows low baseline activity in E. coli. The Evolution Suisse team (iDEC 2025) first confirmed ISCro4-mediated insertion using an sfGFP reporter, but wild-type activity was low. In PACE selection, WT ISCro4 catalyzed correct insertion but at rates insufficient for phage propagation. This low baseline is both a challenge and an opportunity for substantial evolutionary improvement.",
+          "A critical challenge is that DMS data were generated in human cells to \"bypass variants that only improve activity in bacteria.\" Beneficial mutations may depend on human-specific folding environments or DNA topology and may not transfer to E. coli. Conversely, neutral mutations in human cells could be beneficial in bacteria. Validating cross-host transferability will guide bridge recombinase engineering across systems.",
+          "Additionally, epistasis makes mutation stacking unpredictable. Synaptic complex assembly may be rate-limiting, as IS110 recombinases require tetrameric synapse formation influenced by host factors untested in E. coli. As a high school team without continuous evolution devices or deep sequencing, the design must achieve a complete directed evolution cycle under strict constraints.",
+          "The core question: can DMS-guided mutation stacking with accessory protein co-expression improve MM168 inversion activity in E. coli?"
+        ],
+        "id": "challenge"
+      },
+      {
+        "number": "4",
+        "title": "Project Description",
+        "heading": "4. Project Description",
+        "paragraphs": [
+          "Bridge recombinases are about to change the nature of genome editing: they can rearrange large DNA segments in a single step without double-strand breaks and have reprogrammable targeting, which current CRISPR tools, integrases and transposases cannot easily achieve. At the same time, the technology is still in its infancy. ISCro4 shows only a single-digit insertion rate at the endogenous locus in human cells, and its activity in bacterial hosts is even lower. If bridge recombinases are to be applied in gene therapy or synthetic biology, then this performance gap needs to be reduced significantly.",
+          "This project addresses this problem through directed evolution of ISCro4 in E. coli, starting from the previously engineered triple mutant MM168. We are taking two parallel paths. Based on the existing deep mutational scanning (DMS) data, we will rationally add new beneficial mutations to MM168 in the course of protein engineering. From the DMS set, we select the top ten mutations with a fold change that does not overlap with S30, P54, or S243, prioritise solvent-exposed residues outside the Tnp wedge regions and within the RuvC domain, and this region shows the highest mutational tolerance. Each candidate is introduced by site-directed mutagenesis and first screened by qPCR; then, mutations that show a positive effect are combined to test for epistasis.",
+          "At the same time, we optimise the host environment by co-expressing three classes of E. coli accessory proteins: IHF, a DNA-bending protein that promotes synaptic assembly for serine recombinases; GroEL/ES, a chaperone system that may work together with P54Q to enhance folding; and HU, which increases DNA flexibility to help facilitate synapse formation.",
+          "Each protein is tested individually and in combination. The two tracks meet at the end, so we can determine how much each contributes and whether there is any cooperation, aiming for an increase of at least twofold over MM168.",
+          "The project's significance is threefold. Scientifically speaking, this will be the first organised study to determine whether DMS-derived mutations retain their advantages after horizontal transfer among hosts, as Perry et al. DMS was intentionally used in human cells to avoid bacteria-specific improvements, so it is unknown whether these top hits still work in E. coli, and the answer will have broad implications for the future engineering of bridge recombinases. Technically, our accessory protein co-expression strategy introduces a host optimisation dimension that has never been used before to bridge recombinases; it also provides a general framework that can be extended to other IS110 family enzymes and different heterologous hosts. Educationally, the project shows that a complete directed evolution cycle can be achieved by a high school team using only basic molecular cloning and qPCR, without continuous evolution devices, deep sequencing or flow cytometry."
+        ],
+        "id": "project-description"
+      }
+    ]
+  },
+  "methods": {
+    "title": "Methods",
+    "sections": [
+      {
+        "number": "3.1",
+        "title": "Plasmid Construction and Verification",
+        "heading": "3.1 Plasmid Construction and Verification",
+        "paragraphs": [
+          "The ISCro4 expression plasmid (wild-type and MM168), inversion reporter plasmid, and accessory protein co-expression plasmids are prepared by standard molecular cloning. Target genes are PCR-amplified with high-fidelity polymerase, purified by gel extraction, and assembled into compatible backbones (ColE1-origin with ampicillin resistance for ISCro4 and reporter; pACYC184-origin with chloramphenicol resistance for accessory proteins) using Gibson assembly or restriction-ligation.",
+          "Ligation products are transformed into chemically competent E. coli DH5α, selected on appropriate antibiotics, and verified by colony PCR and Sanger sequencing of full inserts."
+        ],
+        "id": "plasmid-construction-and-verification"
+      },
+      {
+        "number": "3.2",
+        "title": "Site-Directed Mutagenesis",
+        "heading": "3.2 Site-Directed Mutagenesis",
+        "paragraphs": [
+          "Track A variants are generated by site-directed mutagenesis using MM168 plasmid as template. Mutagenic primer pairs encoding each candidate substitution are designed with 25–30 bp homology arms and the target codon change at the center.",
+          "PCR is performed with high-fidelity polymerase; template methylated DNA is subsequently digested with DpnI at 37°C for 2 hours.",
+          "Mutagenized plasmids are transformed into DH5α, and all mutations are confirmed by Sanger sequencing before functional testing."
+        ],
+        "id": "site-directed-mutagenesis"
+      },
+      {
+        "number": "3.3",
+        "title": "Transformation, Induction, and Plasmid Extraction",
+        "heading": "3.3 Transformation, Induction, and Plasmid Extraction",
+        "paragraphs": [
+          "Chemically competent E. coli are prepared by calcium chloride treatment. For each assay, ISCro4 expression plasmid, inversion reporter plasmid, and (for Track B) accessory protein co-expression plasmid are co-transformed by heat shock at 42°C for 45 seconds, recovered in SOC medium at 37°C for 1 hour, and plated on dual- or triple-antibiotic LB agar.",
+          "Single colonies are inoculated into liquid LB with appropriate antibiotics, grown to OD₆₀₀ 0.4–0.6, and induced with the appropriate inducer (e.g., arabinose or IPTG depending on promoter) for 16–20 hours at 30°C.",
+          "Plasmid DNA is extracted by alkaline lysis miniprep for qPCR analysis."
+        ],
+        "id": "transformation-induction-and-plasmid-extraction"
+      },
+      {
+        "number": "3.4",
+        "title": "qPCR Inversion Detection",
+        "heading": "3.4 qPCR Inversion Detection",
+        "paragraphs": [
+          "Inversion-specific primers are designed so that unflipped DNA cannot amplify, but inversion flips one primer onto the opposite strand, enabling exponential amplification of inversion products only.",
+          "A standard curve is constructed from serial mixtures of known flipped/unflipped plasmid ratios (10⁰ to 10⁻⁷). A plasmid backbone constant sequence (antibiotic resistance gene fragment) serves as internal reference for ΔΔCt normalization.",
+          "Each sample is run with at least 3 technical replicates and 3 biological replicates.",
+          "Six controls are included: wild-type ISCro4, MM168, no recombinase, mismatched bRNA, catalytic-dead S241A, and empty vector.",
+          "Group comparisons use Student's t-test or one-way ANOVA with Tukey post-hoc (p < 0.05), reported as mean ± SD."
+        ],
+        "id": "qpcr-inversion-detection"
+      }
+    ]
+  }
+}

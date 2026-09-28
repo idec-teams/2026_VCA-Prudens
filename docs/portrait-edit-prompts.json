@@ -1,0 +1,199 @@
+{
+  "date": "2026-09-27",
+  "note": "Two facial-feature changes only, followed by face-size normalization (approximately 38% of circle height). Preserve original photo characteristics. Wide framing generated only where original close framing lacked sufficient space. Zimeng shoulder/sleeve anatomy repaired on user request. Not an anonymization guarantee.",
+  "portraits": [
+    {
+      "name": "Jian, Mo",
+      "asset": "/assets/team/retouched-20260927/jian.jpg",
+      "tool": "built-in image_gen",
+      "prompt": "Edit exactly TWO facial features in the ORIGINAL photograph: (1) make the EYES visibly different in aperture/shape and eyelid crease, and (2) noticeably reshape the NOSE bridge width and tip. These two changes must be easy to see in a before/after comparison, not tiny retouching. Keep natural anatomy, skin texture and age. Preserve all other things: original face outline, cheeks, mouth, expression, hair, eyewear, clothes, body pose and BACKGROUND. Do not beautify/change other areas; no illustration, no wholesale face replacement. Also crop/reframe to square with the face center at 50% x 50%, safe for a circular portrait. Preserve recognizable characteristics of the original photo. Make the man's eyes rounder/open with a clear eyelid crease; make nose narrower and tip more defined. Keep glasses, jacket, straps and mountain background.",
+      "crop": {
+        "sourceWidth": 1254,
+        "centerX": 610,
+        "centerY": 505,
+        "size": 840
+      }
+    },
+    {
+      "name": "Chenfan, Wu",
+      "asset": "/assets/team/retouched-20260927/chenfan-framed.jpg",
+      "tool": "built-in image_gen",
+      "prompt": "Edit exactly TWO facial features in the ORIGINAL photograph: (1) make the EYES visibly different in aperture/shape and eyelid crease, and (2) noticeably reshape the NOSE bridge width and tip. These two changes must be easy to see in a before/after comparison, not tiny retouching. Keep natural anatomy, skin texture and age. Preserve all other things: original face outline, cheeks, mouth, expression, hair, eyewear, clothes, body pose and BACKGROUND. Do not beautify/change other areas; no illustration, no wholesale face replacement. Also crop/reframe to square with the face center at 50% x 50%, safe for a circular portrait. Preserve recognizable characteristics of the original photo. Make eyes distinctly narrower almond-shaped; make the visible nose bridge narrower and taller. Keep phone obscuring lower face, glasses, same dark shirt and gold curtain. Do not invent the unseen mouth.",
+      "crop": {
+        "sourceWidth": 1254,
+        "centerX": 605,
+        "centerY": 630,
+        "size": 900
+      },
+      "framingPrompt": "Use case: compositing / framing correction ONLY. This supplied portrait already has the approved facial edits. Do not edit ANY facial feature, hairstyle, expression, glasses, clothes, pose, or existing scene again. Make a SQUARE, more WIDELY FRAMED version, naturally extending the SAME background and existing clothing at the outer edges only. Face forehead-to-chin height must occupy only 36–38% of the whole square, with the center of the face positioned at exact 50% x 50%. Keep head fully visible, shoulders and adequate surrounding room. The supplied face is much too large in the frame: scale the ORIGINAL subject down substantially, preserve the supplied face/skin/eyes/nose/mouth exactly. Do NOT crop in closer. No border, no blur fill, no invented new background, no stylization. Preserve the source photo's natural lighting and all characteristics. Output 1 square photograph."
+    },
+    {
+      "name": "Yuxi, Bai",
+      "asset": "/assets/team/retouched-20260927/yuxi-framed.jpg",
+      "tool": "built-in image_gen",
+      "prompt": "Edit exactly TWO facial features in the ORIGINAL photograph: (1) make the EYES visibly different in aperture/shape and eyelid crease, and (2) noticeably reshape the NOSE bridge width and tip. These two changes must be easy to see in a before/after comparison, not tiny retouching. Keep natural anatomy, skin texture and age. Preserve all other things: original face outline, cheeks, mouth, expression, hair, eyewear, clothes, body pose and BACKGROUND. Do not beautify/change other areas; no illustration, no wholesale face replacement. Also crop/reframe to square with the face center at 50% x 50%, safe for a circular portrait. Preserve recognizable characteristics of the original photo. Make eyes distinctly larger and rounder with a clear double crease; give nose a narrower taller bridge and more defined tip. Keep same face outline, hair, school clothing and original outdoor setting.",
+      "crop": {
+        "sourceWidth": 1254,
+        "centerX": 650,
+        "centerY": 620,
+        "size": 1200
+      },
+      "framingPrompt": "Use case: compositing / framing correction ONLY. This supplied portrait already has the approved facial edits. Do not edit ANY facial feature, hairstyle, expression, glasses, clothes, pose, or existing scene again. Make a SQUARE, more WIDELY FRAMED version, naturally extending the SAME background and existing clothing at the outer edges only. Face forehead-to-chin height must occupy only 36–38% of the whole square, with the center of the face positioned at exact 50% x 50%. Keep head fully visible, shoulders and adequate surrounding room. The supplied face is much too large in the frame: scale the ORIGINAL subject down substantially, preserve the supplied face/skin/eyes/nose/mouth exactly. Do NOT crop in closer. No border, no blur fill, no invented new background, no stylization. Preserve the source photo's natural lighting and all characteristics. Output 1 square photograph."
+    },
+    {
+      "name": "Zimeng Jessie, Yu",
+      "asset": "/assets/team/retouched-20260927/zimeng-final.jpg",
+      "tool": "built-in image_gen",
+      "prompt": "undefinedMake eyes noticeably more elongated almond-shaped, with shallower eyelid folds; make nose wider at bridge with a softer rounder tip. Preserve all other features, hair, shirt, necklace and beverage fridges.",
+      "crop": {
+        "sourceWidth": 1254,
+        "centerX": 600,
+        "centerY": 430,
+        "size": 800
+      },
+      "framingPrompt": "Use case: compositing / framing correction ONLY. This supplied portrait already has the approved facial edits. Do not edit ANY facial feature, hairstyle, expression, glasses, clothes, pose, or existing scene again. Make a SQUARE, more WIDELY FRAMED version, naturally extending the SAME background and existing clothing at the outer edges only. Face forehead-to-chin height must occupy only 36–38% of the whole square, with the center of the face positioned at exact 50% x 50%. Keep head fully visible, shoulders and adequate surrounding room. The supplied face is much too large in the frame: scale the ORIGINAL subject down substantially, preserve the supplied face/skin/eyes/nose/mouth exactly. Do NOT crop in closer. No border, no blur fill, no invented new background, no stylization. Preserve the source photo's natural lighting and all characteristics. Output 1 square photograph.",
+      "anatomyRepairPrompts": [
+        "Precise object/anatomy repair ONLY. The supplied image has an erroneous THIRD ARM: an extra vertical flesh-colored strip/limb on her torso, between the two long hair strands, from below the neck toward her lap (near image center x~580, y~740–945). REMOVE this third arm completely and replace that torso area with continuous natural WHITE T-SHIRT fabric matching her existing shirt and neckline. Exactly TWO arms remain: the arm on viewer LEFT making a V/peace hand gesture, and the arm on viewer RIGHT dropping from her right-side short sleeve toward the lap. Each arm must connect anatomically to its appropriate shoulder. No extra limb or hand or bare flesh stripe on the chest. Preserve her FACE absolutely unchanged, original hair, jewelry, expression, background, lighting and pose. Do not modify facial features at all. Preserve current square image framing and natural photography.",
+        "Localized realistic clothing/anatomy cleanup ONLY of both SHOULDERS and WHITE T-SHIRT SLEEVES. Keep the exact same face, eyes, nose, lips, hair, expression, square composition and convenience-store background pixel-consistent. Correct the shoulder-to-upper-arm connection and the two short sleeves: each sleeve must be a single clean, believable sleeve with one hem, naturally connected to one shoulder and one upper arm. Remove any duplicated shoulder mound, floating cuff, extra fabric flap or impossible pinched seam. Viewer-left arm makes a V/peace gesture; viewer-right arm rests down toward lap; keep these TWO arms and hands, no third arm. Keep the shirt opaque continuous WHITE cotton including chest, no flesh-colored strip under the hair. Natural moderate fabric folds only, same white shirt style. Do not alter facial features or enlarge face. Do not restyle clothes or change background. Return exactly one repaired photograph."
+      ]
+    },
+    {
+      "name": "Xiaohan Sophie, Wang",
+      "asset": "/assets/team/retouched-20260927/xiaohan.jpg",
+      "tool": "built-in image_gen",
+      "prompt": "undefinedMake eyes noticeably rounder with more open upper lids; make nose slightly broader with a rounder tip. Keep hairstyle, expression, green dress and fan and wooden wall.",
+      "crop": {
+        "sourceWidth": 948,
+        "centerX": 575,
+        "centerY": 670,
+        "size": 720
+      }
+    },
+    {
+      "name": "Kele, Zhang",
+      "asset": "/assets/team/retouched-20260927/kele.jpg",
+      "tool": "built-in image_gen",
+      "prompt": "Edit exactly TWO visible facial features in original photograph: reshape NOSE visibly narrower with a more defined tip, and change LIP SHAPE to a fuller cupid's bow while retaining original expression. Eyes are obscured by sunglasses: KEEP ORIGINAL SUNGLASSES, do not remove or alter them. Preserve everything else: hair, face outline, clothing, accessories, body pose and original background. Natural realistic photograph, not illustration, no wholesale face replacement. Square closer crop around the face, face center at x50% y50%, safe circular portrait. Two adjustments should be noticeable but natural, not tiny retouching. Target the woman in pink hat and pink/teal outdoor jacket holding a dog. Keep hat and reflective sunglasses and original clothing and snowy mountain background. Closer head and shoulders crop around her face; retain the dog only if naturally inside crop.",
+      "crop": {
+        "sourceWidth": 1254,
+        "centerX": 600,
+        "centerY": 630,
+        "size": 940
+      }
+    },
+    {
+      "name": "Zhecheng, Yue",
+      "asset": "/assets/team/retouched-20260927/zhecheng-framed.jpg",
+      "tool": "built-in image_gen",
+      "prompt": "undefinedTarget ONLY the man wearing glasses on the LEFT of the original two-person photo, user confirmed. Make his eyes rounder and more open behind same glasses; make nose distinctly narrower and more defined. Crop onto this man for the square avatar without inventing a new background or clothing.",
+      "crop": {
+        "sourceWidth": 1254,
+        "centerX": 650,
+        "centerY": 495,
+        "size": 820
+      },
+      "framingPrompt": "Use case: compositing / framing correction ONLY. This supplied portrait already has the approved facial edits. Do not edit ANY facial feature, hairstyle, expression, glasses, clothes, pose, or existing scene again. Make a SQUARE, more WIDELY FRAMED version, naturally extending the SAME background and existing clothing at the outer edges only. Face forehead-to-chin height must occupy only 36–38% of the whole square, with the center of the face positioned at exact 50% x 50%. Keep head fully visible, shoulders and adequate surrounding room. The supplied face is much too large in the frame: scale the ORIGINAL subject down substantially, preserve the supplied face/skin/eyes/nose/mouth exactly. Do NOT crop in closer. No border, no blur fill, no invented new background, no stylization. Preserve the source photo's natural lighting and all characteristics. Output 1 square photograph."
+    },
+    {
+      "name": "Lingwei, Li",
+      "asset": "/assets/team/retouched-20260927/lingwei.jpg",
+      "tool": "built-in image_gen",
+      "prompt": "undefinedMake eyes noticeably more elongated with clearer outer corners; make nose visibly narrower with a defined tip. Keep same hair, clothes, gestures and sports field background.",
+      "crop": {
+        "sourceWidth": 1532,
+        "centerX": 840,
+        "centerY": 380,
+        "size": 600
+      }
+    },
+    {
+      "name": "Fengwu, Wang",
+      "asset": "/assets/team/retouched-20260927/fengwu.jpg",
+      "tool": "built-in image_gen",
+      "prompt": "Edit exactly TWO facial features in the ORIGINAL photograph: (1) make the EYES visibly different in aperture/shape and eyelid crease, and (2) noticeably reshape the NOSE bridge width and tip. These two changes must be easy to see in a before/after comparison, not tiny retouching. Keep natural anatomy, skin texture and age. Preserve all other things: original face outline, cheeks, mouth, expression, hair, eyewear, clothes, body pose and BACKGROUND. Do not beautify/change other areas; no illustration, no wholesale face replacement. Also crop/reframe to square with the face center at 50% x 50%, safe for a circular portrait. Preserve recognizable characteristics of the original photo. Make eyes visibly larger and rounder, nose narrower with a more defined tip. Keep same short hair, black patterned shirt, expression, waterfront and night skyline. Closer crop for face centered.",
+      "crop": {
+        "sourceWidth": 1254,
+        "centerX": 625,
+        "centerY": 490,
+        "size": 740
+      }
+    },
+    {
+      "name": "Lifei, Shu",
+      "asset": "/assets/team/retouched-20260927/lifei-framed.jpg",
+      "tool": "built-in image_gen",
+      "prompt": "Edit exactly TWO facial features in the ORIGINAL photograph: (1) make the EYES visibly different in aperture/shape and eyelid crease, and (2) noticeably reshape the NOSE bridge width and tip. These two changes must be easy to see in a before/after comparison, not tiny retouching. Keep natural anatomy, skin texture and age. Preserve all other things: original face outline, cheeks, mouth, expression, hair, eyewear, clothes, body pose and BACKGROUND. Do not beautify/change other areas; no illustration, no wholesale face replacement. Also crop/reframe to square with the face center at 50% x 50%, safe for a circular portrait. Preserve recognizable characteristics of the original photo. Make eyes visibly more elongated almond-shaped with less rounded aperture; make nose slightly wider with rounded tip. Keep original hair and knitted headband, white jacket, concert background, face outline and expression. Crop away the black side bars.",
+      "crop": {
+        "sourceWidth": 1254,
+        "centerX": 650,
+        "centerY": 640,
+        "size": 700
+      },
+      "framingPrompt": "Use case: compositing / framing correction ONLY. This supplied portrait already has the approved facial edits. Do not edit ANY facial feature, hairstyle, expression, glasses, clothes, pose, or existing scene again. Make a SQUARE, more WIDELY FRAMED version, naturally extending the SAME background and existing clothing at the outer edges only. Face forehead-to-chin height must occupy only 36–38% of the whole square, with the center of the face positioned at exact 50% x 50%. Keep head fully visible, shoulders and adequate surrounding room. The supplied face is much too large in the frame: scale the ORIGINAL subject down substantially, preserve the supplied face/skin/eyes/nose/mouth exactly. Do NOT crop in closer. No border, no blur fill, no invented new background, no stylization. Preserve the source photo's natural lighting and all characteristics. Output 1 square photograph."
+    },
+    {
+      "name": "Shiya, Da",
+      "asset": "/assets/team/retouched-20260927/shiya-framed.jpg",
+      "tool": "built-in image_gen",
+      "prompt": "Edit exactly TWO visible facial features in original photograph: reshape NOSE visibly narrower with a more defined tip, and change LIP SHAPE to a fuller cupid's bow while retaining original expression. Eyes are obscured by sunglasses: KEEP ORIGINAL SUNGLASSES, do not remove or alter them. Preserve everything else: hair, face outline, clothing, accessories, body pose and original background. Natural realistic photograph, not illustration, no wholesale face replacement. Square closer crop around the face, face center at x50% y50%, safe circular portrait. Two adjustments should be noticeable but natural, not tiny retouching. Keep the woman's original sunglasses, long reddish hair, grey T-shirt, pendant, bag strap and pastel buildings in sunlight. Crop closer around face without changing pose.",
+      "crop": {
+        "sourceWidth": 1254,
+        "centerX": 640,
+        "centerY": 580,
+        "size": 700
+      },
+      "framingPrompt": "Use case: compositing / framing correction ONLY. This supplied portrait already has the approved facial edits. Do not edit ANY facial feature, hairstyle, expression, glasses, clothes, pose, or existing scene again. Make a SQUARE, more WIDELY FRAMED version, naturally extending the SAME background and existing clothing at the outer edges only. Face forehead-to-chin height must occupy only 36–38% of the whole square, with the center of the face positioned at exact 50% x 50%. Keep head fully visible, shoulders and adequate surrounding room. The supplied face is much too large in the frame: scale the ORIGINAL subject down substantially, preserve the supplied face/skin/eyes/nose/mouth exactly. Do NOT crop in closer. No border, no blur fill, no invented new background, no stylization. Preserve the source photo's natural lighting and all characteristics. Output 1 square photograph."
+    },
+    {
+      "name": "Ruixi, Huang",
+      "asset": "/assets/team/retouched-20260927/ruixi-framed.jpg",
+      "tool": "built-in image_gen",
+      "prompt": "Edit exactly TWO facial features in the ORIGINAL photograph: (1) make the EYES visibly different in aperture/shape and eyelid crease, and (2) noticeably reshape the NOSE bridge width and tip. These two changes must be easy to see in a before/after comparison, not tiny retouching. Keep natural anatomy, skin texture and age. Preserve all other things: original face outline, cheeks, mouth, expression, hair, eyewear, clothes, body pose and BACKGROUND. Do not beautify/change other areas; no illustration, no wholesale face replacement. Also crop/reframe to square with the face center at 50% x 50%, safe for a circular portrait. Preserve recognizable characteristics of the original photo. Make eyes visibly rounder/open with a defined eyelid crease; make nose noticeably narrower at bridge and tip. Keep original black cap, fringe, dark blouse, expression, and green theatre exterior background.",
+      "crop": {
+        "sourceWidth": 1254,
+        "centerX": 707,
+        "centerY": 670,
+        "size": 600
+      },
+      "framingPrompt": "Use case: compositing / framing correction ONLY. This supplied portrait already has the approved facial edits. Do not edit ANY facial feature, hairstyle, expression, glasses, clothes, pose, or existing scene again. Make a SQUARE, more WIDELY FRAMED version, naturally extending the SAME background and existing clothing at the outer edges only. Face forehead-to-chin height must occupy only 36–38% of the whole square, with the center of the face positioned at exact 50% x 50%. Keep head fully visible, shoulders and adequate surrounding room. The supplied face is much too large in the frame: scale the ORIGINAL subject down substantially, preserve the supplied face/skin/eyes/nose/mouth exactly. Do NOT crop in closer. No border, no blur fill, no invented new background, no stylization. Preserve the source photo's natural lighting and all characteristics. Output 1 square photograph."
+    },
+    {
+      "name": "Yichen Sun",
+      "asset": "/assets/team/retouched-20260927/yichen.jpg",
+      "tool": "built-in image_gen",
+      "prompt": "Edit exactly TWO facial features in the ORIGINAL photograph: (1) make the EYES visibly different in aperture/shape and eyelid crease, and (2) noticeably reshape the NOSE bridge width and tip. These two changes must be easy to see in a before/after comparison, not tiny retouching. Keep natural anatomy, skin texture and age. Preserve all other things: original face outline, cheeks, mouth, expression, hair, eyewear, clothes, body pose and BACKGROUND. Do not beautify/change other areas; no illustration, no wholesale face replacement. Also crop/reframe to square with the face center at 50% x 50%, safe for a circular portrait. Preserve recognizable characteristics of the original photo. Make eyes visibly more elongated almond-shaped with a narrower aperture; make nose noticeably broader at bridge with rounded tip. Keep same reddish-brown hair and flower clip, mouth, original face outline, white top and yellow skirt and beach background. Only closer square cropping for centered face.",
+      "crop": {
+        "sourceWidth": 1254,
+        "centerX": 610,
+        "centerY": 490,
+        "size": 830
+      }
+    },
+    {
+      "name": "Yiding Yuan",
+      "asset": "/assets/team/retouched-20260927/yiding.jpg",
+      "tool": "built-in image_gen",
+      "prompt": "Edit exactly TWO facial features in the ORIGINAL photograph: (1) make the EYES visibly different in aperture/shape and eyelid crease, and (2) noticeably reshape the NOSE bridge width and tip. These two changes must be easy to see in a before/after comparison, not tiny retouching. Keep natural anatomy, skin texture and age. Preserve all other things: original face outline, cheeks, mouth, expression, hair, eyewear, clothes, body pose and BACKGROUND. Do not beautify/change other areas; no illustration, no wholesale face replacement. Also crop/reframe to square with the face center at 50% x 50%, safe for a circular portrait. Preserve recognizable characteristics of the original photo. Make eyes rounder and more open, nose visibly narrower and taller. Keep hairstyle, black graphic T-shirt, original mouth and expression, dorm desk laptop and shelving background.",
+      "crop": {
+        "sourceWidth": 1254,
+        "centerX": 580,
+        "centerY": 490,
+        "size": 700
+      }
+    },
+    {
+      "name": "Ruohan, Shen",
+      "asset": "/assets/team/retouched-20260927/ruohan-framed.jpg",
+      "tool": "built-in image_gen",
+      "prompt": "Edit exactly TWO facial features in the ORIGINAL photograph: (1) make the EYES visibly different in aperture/shape and eyelid crease, and (2) noticeably reshape the NOSE bridge width and tip. These two changes must be easy to see in a before/after comparison, not tiny retouching. Keep natural anatomy, skin texture and age. Preserve all other things: original face outline, cheeks, mouth, expression, hair, eyewear, clothes, body pose and BACKGROUND. Do not beautify/change other areas; no illustration, no wholesale face replacement. Also crop/reframe to square with the face center at 50% x 50%, safe for a circular portrait. Preserve recognizable characteristics of the original photo. Make eyes distinctly elongated almond-shaped with a narrower aperture, nose noticeably narrower and taller with refined tip. Preserve face outline, hairstyle, grey blazer and pale collar, mouth, original expression, plain background.",
+      "crop": {
+        "sourceWidth": 1254,
+        "centerX": 625,
+        "centerY": 605,
+        "size": 990
+      },
+      "framingPrompt": "Use case: compositing / framing correction ONLY. This supplied portrait already has the approved facial edits. Do not edit ANY facial feature, hairstyle, expression, glasses, clothes, pose, or existing scene again. Make a SQUARE, more WIDELY FRAMED version, naturally extending the SAME background and existing clothing at the outer edges only. Face forehead-to-chin height must occupy only 36–38% of the whole square, with the center of the face positioned at exact 50% x 50%. Keep head fully visible, shoulders and adequate surrounding room. The supplied face is much too large in the frame: scale the ORIGINAL subject down substantially, preserve the supplied face/skin/eyes/nose/mouth exactly. Do NOT crop in closer. No border, no blur fill, no invented new background, no stylization. Preserve the source photo's natural lighting and all characteristics. Output 1 square photograph."
+    }
+  ],
+  "encoding": "JPEG quality 87 for faster web delivery, no resizing or pixel retouching. Full-resolution PNG masters retained in ../portrait-final-png-20260927/."
+}

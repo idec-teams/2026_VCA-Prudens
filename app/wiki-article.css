@@ -1,0 +1,57 @@
+.wiki-article { overflow: visible; }
+.wiki-article-layout {
+  max-width: 1640px;
+  margin-inline: auto;
+  padding: clamp(38px, 5vw, 80px) clamp(20px, 4.6vw, 88px) 90px;
+  display: grid;
+  grid-template-columns: minmax(180px, 23%) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 64px);
+  align-items: start;
+  color: #22253c;
+}
+.wiki-article-outline {
+  position: sticky;
+  top: 140px;
+  max-height: calc(100svh - 170px);
+  overflow-y: auto;
+  gap: 14px;
+  padding: 24px 18px;
+}
+.wiki-article-outline a {
+  display: block;
+  padding: 10px 8px;
+  border-radius: 10px;
+  font-size: clamp(.95rem, 1.2vw, 1.15rem);
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  touch-action: manipulation;
+}
+.wiki-article-outline a:hover,
+.wiki-article-outline a:focus-visible { background: #ffffff70; outline: 2px solid var(--teal); }
+.wiki-article-copy { min-height: 0; padding: clamp(28px, 4vw, 60px); border-radius: clamp(32px, 5vw, 80px); }
+.wiki-article-copy > h1 { margin: 0 0 44px; }
+.wiki-article-copy section + section { margin-top: 48px; padding-top: 32px; border-top: 1px solid #ddc579; }
+.wiki-article-copy h2 {
+  margin: 0 0 24px;
+  font-size: clamp(1.45rem, 2.3vw, 2.2rem);
+  line-height: 1.25;
+  font-weight: 400;
+  overflow-wrap: anywhere;
+  scroll-margin-top: 150px;
+}
+.wiki-article-copy h2:target { color: var(--teal); }
+.wiki-article-copy p { margin: 0 0 1.4em; font-size: clamp(1rem, 1.25vw, 1.18rem); line-height: 1.8; overflow-wrap: anywhere; }
+.wiki-article-copy p:last-child { margin-bottom: 0; }
+.paper-copy { min-width: 0; }
+.paper-figure { margin: 30px 0; scroll-margin-top: 150px; }
+.paper-figure img { display: block; width: 100%; height: auto; object-fit: contain; background: white; }
+.paper-figure figcaption { margin-top: 16px; font-size: 1rem; line-height: 1.7; overflow-wrap: anywhere; }
+.figure-original { display: inline-block; margin-top: 12px; padding-block: 8px; color: #185c53; text-decoration: underline; }
+.wiki-article-copy .paper-note { padding: 18px; border-left: 3px solid #a56c18; background: #fff9e8; font-size: 1rem; line-height: 1.7; }
+@media (max-width: 760px) {
+  .wiki-article-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 26px 16px 80px; }
+  .wiki-article-outline { position: static; order: 0; max-height: none; gap: 4px; padding: 16px; }
+  .wiki-article-copy { padding: 30px 22px; }
+  .wiki-article-copy h2 { scroll-margin-top: 110px; }
+  .wiki-article-copy > h1 { margin-bottom: 32px; }
+}

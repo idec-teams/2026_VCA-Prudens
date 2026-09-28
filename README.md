@@ -1,13 +1,41 @@
-# Wiki repoistory for iDEC 2026 | VCA-Prudens
+# VCA-Prudens 2026 iDEC Wiki
 
-(This a temporary README file that needs to be updated before you submit the team wiki. Please stay tuned at [idec.io](https://idec.io) for future relevant announcements.)
+This repository contains the maintainable source for the VCA-Prudens 2026 iDEC Wiki.
 
-This is the wiki repository for iDEC 2026, Team: VCA-Prudens.
+- Official iDEC repository: <https://github.com/idec-teams/2026_VCA-Prudens>
+- GitHub Pages: <https://idec-teams.github.io/2026_VCA-Prudens/>
+- Working publication: <https://vca-prudens-idec-wiki.ruiliuyang.chatgpt.site/>
 
-The wiki created from this repository is hosted at [idec-teams.github.io/2026_VCA-Prudens](https://idec-teams.github.io/2026_VCA-Prudens).
+The site is built with React and Vinext. A push to `main` runs the GitHub Pages workflow and publishes a static copy. The same source can also be published to the existing Sites project without changing its audience.
 
-The default wiki layout is powered by [MkDocs](http://mkdocs.org) with the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
+## Important content rules
 
-## License
+- Do not shorten or rewrite the protected Methods or Description articles.
+- Section numbers may remain in source audit data but are hidden in displayed titles.
+- Do not invent scientific results, figures, tables, materials, or experimental parameters.
+- Preserve native `href` navigation, the home-page motion, RNA reading progress, and clover back-to-top control.
+- Preserve the final portrait files and their face-centered crop settings.
 
-[MkDocs](http://mkdocs.org) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) are under the MIT Licence. Contents of this wiki are under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/legalcode) Copyright License.
+## Local commands
+
+Requires Node.js 22.13 or later and pnpm 11.
+
+```bash
+pnpm install --frozen-lockfile
+pnpm test
+pnpm dev
+```
+
+To verify the GitHub Pages export locally:
+
+```bash
+GITHUB_PAGES=true \
+NEXT_PUBLIC_SITE_BASE_PATH=/2026_VCA-Prudens \
+pnpm build
+```
+
+The static result is written to `dist/client`.
+
+## Editing guide
+
+See [docs/WIKI_UPDATE_GUIDE.zh-CN.md](docs/WIKI_UPDATE_GUIDE.zh-CN.md) for the Chinese maintenance guide, file map, asset upload rules, verification checklist, and publishing workflow.

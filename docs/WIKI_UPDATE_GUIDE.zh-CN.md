@@ -34,10 +34,13 @@
 | 首页样式与动画 | `app/home-story.css` | CSS 动画、响应式布局和配色在这里。 |
 | 全站导航 | `app/SiteHeader.tsx`、`app/wiki-data.ts` | 链接使用原生 `href`，不要改成拦截式跳转。 |
 | RNA 阅读进度、四叶草回顶 | `app/ReadingControls.tsx`、`app/globals.css` | 不要删除；修改后检查长页面与手机端。 |
-| Methods、Description 正文 | `app/wiki-articles.json` | 受保护正文，必须完整保留；不要自行改写。 |
-| Design/Model/Engineering/Experiment/Analysis/Results | `app/paper-articles.json`、`app/PaperArticle.tsx` | 只放论文真实内容；保留缺失信息和占位说明。 |
+| Description 与搬入其中的旧 Method 正文 | `app/wiki-articles.json`、`app/WikiArticle.tsx` | 旧 methods 数据完整保留，显示在 Challenge 与 Project Description 之间；不要自行改写。 |
+| Design/Methods/Engineering/Results/Analysis | `app/report-articles.json`、`app/ReportArticle.tsx` | 以 2026-10-04 上传的五份 Word 为准；正文、图注、参考文献一字不漏，审计见 docs/report-source-audit-20261004.json。 |
+| Model/Experiment | `app/paper-articles.json`、`app/PaperArticle.tsx` | 保留现有内容，未在本轮更新范围。 |
+| Safety/Supplement Files 页头 | `app/DocumentLanding.tsx`、`app/document-landing.css` | 目前只提供页头，未提供正文不得编造。 |
 | 队员信息、头像和裁切 | `app/team-profiles.json`、`public/assets/team/` | 头像面部居中且大小一致；不要恢复旧草稿。 |
 | 论文图片 | `public/assets/paper-20260928/` | 使用原图，不生成替代图。 |
+| 五份 Word 原图与新页头图标 | `public/assets/report-20261004/` | 13 张原图完整提取，含 Table S1；点击图片可打开原图。图标许可原文一并保留。 |
 | 其他图片、GIF、视频、下载文件 | `public/assets/` | 使用小写英文文件名，避免空格和中文路径。 |
 | 全局样式、团队页、论文页样式 | `app/globals.css`、`app/wiki-article.css` | 修改时同时检查 320、390、768、1440px。 |
 | GitHub Pages 自动发布 | `.github/workflows/deploy-pages.yml` | 一般不需要修改。推送到 `main` 后自动运行。 |
@@ -66,8 +69,9 @@ PDF、TXT、CSV 等放在 `public/assets/downloads/`，用普通 `<a href>` 链�
 ### 文字
 
 - 首页短文：修改 `app/page.tsx` 或 `app/HomeStory.tsx`。
-- Methods/Description：只在已核对原文后修改 `app/wiki-articles.json`。
-- 论文页面：修改 `app/paper-articles.json`，同时更新相应审计记录。
+- Description/旧 Method：只在已核对原文后修改 `app/wiki-articles.json`。
+- Design/新 Methods/Engineering/Results/Analysis：修改 `app/report-articles.json`，同时更新相应审计记录。
+- Model/Experiment：修改 `app/paper-articles.json`，同时更新相应审计记录。
 - 队员姓名和介绍：修改 `app/team-profiles.json`。
 
 JSON 文件中的双引号、逗号必须保持合法。大段内容更新建议交给 Codex，并要求它运行全文一致性测试。

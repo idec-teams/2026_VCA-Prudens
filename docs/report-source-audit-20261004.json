@@ -1,0 +1,631 @@
+{
+  "design": {
+    "file": "Design.docx",
+    "sha256": "6e1555f47c7264af95a4e3d30ff6272c18400a99b4a16cf5cf703daff59d2069",
+    "paragraphs": [
+      {
+        "paragraph": 0,
+        "text": "Design",
+        "images": []
+      },
+      {
+        "paragraph": 1,
+        "text": "（缺标题，帮我根据内容取一下）",
+        "images": [],
+        "role": "editorial-placeholder-replaced-by-requested-heading"
+      },
+      {
+        "paragraph": 2,
+        "text": "Directed evolution of proteins can be used to create truly remarkable synthetic biology tools, such as plastic-degrading enzymes, fluorescent proteins, and gene-editing tools. Its core idea is to \"replay natural selection in a test tube\": a vast mutant library is constructed through random mutagenesis, DNA shuffling, or saturation mutagenesis, and then iterative cycles of \"mutation–screening–re-mutation\" are carried out according to a predefined functional goal (such as higher catalytic activity, brighter fluorescence, or broader substrate compatibility), allowing a naturally mediocre protein to evolve continuously in the direction we set [1]. From engineering PET hydrolases to accelerate plastic degradation [2], to evolving GFP into a series of brighter and more stable fluorescent proteins [3], and to the directed evolution of Cas9 variants and large serine recombinases [4, 5] to expand the target range and efficiency of genome editing, this strategy has proven again and again that we do not need to fully understand every detail of a protein in order to tame it into an ideal tool.",
+        "images": []
+      },
+      {
+        "paragraph": 3,
+        "text": "This technology is full of potential, yet it also faces certain bottlenecks—or professional barriers. First, experimental design is itself an interdisciplinary discipline: the mutagenesis strategy (error-prone PCR, saturation mutagenesis, recombination) must be matched to the \"fitness landscape\" of the target function, and the library size must be carefully balanced against screening throughput; otherwise, one either fails to find positive clones or is drowned in a sea of negative results. Second, every round of evolution involves primer design, vector construction, transformation and colony counting, high-throughput assays, and sequencing data analysis—a statistical or operational error at any single step can render weeks of effort futile. More importantly, this knowledge is scattered across hundreds of papers, laboratory manuals, and bioinformatics tools. For beginners without systematic training or expensive equipment, the barrier to entry is extremely high—which is precisely why so many high school students and amateur enthusiasts yearn for directed evolution yet dare not take the first step. ",
+        "images": []
+      },
+      {
+        "paragraph": 4,
+        "text": "Here, as a group of biotechnology enthusiasts still in high school, we demonstrate how AI agents—Biomni in particular—can help us break through these knowledge barriers and successfully complete our first directed evolution journey, yielding a more efficient large-fragment DNA editing tool. Throughout the project, Biomni served as our \"on-board mentor\": it helped us systematically search and organize the literature on the evolutionary history and key residues of our target protein, guided us in designing the mutagenesis strategy and screening scheme, predicted the effects of mutations on protein structure and function, and assisted us with sequence alignment and fitness analysis of our sequencing data. With its guidance, we were able to plan each round of iteration the way a professional laboratory would, avoiding a great deal of trial-and-error waste of time and reagents. In the end, we successfully evolved a variant of the ISCro4-based large-fragment DNA editing tool with substantially improved activity, achieving a considerable increase in editing efficiency over the already-engineered parent variant. This experience has convinced us that AI agents are placing the \"admission ticket\" to cutting-edge protein engineering into the hands of more young enthusiasts, so that curiosity is no longer limited by experience or resources. ",
+        "images": []
+      },
+      {
+        "paragraph": 5,
+        "text": "Project design with the help of Biomni",
+        "images": [],
+        "role": "heading",
+        "display": "Project design with the help of Biomni"
+      },
+      {
+        "paragraph": 6,
+        "text": "Directed evolution is an advanced and technically demanding field that requires substantial prior knowledge, specialized expertise, and experimental resources. As a high school student research group, we initially lacked many of the necessary skills and resources to conduct such work.",
+        "images": []
+      },
+      {
+        "paragraph": 7,
+        "text": "At a point when we were unsure how to proceed, we noticed the rapid emergence of AI agents over the past two years, which offered a potential way to overcome some of these limitations. We chose Biomni, an AI agent specifically developed for biological research [10], as our research assistant. With guidance from Biomni, we explored the directed evolution of ISCro4, a tool with the ability to mediate large-fragment DNA recombination. The following describes our approach and the evolutionary process we carried out with its assistance.",
+        "images": []
+      },
+      {
+        "paragraph": 8,
+        "text": "",
+        "images": [
+          {
+            "src": "/assets/report-20261004/design-8-0.jpeg",
+            "sha256": "5dcb54375219d6d594dd9c05f5aa9e3f989b1fe66870a47fea1e903cfb121713"
+          }
+        ]
+      },
+      {
+        "paragraph": 9,
+        "text": "Fig. 1. Agent-enabled workflow and progress of the directed evolution project. Agents were involved throughout the research process, from project conception and experimental design to data interpretation and scientific writing. By integrating AI agents into the research workflow, this framework allows researchers with limited prior experience to effectively undertake complex directed evolution projects, potentially broadening the accessibility and impact of directed evolution technologies.",
+        "images": []
+      },
+      {
+        "paragraph": 10,
+        "text": "We first set out to define our research topic by reviewing the existing literature and seeking guidance from Biomni. More than half of our team members were particularly interested in gene-editing technologies. When we entered this interest into a web search, we encountered a number of recently reported technologies for large-fragment DNA editing and recombination, including prime editing-based technology [6], IS621 [7] and ISCro4 [8, 9].",
+        "images": []
+      },
+      {
+        "paragraph": 11,
+        "text": "",
+        "images": [
+          {
+            "src": "/assets/report-20261004/design-11-0.png",
+            "sha256": "ff823ff177d9c8e48c6a9fbbe38258821e31ba049ae57851c39ca41852b909a1"
+          }
+        ]
+      },
+      {
+        "paragraph": 12,
+        "text": "Fig. 2. Project initiation through dialogue with the AI agent Biomni. We first reviewed relevant information available online and communicated our research interests to Biomni. Based on these inputs, Biomni autonomously explored the relevant literature and information and proposed an experimentally feasible research direction.",
+        "images": []
+      },
+      {
+        "paragraph": 13,
+        "text": "We then described our interests, our background, and our limitations to Biomni. At first, we expected that Biomni would simply provide us with some general background information, introduce the relevant technologies, or perhaps even tell us that the project was beyond our capabilities. What it actually provided was far beyond our expectations. Rather than simply giving us a broad introduction to the field, Biomni recognized the potential of our research interests, suggested that our choice of topic was promising, and presented us with multiple possible research directions. It helped us compare different systems and identify questions that could potentially be addressed through experimentation. Due to space limitations, we show only one representative part of its response here.",
+        "images": []
+      },
+      {
+        "paragraph": 14,
+        "text": "Based on Biomni’s suggestions, together with our own subsequent literature review and verification, we ultimately chose ISCro4, a large-fragment DNA recombinase, as our target for directed evolution. Our goal was to investigate whether its recombination activity could be further improved, particularly in Escherichia coli, and to explore whether an AI agent could help us navigate a technically demanding area of biological research that would otherwise have been difficult for a high school student team to enter.",
+        "images": []
+      },
+      {
+        "paragraph": 15,
+        "text": "",
+        "images": [
+          {
+            "src": "/assets/report-20261004/design-15-0.png",
+            "sha256": "67a331e2531d0b94e9b86e2d02a792e849dc301614bcce705e73160da0e25c31"
+          }
+        ]
+      },
+      {
+        "paragraph": 16,
+        "text": "Fig. 3. Mechanism of action of ISCro4. ISCro4 mediates the RNA-guided, targeted integration of donor DNA fragments into genomic target sites [8, 9]. First, the guide RNA (gRNA) recognizes and base-pairs with the complementary target DNA sequence, directing the ISCro4-associated complex to the target site. The donor DNA is subsequently engaged by the ISCro4 system, facilitating coordinated DNA recombination between the donor and target sites and ultimately enabling the precise insertion of the designed DNA fragment into the target genomic locus. This mechanism highlights the potential of ISCro4 as a platform for targeted delivery and integration of relatively long DNA fragments, providing an alternative strategy for genome engineering that does not rely on conventional homology-directed recombination.",
+        "images": []
+      },
+      {
+        "paragraph": 17,
+        "text": "Protein directed evolution with the help of Biomni",
+        "images": [],
+        "role": "heading",
+        "display": "Protein directed evolution with the help of Biomni"
+      },
+      {
+        "paragraph": 18,
+        "text": "After establishing and validating the testing system, we officially moved on to the directed evolution of ISCro4. Previous studies of ISCro4 had generated a deep mutational scanning (DMS) dataset [8, 11], providing a valuable resource for identifying mutations that could potentially enhance its activity. Our goal was to use this existing dataset to identify promising mutations and further improve the efficiency of ISCro4. However, interpreting these mutations from a structural perspective was challenging for us due to our limited background in structural biology. We therefore turned to Biomni once again and asked it to help us select 10 candidate mutation sites for subsequent experimental validation.",
+        "images": []
+      },
+      {
+        "paragraph": 19,
+        "text": "",
+        "images": [
+          {
+            "src": "/assets/report-20261004/design-19-0.png",
+            "sha256": "7fe900ea6e4358f93590c761d8ed61f982fa0fb549c6739afebfd01f073b201b"
+          }
+        ]
+      },
+      {
+        "paragraph": 20,
+        "text": "Fig. 4. Biomni-assisted selection of mutation sites. We asked Biomni to select 10 highly active mutations from previously reported datasets, while excluding the previously identified positions S30, P54, and S243. (A) Original conversation with Biomni. (B) Original output generated by Biomni. (C) English translation of our conversation. (D) English translation of Biomni’s output.",
+        "images": []
+      },
+      {
+        "paragraph": 21,
+        "text": "To introduce these mutations, we next needed to design the corresponding primers. With a large number of mutants to construct and the need for careful primer design, this quickly became a tedious and time-consuming step. Once again, we turned to Biomni for help. It efficiently designed the primers for all of our mutants, allowing us to move on to the next stage of the experiment.",
+        "images": []
+      },
+      {
+        "paragraph": 22,
+        "text": "",
+        "images": [
+          {
+            "src": "/assets/report-20261004/design-22-0.png",
+            "sha256": "2ebc419338c0079d723d9664ff5804caafd23ed82c2a83e3f1c937e725c7795d"
+          }
+        ]
+      },
+      {
+        "paragraph": 23,
+        "text": "Fig. 5. Biomni-assisted primer design. We asked Biomni to design primers for introducing the selected mutations.",
+        "images": []
+      },
+      {
+        "paragraph": 24,
+        "text": "",
+        "images": []
+      },
+      {
+        "paragraph": 25,
+        "text": "Reference",
+        "images": [],
+        "role": "heading",
+        "display": "Reference"
+      },
+      {
+        "paragraph": 26,
+        "text": "1.\tM. S. Packer, D. R. Liu, Methods for the directed evolution of proteins. Nature Reviews Genetics 16, 379–394, (2015).",
+        "images": []
+      },
+      {
+        "paragraph": 27,
+        "text": "DOI: https://doi.org/10.1038/nrg3927",
+        "images": []
+      },
+      {
+        "paragraph": 28,
+        "text": "2.\tH. Lu et al., Machine learning-aided engineering of hydrolases for PET depolymerization. Nature 604, 662–667, (2022).",
+        "images": []
+      },
+      {
+        "paragraph": 29,
+        "text": "DOI: https://doi.org/10.1038/s41586-022-04599-z",
+        "images": []
+      },
+      {
+        "paragraph": 30,
+        "text": "3.\tA. Crameri, E. A. Whitehorn, E. Tate, W. P. Stemmer, Improved green fluorescent protein by molecular evolution using DNA shuffling. Nature Biotechnology 14, 315–319, (1996).",
+        "images": []
+      },
+      {
+        "paragraph": 31,
+        "text": "DOI: https://doi.org/10.1038/nbt0396-315",
+        "images": []
+      },
+      {
+        "paragraph": 32,
+        "text": "4.\tJ. H. Hu et al., Evolved Cas9 variants with broad PAM compatibility and high DNA specificity. Nature 556, 57–63, (2018).",
+        "images": []
+      },
+      {
+        "paragraph": 33,
+        "text": "DOI: https://doi.org/10.1038/nature26155",
+        "images": []
+      },
+      {
+        "paragraph": 34,
+        "text": "5.\tS. Pandey et al., Efficient site-specific integration of large genes in mammalian cells via continuously evolved recombinases and prime editing. Nature Biomedical Engineering 9, 22–39, (2025).",
+        "images": []
+      },
+      {
+        "paragraph": 35,
+        "text": "DOI: https://doi.org/10.1038/s41551-024-01227-1",
+        "images": []
+      },
+      {
+        "paragraph": 36,
+        "text": "6.\tA. V. Anzalone et al., Search-and-replace genome editing without double-strand breaks or donor DNA. Nature 576, 149–157, (2019).",
+        "images": []
+      },
+      {
+        "paragraph": 37,
+        "text": "DOI: https://doi.org/10.1038/s41586-019-1711-4",
+        "images": []
+      },
+      {
+        "paragraph": 38,
+        "text": "7.\tM. G. Durrant et al., Bridge RNAs direct programmable recombination of target and donor DNA. Nature 630, 984–993, (2024).",
+        "images": []
+      },
+      {
+        "paragraph": 39,
+        "text": "DOI: https://doi.org/10.1038/s41586-024-07552-4",
+        "images": []
+      },
+      {
+        "paragraph": 40,
+        "text": "8.\tN. T. Perry et al., Megabase-scale human genome rearrangement with programmable bridge recombinases. Science 391, eadz0276, (2026).",
+        "images": []
+      },
+      {
+        "paragraph": 41,
+        "text": "DOI: https://doi.org/10.1126/science.adz0276",
+        "images": []
+      },
+      {
+        "paragraph": 42,
+        "text": "9.\tO. Pelea et al., Programmable genome editing in human cells using RNA-guided bridge recombinases. Science 391, eadz1884, (2026).",
+        "images": []
+      },
+      {
+        "paragraph": 43,
+        "text": "DOI: https://doi.org/10.1126/science.adz1884",
+        "images": []
+      },
+      {
+        "paragraph": 44,
+        "text": "10.\tK. Huang et al., Biomni: A General-Purpose Biomedical AI Agent. bioRxiv 2025.05.30.656746, (2025).",
+        "images": []
+      },
+      {
+        "paragraph": 45,
+        "text": "DOI: https://doi.org/10.1101/2025.05.30.656746",
+        "images": []
+      },
+      {
+        "paragraph": 46,
+        "text": "11.\tD. M. Fowler, S. Fields, Deep mutational scanning: a new style of protein science. Nature Methods 11, 801–807, (2014).",
+        "images": []
+      },
+      {
+        "paragraph": 47,
+        "text": "DOI: https://doi.org/10.1038/nmeth.3027",
+        "images": []
+      },
+      {
+        "paragraph": 48,
+        "text": "",
+        "images": []
+      }
+    ]
+  },
+  "methods": {
+    "file": "Methods.docx",
+    "sha256": "25a5935b3c509cdc487cc83ed8d4baadf69518f8ba051da06dcde4fb73d9312e",
+    "paragraphs": [
+      {
+        "paragraph": 0,
+        "text": "Methods",
+        "images": []
+      },
+      {
+        "paragraph": 1,
+        "text": "1. AI-agent-assisted research workflow",
+        "images": [],
+        "role": "heading",
+        "display": "AI-agent-assisted research workflow"
+      },
+      {
+        "paragraph": 2,
+        "text": "The AI scientific agent Biomni (Phylo) was used throughout the project as a research assistant. Specifically, Biomni was used for (i) literature exploration and comparison of candidate large-fragment DNA-editing systems during project conception; (ii) diagnosis of the repeated failure to construct the ISCro4 expression plasmid; (iii) interpretation of a published deep-mutational-scanning (DMS) dataset of ISCro4 and nomination of ten candidate mutations, excluding the previously characterized positions S30, P54, and S243; and (iv) design of mutagenesis primers. All agent outputs were treated as hypotheses and independently verified by literature review and experiment before being adopted. Conversations with Biomni were conducted in Chinese; representative exchanges were translated into English for presentation.",
+        "images": []
+      },
+      {
+        "paragraph": 3,
+        "text": "2. Plasmid construction",
+        "images": [],
+        "role": "heading",
+        "display": "Plasmid construction"
+      },
+      {
+        "paragraph": 4,
+        "text": "The previously reported activity-enhanced variant ISCro4(S30T/P54Q/S243H) was used as the parent construct and is referred to as ISCro4 throughout. In the initial two-plasmid design, an expression plasmid carried ISCro4 and its donor site under the strong constitutive J23119 promoter, and a separate functional-validation plasmid carried a chloramphenicol-resistance gene, the guide RNA (gRNA), and the designed target site, such that ISCro4-mediated recombination between the donor and target sites would activate expression of the resistance gene. After repeated failure to obtain the expression plasmid, the design was revised following Biomni-assisted troubleshooting: the promoter driving ISCro4 was replaced with a T7 promoter, and the ISCro4 expression cassette, gRNA, donor site, target site, and resistance marker were consolidated onto a single plasmid, in which a terminator positioned between the WT Donor and WT Target sites is excised upon ISCro4 activity, permitting expression of the downstream chloramphenicol-resistance gene. For the final quantitative assay, the system was split into two plasmids: pUC19-d-T, a pUC19-derived substrate plasmid carrying the DNA fragment targeted for deletion between the WT Donor and WT Target sequences, and pID05, which expresses the ISCro4 recombinase and served as the starting construct for mutagenesis. A control plasmid lacking the ISCro4 expression cassette was generated from the single-plasmid design. All constructs were verified by Sanger sequencing. Plasmids were constructed by Gibson and propagated in E. coli DH5α.",
+        "images": []
+      },
+      {
+        "paragraph": 5,
+        "text": "3. Chloramphenicol susceptibility assay",
+        "images": [],
+        "role": "heading",
+        "display": "Chloramphenicol susceptibility assay"
+      },
+      {
+        "paragraph": 6,
+        "text": "To assess basal antibiotic tolerance in the absence of ISCro4 activity, E. coli cells carrying the control plasmid lacking the ISCro4 expression cassette were grown on LB agar plates containing 0, 25, or 100 μg/ml chloramphenicol, and growth was assessed after incubation at 37℃, 220 rpm.",
+        "images": []
+      },
+      {
+        "paragraph": 7,
+        "text": "4. DMS-guided mutation selection and site-directed mutagenesis",
+        "images": [],
+        "role": "heading",
+        "display": "DMS-guided mutation selection and site-directed mutagenesis"
+      },
+      {
+        "paragraph": 8,
+        "text": "Ten candidate mutations were nominated from a published ISCro4 DMS dataset with Biomni's assistance, excluding positions S30, P54, and S243 already present in the parent construct. The catalytically inactivating mutation E60Q, previously reported to abolish ISCro4 DNA cleavage activity, was included as a negative control. Mutagenesis primers were designed with Biomni's assistance (Table S1). Mutations were introduced into pID05 by [mutagenesis method, e.g., inverse PCR followed by DpnI digestion], and all mutant plasmids were verified by Sanger sequencing.",
+        "images": []
+      },
+      {
+        "paragraph": 9,
+        "text": "",
+        "images": [
+          {
+            "src": "/assets/report-20261004/methods-9-0.png",
+            "sha256": "b20bbbe55c0bf783f3de8fa375dc6b996b14ca513cb400bfa9a545290c860b13"
+          }
+        ]
+      },
+      {
+        "paragraph": 10,
+        "text": "Table.S1 Primers designed for site-directed mutagenesis of ten DMS-selected ISCro4 variants.",
+        "images": []
+      },
+      {
+        "paragraph": 11,
+        "text": "The table lists amino acid substitutions and positions, original and substituted codons, and forward and reverse primer sequences (5′–3′). Primer lengths (nt), GC contents (%), predicted melting temperatures (Tm, °C) of the forward primer 3′ annealing regions and reverse primers, and overlap lengths (bp) and predicted Tm values are provided. DMS, deep mutational scanning.",
+        "images": []
+      },
+      {
+        "paragraph": 12,
+        "text": "",
+        "images": []
+      },
+      {
+        "paragraph": 13,
+        "text": "5. qPCR-based DNA deletion assay",
+        "images": [],
+        "role": "heading",
+        "display": "qPCR-based DNA deletion assay"
+      },
+      {
+        "paragraph": 14,
+        "text": "After constructing the plasmids and co-transforming them with pUC19-d-T into E. coli, we used qPCR to quantify the DNA deletion efficiency. As illustrated in Fig. 11, we designed two sets of qPCR primers for this purpose. The primer pair shown in Fig. 11B was used to quantify the relative abundance of the plasmid backbone, whereas the two primers shown in Fig. 11A were positioned on the plasmid backbone and within the region targeted for deletion by ISCro4, respectively. By comparing the qPCR signals obtained from these primer sets, we were able to determine the extent of DNA deletion and thereby evaluate the activity of ISCro4.",
+        "images": []
+      },
+      {
+        "paragraph": 15,
+        "text": "",
+        "images": [
+          {
+            "src": "/assets/report-20261004/methods-15-0.png",
+            "sha256": "b15543513d0effe38045c30cc7cddce7db3c6db42db25984448f28b033e14eca"
+          }
+        ]
+      },
+      {
+        "paragraph": 16,
+        "text": "Fig. 1. qPCR primers.",
+        "images": []
+      },
+      {
+        "paragraph": 17,
+        "text": "Each pID05 variant was co-transformed with pUC19-d-T into E. coli DH5α, and ISCro4 expression was induced with [IPTG concentration, temperature, duration]. For each variant, three independent colonies were randomly selected and cultured overnight; cultures were diluted to normalize OD600 before analysis, and two technical replicates were performed per sample. Two qPCR primer pairs were used (Fig. 11): qPCR-A-F/-R, with one primer on the plasmid backbone and the other within the region targeted for deletion, and qPCR-AmpR-F/-R, which quantifies the plasmid backbone as a normalization reference. qPCR was performed using [master mix] on [instrument] with the following cycling conditions: [program]; template was prepared by [e.g., boiled colony lysate]. DNA deletion efficiency was relatively quantified as ΔCq = Cq(qPCR-A) − Cq(qPCR-AmpR); a larger ΔCq indicates a greater extent of ISCro4-mediated deletion. Variants with ΔCq exceeding that of the parent ISCro4 control were considered positive hits.",
+        "images": []
+      }
+    ]
+  },
+  "engineering": {
+    "file": "Engineering.docx",
+    "sha256": "f134a2da1d73cd06cffed2df51f18d4662edf616f0bb7b9fbb1ed52ef70c5cef",
+    "paragraphs": [
+      {
+        "paragraph": 0,
+        "text": "Engineering",
+        "images": []
+      },
+      {
+        "paragraph": 1,
+        "text": "Project debug with the help of Biomni",
+        "images": [],
+        "role": "heading",
+        "display": "Project debug with the help of Biomni"
+      },
+      {
+        "paragraph": 2,
+        "text": "",
+        "images": [
+          {
+            "src": "/assets/report-20261004/engineering-2-0.png",
+            "sha256": "ea113a3272ff14735da1d3cd5df3ac223e7800a14531df7183387e5a50e29da1"
+          }
+        ]
+      },
+      {
+        "paragraph": 3,
+        "text": "Fig. 1. Plasmid design and validation for functional characterization of ISCro4. (A) Plasmid designed for ISCro4 expression. The plasmid contains an ISCro4 donor site preceded by the strong J23119 promoter. Based on a previously reported variant [8], ISCro4 (S30T/P54Q/S243H) was selected for our experiments and is hereafter referred to simply as ISCro4 for convenience. (B) Plasmid designed for functional validation. This plasmid contains a chloramphenicol-resistance gene, a guide RNA, and the designed target site. If ISCro4-mediated integration occurs, the donor and target sites are expected to recombine, resulting in expression of the chloramphenicol-resistance gene. (C) Sequencing results of the two plasmids. The functional-validation plasmid was successfully constructed, whereas repeated attempts to construct the ISCro4 expression plasmid were unsuccessful.",
+        "images": []
+      },
+      {
+        "paragraph": 4,
+        "text": "When we obtained this result, we were deeply frustrated. Without successfully obtaining the desired plasmid, we could not proceed to the next stage of our experiment. We therefore tried to troubleshoot the problem using the approaches we were familiar with. We reduced the amount of template DNA, treated the reaction with DpnI to eliminate the parental plasmid, and screened additional colonies in the hope that the desired construct might still be recovered. However, none of these strategies resolved the problem.",
+        "images": []
+      },
+      {
+        "paragraph": 5,
+        "text": "With few options left, we decided to consult Biomni. Its response surprised us. Rather than simply suggesting another round of cloning or further optimization of the existing protocol, Biomni pointed out several factors that we had completely overlooked, including the potential toxicity of the construct, the properties of the promoter, and the characteristics and compatibility of individual genetic elements. These were not obvious considerations to us because they require knowledge that is highly specific to molecular cloning and biological engineering. Without experience in this particular area, it is difficult to know which seemingly unrelated factors may determine whether a construct can actually be obtained.",
+        "images": []
+      },
+      {
+        "paragraph": 6,
+        "text": "What was even more striking was that these considerations had not emerged during our own troubleshooting process. We had also consulted a teacher who was helping us with the project, yet these potential issues were not identified at that stage either. This experience made us realize that the value of an AI scientific agent is not simply that it can provide another protocol or search for an answer. More importantly, it can connect dispersed pieces of domain knowledge and bring expert-level considerations into the problem-solving process, even when the user does not yet know which questions should be asked.",
+        "images": []
+      },
+      {
+        "paragraph": 7,
+        "text": "For us, this was particularly meaningful as a high school research group. At the beginning of the project, we lacked much of the specialized knowledge and experimental experience normally required for directed evolution and molecular engineering. Biomni did not replace the need for experimental work, but it helped us recognize hidden variables that we would otherwise have had little chance of considering. In this sense, scientific agents such as Biomni may have the potential to make advanced biological techniques more accessible by lowering the knowledge barrier between researchers and specialized experimental expertise.",
+        "images": []
+      },
+      {
+        "paragraph": 8,
+        "text": "Based on Biomni’s suggestions, we replaced the promoter upstream of ISCro4 with a T7 promoter. This design allowed us to introduce the completed plasmid into E. coli strains carrying the T7 RNA polymerase gene, such as BL21(DE3), and subsequently induce ISCro4 expression to directly assess its activity.",
+        "images": []
+      },
+      {
+        "paragraph": 9,
+        "text": "",
+        "images": [
+          {
+            "src": "/assets/report-20261004/engineering-9-0.png",
+            "sha256": "36086c378755237029abb9fa4b4a979acd72990941a8119f3e6709985f7903bb"
+          }
+        ]
+      },
+      {
+        "paragraph": 10,
+        "text": "Fig. 2. Biomni-assisted debugging reveals previously overlooked factors. We shared our experimental results and observations with Biomni and asked it to diagnose the failure in plasmid construction. Biomni proposed several potential contributing factors, all of which were biologically plausible and consistent with our results, but none of which we had initially considered.",
+        "images": []
+      },
+      {
+        "paragraph": 11,
+        "text": "At the same time, to accelerate the experimental workflow, we consolidated the donor site, target site, guide RNA, and ISCro4 expression cassette into a single plasmid, thereby simplifying the plasmid construction and subsequent functional validation process. When ISCro4 is active, the terminator sequence located between the WT Donor and WT Target sites is expected to be excised, allowing expression of the downstream chloramphenicol-resistance gene and thereby conferring chloramphenicol resistance to the bacterial host.",
+        "images": []
+      },
+      {
+        "paragraph": 12,
+        "text": "",
+        "images": [
+          {
+            "src": "/assets/report-20261004/engineering-12-0.png",
+            "sha256": "8e1ffdaae10b20b03ea5bb211990a0402508e6eb0cf8942521f08a5dcb6cc069"
+          }
+        ]
+      },
+      {
+        "paragraph": 13,
+        "text": "Fig. 3. Revised plasmid design and sequencing validation. We redesigned the plasmid to place ISCro4, the antibiotic-resistance gene, the guide RNA, and its target site on a single plasmid. After plasmid construction, we performed sequencing to assess whether ISCro4 was functional.",
+        "images": []
+      },
+      {
+        "paragraph": 14,
+        "text": "To our surprise, the sequencing results revealed that ISCro4 had already mediated the excision event. In our original design, the DNA sequence between the ISCro4 donor and target sites was expected to be excised. Consistent with this prediction, the sequencing results showed the expected rearrangement of the plasmid, providing evidence that ISCro4 was functionally active.",
+        "images": []
+      },
+      {
+        "paragraph": 15,
+        "text": "",
+        "images": [
+          {
+            "src": "/assets/report-20261004/engineering-15-0.png",
+            "sha256": "b4611aaac4e07f833fe994435c7ac6c34d5031baa404a73828a1fc106c142859"
+          }
+        ]
+      },
+      {
+        "paragraph": 16,
+        "text": "Fig. 4. Antibiotic-resistance assessment before and after ISCro4 activity. (A) Plasmid design. The ISCro4 expression cassette was removed from the plasmid shown in Fig. 6 to assess antibiotic resistance in the absence of ISCro4 activity. (B) Bacterial growth was assessed on LB agar plates containing 0, 25, or 100 µg/mL chloramphenicol.",
+        "images": []
+      },
+      {
+        "paragraph": 17,
+        "text": "Meanwhile, we assessed the chloramphenicol tolerance of the host cells in the absence of ISCro4-mediated cleavage. Starting from the plasmid design shown in Fig. 3, we removed the ISCro4 expression cassette and examined bacterial growth on plates containing increasing concentrations of chloramphenicol. Surprisingly, the host cells remained tolerant to chloramphenicol even in the absence of ISCro4 activity. One possible explanation is that the terminator used in our design was insufficiently strong to effectively prevent basal expression of the antibiotic-resistance gene.",
+        "images": []
+      },
+      {
+        "paragraph": 18,
+        "text": "To quantitatively evaluate ISCro4-mediated DNA deletion, we next developed a qPCR-based detection strategy. Since qPCR can quantitatively measure DNA copy numbers, deletion of the target fragment can be readily assessed by monitoring the reduction in the corresponding DNA signal. Importantly, this strategy also provides a quantitative readout that can be used to evaluate and compare recombination efficiencies during subsequent directed-evolution experiments.",
+        "images": []
+      },
+      {
+        "paragraph": 19,
+        "text": "To establish this assay, we constructed two plasmids (Fig. 5). The first plasmid (Fig. 5A) contains the DNA fragment targeted for deletion, which is located between the WT Donor and WT Target sequences. The second plasmid (Fig. 5B) is designed to express the ISCro4 recombinase, thereby providing the enzymatic activity required for the deletion reaction.",
+        "images": []
+      },
+      {
+        "paragraph": 20,
+        "text": "",
+        "images": [
+          {
+            "src": "/assets/report-20261004/engineering-20-0.png",
+            "sha256": "4e3caf7c58c689a91a59640753c4829eb3f231bbe2ec76e510401d221b469bde"
+          }
+        ]
+      },
+      {
+        "paragraph": 21,
+        "text": "Fig. 5. Revised assay design. (A) pUC19-d-T contains the DNA fragment targeted for deletion, which is located between the (WT) Donor and (WT) Target sequences. (B) pID05 expresses the ISCro4 recombinase. In subsequent experiments, pID05 will serve as the starting construct for protein mutagenesis to identify ISCro4 variants with improved recombination activity.",
+        "images": []
+      }
+    ]
+  },
+  "results": {
+    "file": "Results.docx",
+    "sha256": "849ad15a7b9ce460c914abfeda065796995591aabb6a702106a69630cbfe86c0",
+    "paragraphs": [
+      {
+        "paragraph": 0,
+        "text": "Results",
+        "images": []
+      },
+      {
+        "paragraph": 1,
+        "text": "We used the difference between the Cq values obtained with the qPCR-A-F/-R primer pair and those obtained with the qPCR-AmpR-F/-R primer pair to obtain a relative measure of the DNA cleavage efficiency of ISCro4. For each variant, three independent colonies were randomly selected and cultured overnight. The cultures were then diluted to normalize the OD600, and two technical replicates were performed for each sample.",
+        "images": []
+      },
+      {
+        "paragraph": 2,
+        "text": "We additionally included E60Q as a negative control, as this mutation has previously been reported to abolish the DNA cleavage activity of ISCro4 [8]. Interestingly, we found that, with the exception of A225S, the other mutations reduced the activity of ISCro4. Notably, the A225S variant exhibited a higher Cq-value difference than the ISCro4 control, indicating that a greater amount of the target DNA had been deleted. Thus, A225S was identified as a positive hit, corresponding to a hit rate of 1/10.",
+        "images": []
+      },
+      {
+        "paragraph": 3,
+        "text": "",
+        "images": [
+          {
+            "src": "/assets/report-20261004/results-3-0.png",
+            "sha256": "d883beda182aab31d94dffc194fc10d7b4cc96a6fb06ee48c1622e06a8af6e5f"
+          }
+        ]
+      },
+      {
+        "paragraph": 4,
+        "text": "Fig. qPCR-based evaluation of ISCro4 DNA deletion efficiency. The ΔCq means difference in Cq values between the qPCR-A-F/-R and qPCR-AmpR-F/-R primer pairs. It was used to relatively quantify the DNA deletion efficiency of ISCro4 variants. Three independent colonies were randomly selected for each variant and cultured overnight. Cultures were diluted to normalize OD600 before qPCR analysis, with two technical replicates performed for each sample.",
+        "images": []
+      },
+      {
+        "paragraph": 5,
+        "text": "In the context of directed evolution, obtaining one positive variant from a screening set of only ten candidates is a meaningful outcome. Importantly, the ISCro4 variant used as the starting point already contained three mutations relative to the wild-type protein, making epistatic effects a potentially important factor in determining the impact of additional mutations. Furthermore, the sequence–function space of proteins is extraordinarily large, with an enormous number of possible sequence combinations. Against this background, identifying an improved variant by screening only ten candidates demonstrates that our AI-assisted mutation selection strategy can efficiently explore the sequence space and identify potentially beneficial mutations.",
+        "images": []
+      }
+    ]
+  },
+  "analysis": {
+    "file": "Analysis.docx",
+    "sha256": "a152cb37e43605687a862ef530c1ded696ca66006dc703551daa3cfa8426f496",
+    "paragraphs": [
+      {
+        "paragraph": 0,
+        "text": "Analysis",
+        "images": []
+      },
+      {
+        "paragraph": 1,
+        "text": "In this project we asked two questions: whether the recombination activity of ISCro4 can be further improved, and whether an AI scientific agent can enable a team without formal training to carry out a complete directed-evolution campaign. Our results answer both affirmatively. Starting from the previously reported ISCro4(S30T/P54Q/S243H) variant, we screened ten DMS-nominated single mutations and identified the A225S variant, which exhibited a larger ΔCq than the parent, indicating measurably improved recombination activity. Notably, because the parent construct was already an engineered, activity-enhanced variant, the further gains we observed suggest that the existing DMS dataset still contains untapped beneficial mutations and that the activity ceiling of ISCro4 has not yet been reached.",
+        "images": []
+      },
+      {
+        "paragraph": 2,
+        "text": "A key methodological lesson of this work is that the screening assay, more than the mutagenesis itself, often determines the success of a directed-evolution campaign. Our initial chloramphenicol-selection scheme failed because the terminator upstream of the resistance gene was insufficiently strong, allowing basal expression and chloramphenicol tolerance even without ISCro4-mediated recombination — a common pitfall of selection-based screens. Replacing genetic selection with a qPCR-based deletion assay gave us a quantitative, sensitive readout capable of resolving modest activity differences between variants, which is exactly what early rounds of evolution require. This two-plasmid qPCR format is low-cost, requires no specialized equipment beyond a qPCR instrument, and should be generalizable to other recombinases and transposon-associated systems. For future larger-library screens, selection stringency could be restored by using tandem terminators, a stronger insulated terminator, or a fluorescence-based readout.",
+        "images": []
+      },
+      {
+        "paragraph": 3,
+        "text": "The most striking aspect of the project was the role of the AI agent. Biomni's contribution was not merely retrieving protocols: when plasmid construction repeatedly failed, it identified considerations — promoter properties, potential construct toxicity, and compatibility of genetic elements — that had occurred neither to us nor to our supervising teacher. In other words, the agent's value lay in connecting dispersed domain knowledge and surfacing the right questions, including questions we did not know to ask. Equally important, the agent's outputs functioned as hypotheses rather than answers: we verified every suggestion through literature review and experiment. We believe this \"AI proposes, human verifies\" loop is the appropriate model for student use of AI agents in research.",
+        "images": []
+      },
+      {
+        "paragraph": 4,
+        "text": "Several limitations of our study should be acknowledged. First, activity was measured as plasmid-borne DNA deletion in E. coli; integration efficiency at genomic loci, maximum payload size, and editing fidelity (off-target rates) remain to be tested. Second, we evaluated single mutations only; combining the top substitutions may yield additive gains, but epistasis could also erase them. Third, our library was small — ten DMS-nominated sites — so the ISCro4 fitness landscape remains largely unexplored. Fourth, we do not yet have a structural or mechanistic explanation for why the improved mutations work. Finally, because our starting point was the engineered S30T/P54Q/S243H variant rather than wild-type ISCro4, improvements should be reported relative to that parent to avoid overstating the advance.",
+        "images": []
+      },
+      {
+        "paragraph": 5,
+        "text": "These limitations define our next steps. We plan to combine the most beneficial mutations and, if necessary, perform additional rounds of evolution using error-prone PCR; to model the improved variants structurally (e.g., with AlphaFold-based analysis) to rationalize their effects; to test integration of large donor payloads at genomic target sites; and to evaluate activity and specificity in mammalian cells, where ISCro4-based tools would have the greatest therapeutic and biotechnological relevance.",
+        "images": []
+      },
+      {
+        "paragraph": 6,
+        "text": "Beyond the specific variants we obtained, this project illustrates a broader point. Directed evolution has historically been concentrated in well-resourced professional laboratories because its knowledge barrier is as limiting as its equipment barrier. Our experience suggests that AI agents can redistribute this \"admission ticket\" — not by replacing experimental work, but by compressing the knowledge gap between beginners and expert practice. At the same time, AI agents can make mistakes, and human oversight, experimental validation, and biosafety review remain indispensable. Used in this way, however, AI mentors can ensure that curiosity is no longer limited by experience or resources.",
+        "images": []
+      },
+      {
+        "paragraph": 7,
+        "text": "",
+        "images": []
+      }
+    ]
+  }
+}

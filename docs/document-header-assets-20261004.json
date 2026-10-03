@@ -1,0 +1,10 @@
+{
+  "source": "Lucide",
+  "license": "ISC / Lucide combined upstream license",
+  "licenseFile": "public/assets/report-20261004/LUCIDE-LICENSE",
+  "modifications": "Only stroke color changed to #287d72.",
+  "assets": [
+    {"page": "Safety", "source": "https://lucide.dev/icons/shield-check", "file": "public/assets/report-20261004/shield-check.svg"},
+    {"page": "Supplement Files", "source": "https://lucide.dev/icons/file-stack", "file": "public/assets/report-20261004/file-stack.svg"}
+  ]
+}

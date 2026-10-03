@@ -43,6 +43,8 @@
 .wiki-article-copy p { margin: 0 0 1.4em; font-size: clamp(1rem, 1.25vw, 1.18rem); line-height: 1.8; overflow-wrap: anywhere; }
 .wiki-article-copy p:last-child { margin-bottom: 0; }
 .paper-copy { min-width: 0; }
+.report-copy p { white-space: pre-wrap; }
+.report-copy .report-caption { font-size: 1rem; line-height: 1.7; }
 .paper-figure { margin: 30px 0; scroll-margin-top: 150px; }
 .paper-figure img { display: block; width: 100%; height: auto; object-fit: contain; background: white; }
 .paper-figure figcaption { margin-top: 16px; font-size: 1rem; line-height: 1.7; overflow-wrap: anywhere; }

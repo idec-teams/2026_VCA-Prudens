@@ -51,6 +51,8 @@ export function SiteHeader({ teamPages, projectPages }: { teamPages: NavPage[]; 
           <div className="nav-popover compact" id="documents-menu" aria-hidden={openMenu !== "documents"}>
             <a href={sitePath("/notebook")}>Notebook</a>
             <a href={sitePath("/protocol")}>Protocol</a>
+            <a href={sitePath("/safety")}>Safety</a>
+            <a href={sitePath("/supplement-files")}>Supplement Files</a>
           </div>
         </div>
       </nav>
@@ -65,6 +67,8 @@ export function SiteHeader({ teamPages, projectPages }: { teamPages: NavPage[]; 
           <span className="mobile-group">Documents</span>
           <a href={sitePath("/notebook")}>Notebook</a>
           <a href={sitePath("/protocol")}>Protocol</a>
+          <a href={sitePath("/safety")}>Safety</a>
+          <a href={sitePath("/supplement-files")}>Supplement Files</a>
         </div>
       </div>
     </header>

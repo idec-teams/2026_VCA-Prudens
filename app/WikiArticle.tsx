@@ -3,7 +3,15 @@ import "./wiki-article.css";
 import { sitePath } from "./site-path";
 
 export function WikiArticle({ slug }: { slug: "description" | "methods" }) {
-  const data = articles[slug];
+  const original = articles[slug];
+  const data = slug === "description" ? {
+    ...original,
+    sections: original.sections.flatMap(section => section.id === "project-description" ? [
+      { id: "method", title: "Method", paragraphs: [] },
+      ...articles.methods.sections,
+      section,
+    ] : [section]),
+  } : original;
   const coverSlide = "coverSlide" in data ? data.coverSlide : null;
   return (
     <main className="ppt-deck wiki-article" aria-label={`${data.title} article`}>

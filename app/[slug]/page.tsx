@@ -7,6 +7,8 @@ import { TeamMembers } from "../TeamMembers";
 import { ResponsiveProjectPage, type ProjectDetailData } from "../ResponsiveProjectPage";
 import { WikiArticle } from "../WikiArticle";
 import { PaperArticle, paperSlugs } from "../PaperArticle";
+import { ReportArticle, reportSlugs } from "../ReportArticle";
+import { DocumentLanding } from "../DocumentLanding";
 
 const projectDetails: Record<string, ProjectDetailData> = {
   description: {
@@ -105,8 +107,12 @@ export default async function SlugPage({ params }: { params: Promise<{ slug: str
   return (
     <>
       <Header />
-      {canonicalSlug === "description" || canonicalSlug === "methods" ? (
+      {canonicalSlug === "description" ? (
         <WikiArticle slug={canonicalSlug} />
+      ) : reportSlugs.includes(canonicalSlug) ? (
+        <ReportArticle slug={canonicalSlug} />
+      ) : canonicalSlug === "safety" || canonicalSlug === "supplement-files" ? (
+        <DocumentLanding slug={canonicalSlug} />
       ) : paperSlugs.includes(canonicalSlug) ? (
         <PaperArticle slug={canonicalSlug} />
       ) : detail ? (

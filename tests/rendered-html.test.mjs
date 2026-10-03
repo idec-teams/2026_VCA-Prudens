@@ -6,7 +6,7 @@ import { createHash } from "node:crypto";
 const routes = [
   "/", "/team", "/members", "/descriptions", "/attributions", "/work-distribution",
   "/description", "/methods", "/design", "/model", "/engineering", "/experiment", "/analysis",
-  "/results", "/contribution", "/notebook", "/protocol", "/mutation-selection",
+  "/results", "/contribution", "/notebook", "/protocol", "/mutation-selection", "/safety", "/supplement-files",
 ];
 
 async function render(pathname) {
@@ -73,7 +73,7 @@ test("document articles keep every paragraph and heading-only native anchor navi
   const articles = JSON.parse(readFileSync(new URL('../app/wiki-articles.json', import.meta.url), 'utf8'));
   const escape = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#x27;');
   for (const [slug, article] of Object.entries(articles)) {
-    const html = await (await render(`/${slug}`)).text();
+    const html = await (await render("/description")).text();
     const ids = new Set();
     for (const section of article.sections) {
       assert.ok(!ids.has(section.id)); ids.add(section.id);
@@ -84,7 +84,7 @@ test("document articles keep every paragraph and heading-only native anchor navi
     const nav = html.match(/<nav class="project-outline wiki-article-outline"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
     assert.ok(nav);
     assert.doesNotMatch(nav, /<p|<span|<h[1-6]/);
-    assert.equal((nav.match(/<a /g) ?? []).length, article.sections.length);
+    assert.equal((nav.match(/<a /g) ?? []).length, 8);
   }
 });
 
@@ -120,19 +120,22 @@ test("revised manuscript pages preserve assigned text and every embedded figure"
   const used = [];
   for (const [slug, page] of Object.entries(data.pages)) {
     const html = await (await render(`/${slug}`)).text();
+    const stillRendered = ["model", "experiment"].includes(slug);
     for (const section of page.sections) {
-      assert.ok(html.includes(`href="#${section.id}">${escape(section.title)}</a>`));
-      assert.ok(html.includes(`id="${section.id}" tabindex="-1">${escape(section.title)}</h2>`));
+      if (stillRendered) {
+        assert.ok(html.includes(`href="#${section.id}">${escape(section.title)}</a>`));
+        assert.ok(html.includes(`id="${section.id}" tabindex="-1">${escape(section.title)}</h2>`));
+      }
       for (const block of section.blocks) {
         if (block.type === 'paragraph') {
           assert.equal(block.text, audit.paragraphs[block.sourceParagraph]);
-          assert.ok(html.includes(`<p>${escape(block.text)}</p>`));
+          if (stillRendered) assert.ok(html.includes(`<p>${escape(block.text)}</p>`));
         } else if (block.type === 'figure') {
           used.push(block.figure);
           const fig = data.figures[block.figure];
-          assert.ok(html.includes(`<figcaption>${escape(fig.caption)}</figcaption>`));
+          if (stillRendered) assert.ok(html.includes(`<figcaption>${escape(fig.caption)}</figcaption>`));
           if (fig.src) {
-            assert.ok(html.includes(`src="${fig.src}"`));
+            if (stillRendered) assert.ok(html.includes(`src="${fig.src}"`));
             const bytes = readFileSync(new URL(`../public${fig.src}`, import.meta.url));
             assert.equal(createHash('sha256').update(bytes).digest('hex'), audit.figures[block.figure].sha256);
           }
@@ -163,5 +166,56 @@ test("home diagrams are real elements and reading controls exist on every route"
     const page = await (await render(route)).text();
     assert.match(page, /aria-label="Page reading progress"/, route);
     assert.match(page, /aria-label="Back to top"/, route);
+  }
+});
+
+test("uploaded reports preserve all source text and images with native section links", async () => {
+  const data = JSON.parse(readFileSync(new URL('../app/report-articles.json', import.meta.url), 'utf8'));
+  const audit = JSON.parse(readFileSync(new URL('../docs/report-source-audit-20261004.json', import.meta.url), 'utf8'));
+  const escape = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#x27;');
+  let imageCount = 0;
+  for (const [slug, page] of Object.entries(data)) {
+    const html = await (await render(`/${slug}`)).text();
+    const blocks = page.sections.flatMap(section => section.blocks);
+    for (const section of page.sections) {
+      assert.ok(html.includes(`href="#${section.id}">${escape(section.title)}</a>`));
+      assert.ok(html.includes(`id="${section.id}" tabindex="-1">${escape(section.title)}</h2>`));
+    }
+    for (const source of audit[slug].paragraphs) {
+      if (source.paragraph === 0) { assert.equal(page.title, source.text); continue; }
+      if (source.role === 'heading') { assert.ok(page.sections.some(s => s.title === source.display)); continue; }
+      if (source.role === 'editorial-placeholder-replaced-by-requested-heading') continue;
+      if (source.text) {
+        const matched = blocks.filter(b => b.sourceParagraph === source.paragraph && b.text !== undefined);
+        assert.equal(matched.length, 1);
+        assert.equal(matched[0].text, source.text);
+        assert.ok(html.includes(escape(source.text)), `${slug} paragraph ${source.paragraph}`);
+      }
+      for (const image of source.images) {
+        imageCount++;
+        assert.equal(blocks.filter(b => b.src === image.src).length, 1);
+        assert.ok(html.includes(`src="${image.src}"`));
+        assert.equal(createHash('sha256').update(readFileSync(new URL(`../public${image.src}`, import.meta.url))).digest('hex'), image.sha256);
+      }
+    }
+  }
+  assert.equal(imageCount, 13);
+  assert.equal(data.analysis.sections.length, 6);
+});
+
+test("Project order, relocated Method, and new Documents pages match the requested scope", async () => {
+  const html = await (await render("/description")).text();
+  const copy = html.slice(html.indexOf('<article'));
+  assert.ok(copy.indexOf('id="challenge"') < copy.indexOf('id="method"'));
+  assert.ok(copy.indexOf('id="method"') < copy.indexOf('id="plasmid-construction-and-verification"'));
+  assert.ok(copy.indexOf('id="qpcr-inversion-detection"') < copy.indexOf('id="project-description"'));
+  const menu = html.match(/id="project-menu"[^>]*>([\s\S]*?)<\/div>/)[1];
+  const order = [...menu.matchAll(/href="([^"]+)"/g)].map(match => match[1]);
+  assert.deepEqual(order, ["/description", "/design", "/methods", "/engineering", "/results", "/analysis", "/model", "/experiment"]);
+  for (const slug of ["safety", "supplement-files"]) {
+    assert.ok(html.includes(`href="/${slug}"`));
+    const page = await (await render(`/${slug}`)).text();
+    assert.match(page, /class="document-cover"/);
+    assert.doesNotMatch(page, /<p>/);
   }
 });

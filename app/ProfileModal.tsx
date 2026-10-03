@@ -5,7 +5,7 @@ import { ProfilePortrait, type PhotoCrop } from "./ProfilePortrait";
 
 export type TeamProfile = {
   name: string;
-  role: "TEAM MEMBER" | "TEAM LEADER" | "SUPERVISOR";
+  role: "TEAM MEMBER" | "TEAM LEADER" | "ADVISOR" | "SUPERVISOR";
   image: string;
   imageAlt: string;
   bio: string;
@@ -48,7 +48,7 @@ export function ProfileModal({ profile, onClose }: { profile: TeamProfile | null
           <p className="profile-modal-eyebrow">{profile.role === "SUPERVISOR" ? "TEAM SUPERVISOR" : profile.role}</p>
           <h2 id={titleId}><span aria-hidden="true">│</span>{profile.name}</h2>
           <div className="profile-modal-meta">
-            <p>{profile.affiliation ?? (profile.role === "TEAM LEADER" ? "iDEC Team Leader" : "iDEC Team Member")}<br />VCA-Prudens</p>
+            <p>{profile.affiliation ?? (profile.role === "TEAM LEADER" ? "iDEC Team Leader" : profile.role === "ADVISOR" ? "iDEC Team Advisor" : "iDEC Team Member")}<br />VCA-Prudens</p>
           </div>
           <div className="profile-modal-about">
             <span aria-hidden="true" />

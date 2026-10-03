@@ -356,6 +356,9 @@ img { display: block; max-width: 100%; }
 }
 .team-roster-group + .team-roster-group { margin-top: clamp(60px, 6vw, 100px); }
 .supervisor-row .member-card { grid-column: 2 / 4; width: calc((100% - clamp(28px, 3vw, 56px)) / 2); min-width: 240px; justify-self: center; }
+@media (min-width: 1121px) {
+  .advisor-row .member-card:first-child { grid-column: 2; }
+}
 .supervisor-card-wrap > .member-card { width: min(100%, 420px); }
 .member-photo {
   width: min(100%, 270px);

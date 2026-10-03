@@ -6,6 +6,7 @@ import { ProfilePortrait } from "./ProfilePortrait";
 
 const people = profiles as TeamProfile[];
 export const supervisor = people.find(person => person.role === "SUPERVISOR")!;
+export const advisors = people.filter(person => person.role === "ADVISOR");
 const leaderOrder = ["Zimeng Jessie, Yu", "Kele, Zhang", "Lifei, Shu", "Shiya, Da"];
 export const teamLeaders = leaderOrder.map(name => people.find(person => person.name === name)!);
 export const teamMembers = people.filter(person => person.role === "TEAM MEMBER");
@@ -26,6 +27,10 @@ export function TeamMembers() {
     <section className="team-roster-group" aria-labelledby="supervisor-heading">
       <h1 id="supervisor-heading">Supervisor</h1>
       <div className="team-member-grid supervisor-row"><MemberCard member={supervisor} onSelect={setSelected} /></div>
+    </section>
+    <section className="team-roster-group" aria-labelledby="advisors-heading">
+      <h2 id="advisors-heading">Advisors</h2>
+      <div className="team-member-grid advisor-row">{advisors.map(member => <MemberCard key={member.name} member={member} onSelect={setSelected} />)}</div>
     </section>
     <section className="team-roster-group" aria-labelledby="leaders-heading">
       <h2 id="leaders-heading">Team Leaders</h2>

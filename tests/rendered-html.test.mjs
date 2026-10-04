@@ -59,13 +59,14 @@ test("team pages render one member title and interactive profile cards", async (
 test("navigation keeps real href fallbacks for Safari", async () => {
   const response = await render("/");
   const html = await response.text();
-  const canvaNavRoutes = ["/members", "/description", "/methods", "/design", "/model", "/engineering", "/experiment", "/analysis", "/results", "/contribution", "/notebook", "/protocol"];
+  const canvaNavRoutes = ["/members", "/description", "/methods", "/design", "/engineering", "/analysis", "/results", "/contribution", "/notebook", "/protocol"];
   for (const route of canvaNavRoutes) {
     assert.match(html, new RegExp(`href=["']${route}["']`), route);
   }
   assert.doesNotMatch(html, /href=["']\/attributions["']/);
   assert.doesNotMatch(html, /href=["']\/work-distribution["']/);
   assert.doesNotMatch(html, /href=["']\/descriptions["']/);
+  assert.doesNotMatch(html, /href=["']\/(?:model|experiment)["']/);
   assert.doesNotMatch(html, /href=["']#["']/);
 });
 
@@ -78,7 +79,8 @@ test("document articles keep every paragraph and heading-only native anchor navi
     for (const section of article.sections) {
       assert.ok(!ids.has(section.id)); ids.add(section.id);
       assert.ok(html.includes(`href="#${section.id}">${escape(section.title)}</a>`));
-      assert.ok(html.includes(`id="${section.id}" tabindex="-1">${escape(section.title)}</h2>`));
+      const level = slug === 'methods' ? 'h3' : 'h2';
+      assert.ok(html.includes(`id="${section.id}" tabindex="-1">${escape(section.title)}</${level}>`));
       for (const paragraph of section.paragraphs) assert.ok(html.includes(`<p>${escape(paragraph)}</p>`), section.title);
     }
     const nav = html.match(/<nav class="project-outline wiki-article-outline"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
@@ -211,11 +213,46 @@ test("Project order, relocated Method, and new Documents pages match the request
   assert.ok(copy.indexOf('id="qpcr-inversion-detection"') < copy.indexOf('id="project-description"'));
   const menu = html.match(/id="project-menu"[^>]*>([\s\S]*?)<\/div>/)[1];
   const order = [...menu.matchAll(/href="([^"]+)"/g)].map(match => match[1]);
-  assert.deepEqual(order, ["/description", "/design", "/methods", "/engineering", "/results", "/analysis", "/model", "/experiment"]);
+  assert.deepEqual(order, ["/description", "/design", "/methods", "/engineering", "/results", "/analysis"]);
   for (const slug of ["safety", "supplement-files"]) {
     assert.ok(html.includes(`href="/${slug}"`));
     const page = await (await render(`/${slug}`)).text();
     assert.match(page, /class="document-cover"/);
     assert.doesNotMatch(page, /<p>/);
   }
+});
+
+test("Method outline has an accessible disclosure and subordinate body headings", async () => {
+  const html = await (await render("/description")).text();
+  assert.match(html, /aria-label="Expand Method subsections" aria-expanded="false" aria-controls="outline-method"/);
+  assert.match(html, /class="outline-children" id="outline-method" hidden=""/);
+  assert.equal((html.match(/class="method-subsection"/g) ?? []).length, 4);
+  assert.equal((html.match(/<h3 id="/g) ?? []).length, 4);
+});
+
+test("Contribution preserves every source cell, flower position, and guidance paragraph", async () => {
+  const data = JSON.parse(readFileSync(new URL('../app/contribution-data.json', import.meta.url), 'utf8'));
+  const audit = JSON.parse(readFileSync(new URL('../docs/contribution-source-audit-20261004.json', import.meta.url), 'utf8'));
+  const escape = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#x27;');
+  assert.deepEqual(data, audit.original);
+  assert.equal(data.members.length, 17);
+  assert.equal(data.columns.length, 11);
+  const html = await (await render("/contribution")).text();
+  for (const column of data.columns) assert.ok(html.includes(escape(column.label)));
+  for (const member of data.members) {
+    assert.ok(html.includes(`<th scope="row">${escape(member.name)}</th>`));
+    for (const column of data.columns) {
+      const marker = `data-member="${escape(member.name)}" data-role="${column.id}">`;
+      const start = html.indexOf(marker);
+      assert.ok(start > 0, marker);
+      const cell = html.slice(start + marker.length, html.indexOf('</td>', start));
+      assert.equal(cell.includes('class="contribution-flower"'), member.roles.includes(column.id), marker);
+    }
+  }
+  assert.equal((html.match(/class="contribution-flower"/g) ?? []).length, data.members.reduce((sum, member) => sum + member.roles.length, 0));
+  for (const section of data.guidance) {
+    assert.ok(html.includes(escape(section.heading)));
+    assert.ok(html.includes(`<p>${escape(section.text)}</p>`));
+  }
+  assert.equal(createHash('sha256').update(readFileSync(new URL(`../public${data.flower}`, import.meta.url))).digest('hex'), audit.flowerSha256);
 });

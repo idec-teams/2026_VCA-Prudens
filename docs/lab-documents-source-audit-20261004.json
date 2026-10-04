@@ -1,0 +1,56 @@
+{
+  "notebook": {
+    "source": "2026_Notebook_EN_Dated_Simple.docx",
+    "sha256": "0b85efcd893e17ddd08d9ff1165339a47f57ed22c8fd0220fbcad13eb5053f38",
+    "paragraphs": [
+      "2026 Laboratory Notebook",
+      "VCA_Prudens  |  ISCro4",
+      "This project investigated Biomni-assisted directed evolution of ISCro4. Starting from ISCro4(S30T/P54Q/S243H), the team developed and revised an assay to screen variants for improved activity. ",
+      "22–28 Jun 2026  Project selection",
+      "We reviewed the literature and used Biomni to compare technologies for editing large DNA fragments. Improving ISCro4 recombination activity in Escherichia coli was selected as the research objective.",
+      "29 Jun–12 Jul 2026  Initial plasmid construction",
+      "An ISCro4 expression plasmid and a chloramphenicol resistance plasmid for functional validation were designed. The validation plasmid was successfully constructed, but repeated expression plasmid construction attempts failed, prompting troubleshooting.",
+      "13–26 Jul 2026  Construct redesign",
+      "Following Biomni-assisted troubleshooting, the promoter upstream of ISCro4 was replaced with T7, and the relevant components were combined in a single plasmid. Sequencing revealed the expected plasmid rearrangement resulting from DNA deletion.",
+      "27 Jul–2 Aug 2026  Resistance background assessment",
+      "Cells remained tolerant to chloramphenicol after removal of the ISCro4 expression cassette, demonstrating background in the resistance readout. The team therefore switched to qPCR to evaluate DNA deletion.",
+      "3–16 Aug 2026  Quantitative assay development",
+      "The substrate plasmid pUC19-d-T and expression plasmid pID05 were constructed to provide the DNA targeted for deletion and ISCro4, respectively. This dual plasmid system was used for subsequent variant comparisons.",
+      "17 Aug–6 Sep 2026  Candidate variant construction",
+      "With Biomni assistance, 10 candidates were selected from published deep mutational scanning data, excluding positions S30, P54, and S243 already altered in the parent. Primers were designed, variants were constructed and verified by Sanger sequencing, and E60Q was included as a negative control.",
+      "7–20 Sep 2026  qPCR screening and interim results",
+      "After cotransformation with the substrate plasmid, 3 independent colonies were selected per variant, cultured, and normalized by OD600. Each sample had 2 technical replicates. Comparison of target-region and plasmid-backbone qPCR signals identified A225S as the positive hit among 10 candidates, with a higher ΔCq than the parent. This result reflects plasmid DNA deletion activity in E. coli."
+    ],
+    "extraText": {
+      "word/endnotes.xml": [],
+      "word/footnotes.xml": []
+    }
+  },
+  "protocol": {
+    "source": "2026_Protocol_EN_Simple.docx",
+    "sha256": "6bb48a2b3fdcd8f85f6c3faf1960cc27e8ea51bd8c446ecf77e3303f86682ff1",
+    "paragraphs": [
+      "2026 Laboratory Protocol",
+      "VCA_Prudens  |  ISCro4",
+      "This workflow covers the construction and activity comparison of ISCro4 candidates, including the initial resistance background check and the final dual plasmid qPCR assay.",
+      "1 Experimental materials",
+      "Use ISCro4(S30T/P54Q/S243H) as the parent, pID05 as the expression and mutagenesis vector, and pUC19-d-T as the substrate plasmid. Compare the parent, 10 candidate variants, and the E60Q negative control.",
+      "2 Plasmid construction and verification",
+      "Construct the designed plasmids by Gibson assembly, followed by transformation and clone propagation. Verify the constructs by Sanger sequencing before proceeding to subsequent experiments.",
+      "3 Initial resistance background check",
+      "Remove the ISCro4 expression cassette from the single plasmid system. Observe the growth of cells carrying this control under different chloramphenicol conditions to determine whether the resistance readout has background. This step evaluates the initial assay design.",
+      "4 Candidate variant construction",
+      "Use Biomni to assist with candidate selection from deep mutational scanning data and primer design. Introduce each candidate substitution separately into the parental pID05 background, construct the E60Q control, and verify the resulting sequences.",
+      "5 Cotransformation and sample preparation",
+      "Cotransform each expression plasmid with pUC19-d-T into E. coli. Select 3 independent colonies per variant, culture them, normalize by OD600, and prepare samples for qPCR.",
+      "6 qPCR measurement",
+      "Use qPCR-A-F/-R and qPCR-AmpR-F/-R separately to measure the signal associated with the region targeted for deletion and the plasmid backbone signal. Perform 2 technical replicates per sample and record Cq values.",
+      "7 Data comparison",
+      "Calculate ΔCq = Cq(qPCR-A) − Cq(qPCR-AmpR). Summarize candidate and parental results using independent colonies as the units of comparison. Following the report, variants with a higher ΔCq than the parent are positive candidates; this metric provides a relative measure of plasmid DNA deletion. Retain sequencing results, raw qPCR data, and analysis files."
+    ],
+    "extraText": {
+      "word/endnotes.xml": [],
+      "word/footnotes.xml": []
+    }
+  }
+}

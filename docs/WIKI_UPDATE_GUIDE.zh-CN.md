@@ -179,3 +179,11 @@ Sites 项目保持原项目 ID 和原访问范围。只有通过 Sites 正式流
 - Supplement Files 默认内嵌完整 PDF。浏览器不支持内嵌 PDF 时，可直接打开原文件，或展开 Page-by-page view 浏览全部 8 页图片并点击放大；图片仅用于阅读兼容，不替代原 PDF。
 - 更换 PDF 时需同时更新文件、封面/逐页预览、页面页数与大小、完整性审计 `docs/documents-source-audit-20261004.json`，并运行自动测试。请勿只换 PDF 而留下旧预览。
 - 补充 PDF 中已有的表格截断或 `########` 为原文件内容，网页未擅自修复或重算。
+
+## 九、Notebook 与 Protocol（2026-10-04）
+
+- 两页原文集中在 `app/lab-documents.json`，分别为 notebook 与 protocol；保留 title、subtitle、intro，以及 7 个 sections。正文按原 Word 逐字保留，日期、公式、参数不改写。
+- Notebook 使用左侧日期/标题标签的原生锚点导航，右侧为连续的立体书页。每节的 date 和 title 来自原文，`sourceHeading` 保存完整原始标题；`id` 为稳定链接，后续改标题时尽量不要改已有 id。
+- Protocol 使用按原顺序排列的便签；桌面双列逐行阅读，手机单列。章节序号按既有规则在显示层隐藏，但原始完整标题仍保存在数据和审计中。
+- 两页专用组件为 `app/LabDocuments.tsx`，专用样式为 `app/lab-documents.css`，只在 `app/[slug]/page.tsx` 中接入 notebook / protocol 两个路由。勿修改其他页面的组件或全局样式。
+- 来源为 2026_Notebook_EN_Dated_Simple.docx 与 2026_Protocol_EN_Simple.docx；逐段原文及源文件 SHA-256 保存于 `docs/lab-documents-source-audit-20261004.json`。更换正文时同步更新审计并运行测试，不能直接删除测试绕过完整性检查。

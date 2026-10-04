@@ -36,7 +36,9 @@
 | RNA 阅读进度、四叶草回顶 | `app/ReadingControls.tsx`、`app/globals.css` | 不要删除；修改后检查长页面与手机端。 |
 | Description 与搬入其中的旧 Method 正文 | `app/wiki-articles.json`、`app/WikiArticle.tsx` | 旧 methods 数据完整保留，显示在 Challenge 与 Project Description 之间；不要自行改写。 |
 | Design/Methods/Engineering/Results/Analysis | `app/report-articles.json`、`app/ReportArticle.tsx` | 以 2026-10-04 上传的五份 Word 为准；正文、图注、参考文献一字不漏，审计见 docs/report-source-audit-20261004.json。 |
-| Model/Experiment | `app/paper-articles.json`、`app/PaperArticle.tsx` | 保留现有内容，未在本轮更新范围。 |
+| Model/Experiment 历史直接路由 | `app/paper-articles.json`、`app/PaperArticle.tsx` | 已从 Project 菜单移除，仅保留历史内容与兼容路由。 |
+| Contribution 表格、花位及下方文字 | `app/contribution-data.json` | 每位成员 roles 列表决定哪些格子显示花；样式在 contribution.css，见下方花位说明。 |
+| Description 的 Method 折叠目录 | `app/ArticleOutline.tsx`、`app/wiki-article.css` | 展开按钮与原生标题链接独立，不删除或折叠受保护正文。 |
 | Safety/Supplement Files 页头 | `app/DocumentLanding.tsx`、`app/document-landing.css` | 目前只提供页头，未提供正文不得编造。 |
 | 队员信息、头像和裁切 | `app/team-profiles.json`、`public/assets/team/` | 头像面部居中且大小一致；不要恢复旧草稿。 |
 | 论文图片 | `public/assets/paper-20260928/` | 使用原图，不生成替代图。 |
@@ -79,6 +81,30 @@ JSON 文件中的双引号、逗号必须保持合法。大段内容更新建议
 ### 表格
 
 少量数据使用语义化 HTML 表格；大量数据可从 CSV 生成。必须提供表头、单位、图注和数据来源，并在手机端允许横向滚动。任何实验数值都应来自队伍确认的文件，不要让 AI 猜测或补全。
+
+### Contribution 花的位置
+
+最简单的方式是直接告诉 Codex：“把某成员在某列的花移到另一列，其他花和文字不变，同步两端。”也可以提供修改后的 Word 表格。
+
+自行修改时，打开 `app/contribution-data.json`，在 `members` 中找到对应姓名。其 `roles` 数组有某列代号就显示花，没有就留空；增加或移除代号即可，不要修改图片坐标。列代号对应如下：
+
+| 表头 | 代号 |
+| --- | --- |
+| Team Leader | team-leader |
+| Literature & AI-Assisted Design | literature-ai-design |
+| Plasmid Construction | plasmid-construction |
+| Assay Development & Validation | assay-development |
+| Mutant Construction | mutant-construction |
+| qPCR Activity Screening | qpcr-screening |
+| Data Analysis & Visualization | data-analysis |
+| Manuscript Writing & Editing | manuscript |
+| Wiki Team | wiki |
+| Poster Team | poster |
+| Presentation Preparation | presentation |
+
+例如移花只改对应成员的 `roles`，不要改其他成员。下方文字保存在 `guidance`。没有页面内即时编辑按钮，避免未经审核直接改变正式站内容。
+
+每次花位变更都需记录用户确认的修改，并更新相应审计和测试预期；原始 Word 审计应保留作对照，不可为了让测试通过而随意改写。检查后仍须分别发布 GitHub Pages 与 Sites。
 
 ### 动画效果
 

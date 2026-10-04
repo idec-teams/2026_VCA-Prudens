@@ -169,3 +169,13 @@ Sites 项目保持原项目 ID 和原访问范围。只有通过 Sites 正式流
 - GitHub 自动保留提交历史；出问题时优先回退单个提交，而不是清空仓库。
 - 账号密码、验证码和短期令牌不写入源码、`.env`、文档、Actions 日志或提交记录。
 - Wiki freeze 后仓库会变为只读；冻结前应完成最后一次双端发布和下载备份。
+
+## 八、Safety 与 Supplement Files（2026-10-04）
+
+- Safety 正文保存在 `app/safety-article.json`：7 个原文小节、16 段正文；修改文字或小节名称时只改对应字段，保留稳定的 `id` 供目录链接使用。
+- 页面排版在 `app/DocumentLanding.tsx`，两页专属样式在 `app/document-landing.css`。不要修改其他页面或全局样式来调整这两页。
+- 原始 PDF 在 `public/assets/documents-20261004/`：`responsible-research-form.pdf`（11 页）和 `supplementary-material.pdf`（8 页）。原文件逐字节保留，没有重新压缩、裁切或重排。
+- Safety 下方的封面卡片、Open full PDF、Download PDF 均指向完整研究责任表。
+- Supplement Files 默认内嵌完整 PDF。浏览器不支持内嵌 PDF 时，可直接打开原文件，或展开 Page-by-page view 浏览全部 8 页图片并点击放大；图片仅用于阅读兼容，不替代原 PDF。
+- 更换 PDF 时需同时更新文件、封面/逐页预览、页面页数与大小、完整性审计 `docs/documents-source-audit-20261004.json`，并运行自动测试。请勿只换 PDF 而留下旧预览。
+- 补充 PDF 中已有的表格截断或 `########` 为原文件内容，网页未擅自修复或重算。

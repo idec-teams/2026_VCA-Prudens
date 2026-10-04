@@ -9,6 +9,7 @@ import { WikiArticle } from "../WikiArticle";
 import { PaperArticle, paperSlugs } from "../PaperArticle";
 import { ReportArticle, reportSlugs } from "../ReportArticle";
 import { DocumentLanding } from "../DocumentLanding";
+import { Contribution } from "../Contribution";
 
 const projectDetails: Record<string, ProjectDetailData> = {
   description: {
@@ -107,7 +108,9 @@ export default async function SlugPage({ params }: { params: Promise<{ slug: str
   return (
     <>
       <Header />
-      {canonicalSlug === "description" ? (
+      {canonicalSlug === "contribution" ? (
+        <Contribution />
+      ) : canonicalSlug === "description" ? (
         <WikiArticle slug={canonicalSlug} />
       ) : reportSlugs.includes(canonicalSlug) ? (
         <ReportArticle slug={canonicalSlug} />

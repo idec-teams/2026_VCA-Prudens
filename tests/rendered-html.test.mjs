@@ -218,7 +218,35 @@ test("Project order, relocated Method, and new Documents pages match the request
     assert.ok(html.includes(`href="/${slug}"`));
     const page = await (await render(`/${slug}`)).text();
     assert.match(page, /class="document-cover"/);
-    assert.doesNotMatch(page, /<p>/);
+    assert.match(page, /Open full PDF/);
+  }
+});
+
+test("Safety preserves the complete Word text and both original PDFs remain byte-identical", async () => {
+  const data = JSON.parse(readFileSync(new URL('../app/safety-article.json', import.meta.url), 'utf8'));
+  const audit = JSON.parse(readFileSync(new URL('../docs/documents-source-audit-20261004.json', import.meta.url), 'utf8'));
+  assert.deepEqual([data.title, ...data.sections.flatMap(s => [s.title, ...s.paragraphs])], audit.safety.paragraphs);
+  assert.equal(data.sections.length, 7);
+  assert.equal(data.sections.flatMap(s => s.paragraphs).length, 16);
+  const escape = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#x27;');
+  const safetyHtml = await (await render("/safety")).text();
+  for (const section of data.sections) {
+    assert.ok(safetyHtml.includes(`href="#${section.id}"`));
+    assert.ok(safetyHtml.includes(`id="${section.id}" tabindex="-1">${escape(section.title)}</h2>`));
+    for (const p of section.paragraphs) assert.ok(safetyHtml.includes(`<p>${escape(p)}</p>`));
+  }
+  assert.ok(safetyHtml.indexOf('id="ethical-considerations"') < safetyHtml.indexOf('id="responsible-research-form"'));
+  for (const pdf of audit.pdfs) {
+    const bytes = readFileSync(new URL(`../public${pdf.src}`, import.meta.url));
+    assert.equal(bytes.length, pdf.bytes);
+    assert.equal(createHash('sha256').update(bytes).digest('hex'), pdf.sha256);
+  }
+  const supplementHtml = await (await render("/supplement-files")).text();
+  assert.match(supplementHtml, /<iframe[^>]*src="\/assets\/documents-20261004\/supplementary-material.pdf#view=FitH"/);
+  assert.equal((supplementHtml.match(/<figure id="supplement-page-/g) ?? []).length, 8);
+  for (let page = 1; page <= 8; page++) {
+    assert.ok(supplementHtml.includes(`href="#supplement-page-${page}"`));
+    assert.ok(readFileSync(new URL(`../public/assets/documents-20261004/supplementary-page-${page}.jpg`, import.meta.url)).length > 0);
   }
 });
 

@@ -12,6 +12,10 @@ export const projectPages: SlidePage[] = [
   { slug: "engineering", label: "Engineering", title: "Engineering", slides: [20, 21] },
   { slug: "results", label: "Results", title: "Results", slides: [26, 27] },
   { slug: "analysis", label: "Analysis", title: "Analysis", slides: [24, 25] },
+];
+
+// Preserve existing direct URLs and source history, but remove these pages from navigation.
+const archivedProjectPages: SlidePage[] = [
   { slug: "model", label: "Model", title: "Model", slides: [18, 19] },
   { slug: "experiment", label: "Experiment", title: "Experiment", slides: [22, 23] },
 ];
@@ -34,5 +38,5 @@ export const documentPages: SlidePage[] = [
   { slug: "supplement-files", label: "Supplement Files", title: "Supplement Files", slides: [] },
 ];
 
-export const allPages = [...teamPages, ...projectPages, ...documentPages];
+export const allPages = [...teamPages, ...projectPages, ...documentPages, ...archivedProjectPages];
 export const pageBySlug = Object.fromEntries(allPages.map((page) => [page.slug, page]));

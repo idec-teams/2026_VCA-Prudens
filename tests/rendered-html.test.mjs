@@ -9,6 +9,35 @@ const routes = [
   "/results", "/contribution", "/notebook", "/protocol", "/mutation-selection", "/safety", "/supplement-files",
 ];
 
+test("Notebook and Protocol preserve the full supplied documents with scoped layouts", async () => {
+  const data = JSON.parse(readFileSync(new URL('../app/lab-documents.json', import.meta.url), 'utf8'));
+  const audit = JSON.parse(readFileSync(new URL('../docs/lab-documents-source-audit-20261004.json', import.meta.url), 'utf8'));
+  const escape = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#x27;');
+  for (const [slug, page] of Object.entries(data)) {
+    assert.deepEqual([page.title, page.subtitle, page.intro, ...page.sections.flatMap(s => [s.sourceHeading, ...s.paragraphs])], audit[slug].paragraphs);
+    assert.equal(page.sections.length, 7);
+    const html = await (await render('/' + slug)).text();
+    assert.ok(html.includes(escape(page.title)));
+    assert.ok(html.includes(escape(page.subtitle)));
+    assert.ok(html.includes(escape(page.intro)));
+    for (const section of page.sections) {
+      assert.ok(html.includes(`id="${section.id}" tabindex="-1"`));
+      assert.ok(html.includes(escape(section.title)));
+      if (slug === 'notebook') {
+        assert.equal(section.date + '  ' + section.title, section.sourceHeading);
+        assert.ok(html.includes(`href="#${section.id}"`));
+        assert.ok(html.includes(escape(section.date)));
+      } else {
+        assert.equal(section.title, section.sourceHeading.replace(/^\d+\s+/, ''));
+        assert.doesNotMatch(section.title, /^\d+\s/);
+      }
+      for (const p of section.paragraphs) assert.ok(html.includes(`<p>${escape(p)}</p>`));
+    }
+    assert.equal((html.match(new RegExp('class="' + (slug === 'notebook' ? 'lab-notebook-entry' : 'lab-protocol-note') + '"', 'g')) ?? []).length, 7);
+    assert.doesNotMatch(html, /XXXXXX|protocol直接跳转/);
+  }
+});
+
 async function render(pathname) {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}-${pathname}`);

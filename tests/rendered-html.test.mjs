@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 
 const routes = [
-  "/", "/team", "/members", "/descriptions", "/attributions", "/work-distribution",
+  "/", "/members", "/descriptions", "/attributions", "/work-distribution",
   "/description", "/methods", "/design", "/model", "/engineering", "/experiment", "/analysis",
   "/results", "/contribution", "/notebook", "/protocol", "/mutation-selection", "/safety", "/supplement-files",
 ];
@@ -62,7 +62,9 @@ test("all wiki routes server-render successfully", async () => {
 test("team pages render one member title and interactive profile cards", async () => {
   const membersResponse = await render("/members");
   const membersHtml = await membersResponse.text();
-  assert.equal((membersHtml.match(/>Team Members</g) ?? []).length, 1);
+  assert.match(membersHtml, /id="team-intro-title">Our Team<br\/><span>Members<\/span><\/h1>/);
+  assert.equal((membersHtml.match(/<h1/g) ?? []).length, 1);
+  assert.equal((membersHtml.match(/<h2 id="members-heading">Team Members<\/h2>/g) ?? []).length, 1);
   assert.equal((membersHtml.match(/class="member-card"/g) ?? []).length, 20);
   assert.match(membersHtml, /Open Haotian, Lu profile/);
   assert.match(membersHtml, /Open Shiya, Da profile/);
@@ -72,9 +74,9 @@ test("team pages render one member title and interactive profile cards", async (
   assert.match(membersHtml, /Open Zimeng Jessie, Yu profile/);
   assert.equal((membersHtml.match(/>TEAM LEADER</g) ?? []).length, 4);
   assert.equal((membersHtml.match(/>ADVISOR</g) ?? []).length, 2);
-  assert.ok(membersHtml.indexOf('id="supervisor-heading"') < membersHtml.indexOf('>Advisors<'));
-  assert.ok(membersHtml.indexOf('>Advisors<') < membersHtml.indexOf('>Team Leaders<'));
-  assert.ok(membersHtml.indexOf('>Team Leaders<') < membersHtml.indexOf('>Team Members<'));
+  assert.ok(membersHtml.indexOf('id="supervisor-heading"') < membersHtml.indexOf('id="advisors-heading"'));
+  assert.ok(membersHtml.indexOf('id="advisors-heading"') < membersHtml.indexOf('id="leaders-heading"'));
+  assert.ok(membersHtml.indexOf('id="leaders-heading"') < membersHtml.indexOf('id="members-heading"'));
   assert.doesNotMatch(membersHtml, /member-mountains/);
   assert.doesNotMatch(membersHtml, /iGEM/);
 
@@ -83,6 +85,20 @@ test("team pages render one member title and interactive profile cards", async (
   assert.match(supervisorHtml, />Team Supervisor</);
   assert.match(supervisorHtml, /Open Jian, Mo profile/);
   assert.doesNotMatch(supervisorHtml, /Mo Jian/);
+});
+
+test("retired Team overview is absent and Home retains accessible motion controls", async () => {
+  const response = await render('/team');
+  assert.equal(response.status, 404);
+  const html = await (await render('/')).text();
+  assert.doesNotMatch(html, /href="\/team"|Meet ISCro4\./);
+  assert.match(html, />Meet ISCro4<\/h2>/);
+  assert.match(html, /Pause motion/);
+  assert.match(html, /class="hero-orbit" aria-hidden="true"/);
+  const motion = readFileSync(new URL('../app/HomeExperience.tsx', import.meta.url), 'utf8');
+  assert.match(motion, /prefers-reduced-motion/);
+  assert.match(motion, /Skip intro/);
+  assert.match(motion, /setTimeout\(stop, 3500\)/);
 });
 
 test("navigation keeps real href fallbacks for Safari", async () => {
@@ -139,7 +155,7 @@ test("home has one navigation bar and keeps interactive actions", async () => {
   assert.equal((html.match(/class="site-header"/g) ?? []).length, 1);
   assert.match(html, /class="home-hero"/);
   assert.match(html, /href="\/description">Explore the project/);
-  assert.match(html, /href="\/team">Meet the team/);
+  assert.match(html, /href="\/members">Meet the team/);
   assert.match(html, /href="#slide-2">Scroll to discover/);
   assert.doesNotMatch(html, /slides\/slide-01\.png/);
 });

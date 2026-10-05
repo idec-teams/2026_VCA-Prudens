@@ -9,6 +9,24 @@ const routes = [
   "/results", "/contribution", "/notebook", "/protocol", "/mutation-selection", "/safety", "/supplement-files",
 ];
 
+test("each distinct article cover has unique artwork and Home keeps additive painted art", async () => {
+  const seen = new Set();
+  for (const slug of ["description", "design", "methods", "engineering", "results", "analysis", "model", "experiment", "safety", "supplement-files", "contribution"]) {
+    const html = await (await render("/" + slug)).text();
+    const cover = html.match(/class="page-hero-art"[\s\S]*?<img src="([^"]+)"/);
+    assert.ok(cover, slug);
+    const bytes = readFileSync(new URL("../public" + cover[1], import.meta.url));
+    const hash = createHash("sha256").update(bytes).digest("hex");
+    assert.ok(!seen.has(hash), "Duplicate cover artwork: " + slug);
+    seen.add(hash);
+  }
+  const home = await (await render("/")).text();
+  assert.match(home, /home-dna-ribbon.webp/);
+  assert.match(home, /home-petri-pipette.webp/);
+  assert.match(home, /iscro4-bridge.webp/);
+  assert.match(home, /petri-dish.jpeg/);
+});
+
 test("shared page introductions preserve titles and use the two-font design system", async () => {
   for (const slug of ["description", "design", "methods", "engineering", "results", "analysis", "safety", "supplement-files", "contribution"]) {
     const html = await (await render("/" + slug)).text();

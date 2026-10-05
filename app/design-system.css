@@ -23,13 +23,27 @@ body.wiki-theme :is(.wiki-article-outline,.document-outline,.lab-notebook-index)
 body.wiki-theme :is(.report-caption,.paper-figure figcaption,.document-reader-help) { font-size: 1rem; line-height: 1.7; }
 body.wiki-theme .outline-children a { font-size: .925rem; }
 body.wiki-theme .brand span { letter-spacing: -.025em; }
+/* Three distinct light surfaces: warm navigation, lavender introduction, sage reading canvas. */
+body.wiki-theme .site-header {
+  background: #fffdf7; border-bottom: 1px solid #d8d0c1;
+  box-shadow: 0 5px 18px #4f42530a;
+}
+body.wiki-theme .desktop-nav {
+  gap: clamp(14px,2.2vw,36px); padding: 0 22px; border: 1px solid #e4ded0;
+  border-radius: 999px; background: #f3f1e9;
+}
+body.wiki-theme :is(.nav-popover,.mobile-popover) {
+  background: #fffdf8; border-color: #d9cfe5; border-radius: 16px;
+  box-shadow: 0 15px 34px #473a6022;
+}
+body.wiki-theme .mobile-trigger { border-color: #d0c5df; border-radius: 14px; background: #f1ecf6; }
 
 /* One visual language for page introductions, retaining each page's original wording. */
 body.wiki-theme :is(.page-hero,.lab-document-heading,.team-intro) {
   position: relative; isolation: isolate; overflow: hidden;
-  color: #075440; border: 1px solid #cbded3; border-radius: 28px 28px 72px 28px;
-  background: radial-gradient(ellipse at 85% 25%,#d8cee6 0,transparent 60%),linear-gradient(135deg,#fffdf5,#e6f1e9);
-  box-shadow: 0 8px 0 #dbe3d580,0 24px 52px -32px #07544040;
+  color: #075440; border: 1px solid #cfc3df; border-radius: 28px 28px 72px 28px;
+  background: radial-gradient(ellipse at 12% 5%,#fff8e4 0,transparent 52%),radial-gradient(ellipse at 95% 100%,#dcece2 0,transparent 40%),linear-gradient(115deg,#f3edf6,#dcd0ec);
+  box-shadow: 0 8px 0 #c9bfdc45,0 24px 52px -32px #65547d50;
 }
 body.wiki-theme .page-hero {
   display: grid; grid-template-columns: minmax(0,1.5fr) minmax(180px,.7fr); align-items: center;
@@ -87,12 +101,12 @@ body.wiki-theme .team-intro nav a:hover,body.wiki-theme .team-intro nav a:focus-
 
 /* Layered reading surface: restrained decoration stays outside the text column. */
 body.wiki-theme :is(.wiki-article,.document-landing,.contribution-page,.lab-document) {
-  background: radial-gradient(ellipse at 2% 350px,#d8d0e92e,transparent 650px),#f3f7f4;
+  background: radial-gradient(ellipse at 2% 350px,#dfd9e930,transparent 650px),#edf2ef;
 }
 body.wiki-theme :is(.wiki-article-outline,.document-outline) {
   border: 1px solid #c9d9d1; border-top: 4px solid #9380b2; border-radius: 8px 24px 24px 8px;
-  background: linear-gradient(140deg,#fffefa,#e8f0ea); color: #234f45;
-  box-shadow: 5px 7px 0 #d9e3dc66,0 16px 32px -25px #214b4480;
+  background: linear-gradient(140deg,#f5f0fa,#e5ddee); color: #234f45;
+  box-shadow: 5px 7px 0 #d8cde366,0 16px 32px -25px #4e3e6380;
   scrollbar-width: thin; scrollbar-color: #9aafa5 transparent;
 }
 body.wiki-theme :is(.wiki-article-outline,.document-outline) a { color: #294e46; transition: background .2s,color .2s; }

@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-05",
+  "scope": "Unique main cover illustrations; shared branding, reading progress and back-to-top controls unchanged",
+  "covers": {
+    "home": "/assets/iscro4-bridge.webp",
+    "members": "/assets/home-20261005/clover-loading.jpg",
+    "contribution": "/assets/contribution.webp",
+    "description": "/assets/book.webp",
+    "design": "/assets/bridge-builder.png",
+    "methods": "/assets/experiment.webp",
+    "engineering": "/assets/engineering.webp",
+    "results": "/assets/rna-progress.png",
+    "analysis": "/assets/illustrations-20261005/analysis-painted.webp",
+    "model": "/assets/results.webp",
+    "experiment": "/assets/petri-dish.jpeg",
+    "notebook": "/slides/slide-31.png",
+    "safety": "/assets/report-20261004/shield-check.svg",
+    "supplement-files": "/assets/report-20261004/file-stack.svg"
+  },
+  "notes": {
+    "protocol": "Existing text-only cover retained",
+    "descriptions": "Existing Supervisor portrait retained",
+    "attributions": "Original slide-12 cover retained",
+    "work-distribution": "Original slide-13 cover retained",
+    "mutation-selection": "Existing alias of Analysis, not a separate article; same canonical content retained",
+    "team": "Previously removed route remains 404"
+  },
+  "homeAdditions": ["/assets/illustrations-20261005/home-dna-ribbon.webp", "/assets/illustrations-20261005/home-petri-pipette.webp"],
+  "assetNature": "Generated decorative editorial art, not experimental figures or measured results",
+  "verification": "17 tests passed; 20-route static export passed; all distinct covers checked; 1440px page audit and 390px changed-page audit have no horizontal overflow; Home source equals baseline after removing only two new decorative img elements"
+}

@@ -14,6 +14,8 @@ export function ReportArticle({ slug }: { slug: string }) {
     design: "/assets/bridge-builder.png",
     methods: "/assets/experiment.webp",
     engineering: "/assets/engineering.webp",
+    results: "/assets/rna-progress.png",
+    analysis: "/assets/illustrations-20261005/analysis-painted.webp",
   };
   return <main className="ppt-deck wiki-article" aria-label={`${page.title} article`}>
     <PageHero title={page.title} image={coverArt[slug]} />

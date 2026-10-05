@@ -1,8 +1,8 @@
 import { sitePath } from "./site-path";
 
 /** Shared presentation only; titles and subtitles come from existing page content. */
-export function PageHero({ title, subtitle, image = "/assets/rna-progress.png", id }: {
-  title: string; subtitle?: string; image?: string; id?: string;
+export function PageHero({ title, subtitle, image, id }: {
+  title: string; subtitle?: string; image: string; id?: string;
 }) {
   return <header className="page-hero" aria-label={title + " cover"}>
     <div className="page-hero-copy">

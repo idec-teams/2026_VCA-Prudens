@@ -12,8 +12,12 @@ export const paperSlugs = Object.keys(pages);
 
 export function PaperArticle({ slug }: { slug: string }) {
   const page = pages[slug];
+  const coverArt: Record<string, string> = {
+    model: "/assets/results.webp",
+    experiment: "/assets/petri-dish.jpeg",
+  };
   return <main className="ppt-deck wiki-article" aria-label={`${page.title} article`}>
-    <PageHero title={page.title} />
+    <PageHero title={page.title} image={coverArt[slug]} />
     <div className="wiki-article-layout">
       <nav className="project-outline wiki-article-outline" aria-label={`${page.title} sections`}>
         {page.sections.map(section => <a key={section.id} href={`#${section.id}`}>{section.title}</a>)}

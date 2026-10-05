@@ -196,3 +196,12 @@ Sites 项目保持原项目 ID 和原访问范围。只有通过 Sites 正式流
 - 吉祥物文件 public/assets/home-20261005/clover-loading.jpg 为用户提供的原图。Home 和成员页页顶共用；原四叶草回顶保持不变。
 - Meet the team 直接进入 /members；旧 /team 页面已移除，不再列入路由。成员列表之前新增 Our Team Members 页顶及四组原生锚点，样式在 app/team-intro.css，成员照片、卡片和介绍不变。
 - 修改后运行 15 项测试，再检查桌面、手机以及 GitHub Pages 子路径导出；双端发布状态以项目交接文档为准。
+
+## 十一、统一浅色页头与两字体系统（2026-10-05 晚间）
+
+- 用户指定的最终颜色是奶白、浅薄荷绿和淡紫渐变；不要改回深色页头。全站视觉变量和新样式集中在 app/design-system.css。
+- 标题使用 Georgia；正文、按钮、目录和图内可编辑标签使用 Arial。同类标题/正文由 --type-page、--type-section、--type-subsection、--type-copy 控制。不得随意在单页增加第三款字体；原始图片/PDF 中已有字体不属于网页可编辑文字，不应重绘。
+- 统一页头组件为 app/PageHero.tsx。title、subtitle 只使用既有原文；image 指向 public 下已有素材。ReportArticle.tsx 的 coverArt 决定 Design/Methods/Engineering 的插图；Contribution 使用原拼图。装饰轨道和小卡片对辅助技术隐藏，不表示新的科研数据。
+- 页头入场动效在 3.8 秒内结束；Home 背景与悬浮效果继续由 Pause motion 控制，系统减少动态效果设置可关闭新增动画。不要让装饰阻挡链接或遮住文字。
+- 文章目录和正文仍由原 JSON、原锚点生成；仅改变阅读面板外观，不删改任何段落。Notebook/Protocol 继续保留笔记本/便签，原 PDF、头像和 Contribution 花位不变。
+- 发布前运行 16 项测试，并检查电脑/手机两种布局和实际字体。当前双端状态以 PROJECT_HANDOFF.md 页首及最新 release 为准，Sites 阻断时不能声称双端均上线。

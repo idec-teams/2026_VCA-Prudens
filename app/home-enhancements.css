@@ -58,7 +58,7 @@
 @media(prefers-reduced-motion:reduce) { .home-page *, .home-page *::before,.home-page *::after { animation:none!important; transition:none!important; } .home-loader { display:none; } }
 /* Decorative hand-painted assets; existing diagrams and copy remain untouched. */
 .home-page .story-footer { grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(24px,3vw,50px); }
-.home-page .footer-quicklinks ul { list-style:none; padding:0; margin:0; display:grid; gap:6px; }
+.home-page .footer-quicklinks ul { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:2px 16px; }
 .home-page .footer-quicklinks a { display:inline-block; padding:3px 0; text-underline-offset:4px; }
 @media(max-width:1000px) { .home-page .story-footer { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:600px) { .home-page .story-footer { grid-template-columns:1fr; } }
@@ -66,6 +66,17 @@
 .home-page .painted-dna { float:right; width:clamp(240px,28vw,420px); height:auto; margin:-25px 0 20px 35px; }
 .home-page .editing-copy { clear:both; }
 .home-page .painted-lab { display:block; width:min(68%,280px); height:auto; margin:30px auto 0; }
+.home-page .story-section .home-painted-art { animation:painted-drift 7s ease-in-out infinite; animation-play-state:paused; }
+.home-page .story-section .painted-lab { animation-name:painted-lab-drift; animation-duration:8s; }
+.home-page .story-section.is-in-view .home-painted-art { animation-play-state:running; }
+@keyframes painted-drift {
+  0%,100% { translate:0 0; rotate:-1deg; }
+  50% { translate:0 -10px; rotate:1deg; }
+}
+@keyframes painted-lab-drift {
+  0%,100% { translate:0 0; rotate:1deg; }
+  50% { translate:0 -8px; rotate:-1deg; }
+}
 @media(max-width:700px) {
   .home-page .painted-dna { float:none; display:block; width:min(90%,320px); margin:0 auto 24px; }
   .home-page .painted-lab { width:min(78%,240px); }

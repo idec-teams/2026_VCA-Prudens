@@ -187,3 +187,12 @@ Sites 项目保持原项目 ID 和原访问范围。只有通过 Sites 正式流
 - Protocol 使用按原顺序排列的便签；桌面双列逐行阅读，手机单列。章节序号按既有规则在显示层隐藏，但原始完整标题仍保存在数据和审计中。
 - 两页专用组件为 `app/LabDocuments.tsx`，专用样式为 `app/lab-documents.css`，只在 `app/[slug]/page.tsx` 中接入 notebook / protocol 两个路由。勿修改其他页面的组件或全局样式。
 - 来源为 2026_Notebook_EN_Dated_Simple.docx 与 2026_Protocol_EN_Simple.docx；逐段原文及源文件 SHA-256 保存于 `docs/lab-documents-source-audit-20261004.json`。更换正文时同步更新审计并运行测试，不能直接删除测试绕过完整性检查。
+
+## 十、Home / Members / Safety（2026-10-05）
+
+- Safety 已替换为 10 月 5 日提供的 Safety.docx 全文，仍使用相同的 7 个小节和稳定锚点；历史命名的 documents-source-audit-20261004.json 中 safety 字段保存本次原文及源文件哈希。PDF 和封面预览未变。
+- Home 的标题、正文及图内标签字号按角色统一；仅首页生效的样式在 app/home-enhancements.css。新增网格、渐变、轨道和立体层次，原有元素和研究文字保留，仅删除 “Meet ISCro4.” 末尾句号。
+- app/HomeExperience.tsx 控制四叶草百分比入场和暂停按钮。百分比基于关键图片与字体就绪情况平滑呈现，最长 3.5 秒退出，支持 Skip intro、Escape 和系统减少动态效果设置；不阻挡原生链接。
+- 吉祥物文件 public/assets/home-20261005/clover-loading.jpg 为用户提供的原图。Home 和成员页页顶共用；原四叶草回顶保持不变。
+- Meet the team 直接进入 /members；旧 /team 页面已移除，不再列入路由。成员列表之前新增 Our Team Members 页顶及四组原生锚点，样式在 app/team-intro.css，成员照片、卡片和介绍不变。
+- 修改后运行 15 项测试，再检查桌面、手机以及 GitHub Pages 子路径导出；双端发布状态以项目交接文档为准。

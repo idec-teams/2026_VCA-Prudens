@@ -3,6 +3,8 @@ import { useCallback, useState } from "react";
 import { ProfileModal, type TeamProfile } from "./ProfileModal";
 import profiles from "./team-profiles.json";
 import { ProfilePortrait } from "./ProfilePortrait";
+import { sitePath } from "./site-path";
+import "./team-intro.css";
 
 const people = profiles as TeamProfile[];
 export const supervisor = people.find(person => person.role === "SUPERVISOR")!;
@@ -24,8 +26,14 @@ export function TeamMembers() {
   const [selected, setSelected] = useState<TeamProfile | null>(null);
   const closeModal = useCallback(() => setSelected(null), []);
   return <main className="team-members-page">
+    <header className="team-intro" aria-labelledby="team-intro-title">
+      <div><p>VCA-Prudens · iDEC 2026</p><h1 id="team-intro-title">Our Team<br /><span>Members</span></h1>
+        <nav aria-label="Team groups"><a href="#supervisor-heading">Supervisor</a><a href="#advisors-heading">Advisors</a><a href="#leaders-heading">Team Leaders</a><a href="#members-heading">Team Members</a></nav>
+      </div>
+      <div className="team-intro-art" aria-hidden="true"><span /><img src={sitePath("/assets/home-20261005/clover-loading.jpg")} alt="" /></div>
+    </header>
     <section className="team-roster-group" aria-labelledby="supervisor-heading">
-      <h1 id="supervisor-heading">Supervisor</h1>
+      <h2 id="supervisor-heading" tabIndex={-1}>Supervisor</h2>
       <div className="team-member-grid supervisor-row"><MemberCard member={supervisor} onSelect={setSelected} /></div>
     </section>
     <section className="team-roster-group" aria-labelledby="advisors-heading">

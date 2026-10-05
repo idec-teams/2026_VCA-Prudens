@@ -21,7 +21,6 @@ const archivedProjectPages: SlidePage[] = [
 ];
 
 export const teamPages: SlidePage[] = [
-  { slug: "team", label: "Overview", title: "Team", slides: [7] },
   { slug: "members", label: "Members", title: "Members", slides: [10] },
   { slug: "contribution", label: "Contribution", title: "Contribution", slides: [28, 29] },
   { slug: "descriptions", label: "Instructors", title: "Team Supervisor", slides: [8] },

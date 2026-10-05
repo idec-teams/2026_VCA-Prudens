@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Header } from "./WikiShell";
 import { HomeStory } from "./HomeStory";
 import { sitePath } from "./site-path";
+import { HomeExperience } from "./HomeExperience";
+import "./home-enhancements.css";
 
 export const metadata: Metadata = {
   title: "VCA-Prudens | Directed Evolution of ISCro4",
@@ -12,7 +14,8 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main className="home-page">
+        <HomeExperience />
         <section className="home-hero">
           <div className="home-hero-copy">
             <span className="hero-accent" aria-hidden="true" />
@@ -24,11 +27,12 @@ export default function Home() {
             </div>
             <div className="hero-actions" aria-label="Home page actions">
               <a className="primary-button" href={sitePath("/description")}>Explore the project</a>
-              <a className="secondary-button" href={sitePath("/team")}>Meet the team <span aria-hidden="true">→</span></a>
+              <a className="secondary-button" href={sitePath("/members")}>Meet the team <span aria-hidden="true">→</span></a>
               <a className="scroll-link" href="#slide-2">Scroll to discover <span aria-hidden="true">↓</span></a>
             </div>
           </div>
           <div className="home-hero-art">
+            <div className="hero-orbit" aria-hidden="true"><i /><i /><i /></div>
             <img src={sitePath("/assets/iscro4-bridge.webp")} alt="ISCro4 bridge RNA-guided recombination diagram" />
             <strong>bridge RNA-guided recombination</strong>
           </div>

@@ -5,58 +5,58 @@
       "id": "laboratory-and-safety-management",
       "title": "Laboratory and Safety Management",
       "paragraphs": [
-        "Our project has received institutional permission to conduct the required experiments. The laboratory operates at Biosafety Level 1 (BSL-1).",
-        "Our Principal Investigator and safety officer is Dr. Jian Mo, who holds a PhD in Biochemistry and Molecular Biology and has more than ten years of laboratory research and management experience. He has received biosafety training and certification in laboratory safety management. His responsibilities include overseeing safety procedures, member training, risk assessments, and compliance with laboratory standards."
+        "Our project has been granted permission by the institution to carry out these experiments. The biosafety level of the laboratory is 1 (BSL-1).",
+        "Our Principal Investigator and safety officer is Dr. Jian Mo; he has a PhD in Biochemistry and Molecular Biology, and over the past decade, he has been engaged in laboratory research and management. He has received biosafety training and certification for laboratory safety management. His duties are to ensure the safety of all members and manage risks in accordance with laboratory regulations."
       ]
     },
     {
       "id": "safety-training",
       "title": "Safety Training",
       "paragraphs": [
-        "Our safety introduction covers the distinction between biosafety and biosecurity, research risk assessment, Dual-Use Research of Concern (DURC), gain-of-function experiments, biological hazard classification, and laboratory containment levels.",
-        "Additional topics include personal protective equipment, biological waste disposal, emergency responses to spills and contamination, and the ethical and safety boundaries of genetic engineering."
+        "Our safety introduction includes the distinction between biosafety and biosecurity, research risk assessment, Dual-Use Research of Concern (DURC), gain-of-function experiments, biological hazard classification and laboratory containment levels.",
+        "Other topics are personal protective equipment, disposal of biological waste, emergency response to spills and contamination, and the ethics and safety limits of genetic engineering."
       ]
     },
     {
       "id": "experimental-chassis-and-gene-origin",
       "title": "Experimental Chassis and Gene Origin",
       "paragraphs": [
-        "Our project uses Escherichia coli DH5α as the experimental chassis and ISCro4 as the target of directed evolution, aiming to improve its efficiency in DNA excision, integration, and inversion.",
-        "Citrobacter rodentium, listed in our Responsible Research Form, is the source organism of ISCro4. We did not use or culture this source organism in our experiments. The BSL-2 designation in the form refers to the source organism itself and does not indicate that BSL-2 strains were used in this project.",
-        "Experimental work was conducted in a BSL-1 laboratory under GMO containment requirements, with no field trials or cultivation in open environments."
+        "Our project selects Escherichia coli DH5α as the experimental chassis and targets ISCro4 for directed evolution to enhance the efficiency of DNA excision, integration and inversion.",
+        "Citrobacter rodentium is listed in our Responsible Research Form as the source organism of ISCro4, and we have neither used nor cultured this source organism in our experiments. The BSL-2 designation in the form refers to the source organism itself and does not mean that BSL-2 strains were used in this project.",
+        "Experimental work was carried out in a BSL-1 laboratory under GMO containment requirements, and no field trials or open-environment cultivation were conducted."
       ]
     },
     {
       "id": "laboratory-safety-facilities",
       "title": "Laboratory Safety Facilities",
       "paragraphs": [
-        "The laboratory is equipped with an eyewash station, an emergency shower, Class II biosafety cabinets, and autoclaves. Additional facilities include fire extinguishers, spill kits, fume hoods, designated biohazard waste bins, and hand-washing sinks.",
-        "Personal protective equipment includes laboratory coats and goggles. Disinfectants are available at laboratory benches for routine surface disinfection."
+        "The laboratory has an eyewash station, an emergency shower, Class II biosafety cabinets and autoclaves. Other facilities are fire extinguishers, spill kits, fume hoods, designated biohazard waste bins and hand-washing sinks.",
+        "Personal protective equipment is a lab coat and goggles. Disinfectants for general surface disinfection are provided at the laboratory bench."
       ]
     },
     {
       "id": "biological-material-and-waste-management",
       "title": "Biological Material and Waste Management",
       "paragraphs": [
-        "Biosafety cabinets, sealed culture vessels, routine surface disinfection, personal protective equipment, and access restrictions are used to reduce the risk of unintended GMO release. Engineered strains are stored in locked, sealed containers, and transport outside the laboratory is restricted.",
-        "Solid waste contaminated with GMOs is collected in sealed biohazard bags and autoclaved. Liquid cultures undergo disinfectant treatment. Residual GMO materials are inactivated before leaving the laboratory.",
-        "Standard laboratory antibiotics are used in routine molecular cloning experiments. Antibiotic-containing media and waste are handled according to laboratory biosafety procedures to minimize risks associated with antibiotic resistance."
+        "Biosafety cabinets, sealed culture vessels, regular surface disinfection, personal protective equipment and access restrictions are used to reduce the risk of unintended GMO release. Engineered strains are stored in locked and sealed containers, and transport outside the laboratory is restricted.",
+        "Sealed biohazard bags are used to collect solid waste contaminated with GMOs, and then they are autoclaved. Disinfectant is added to the liquid culture. Inactivate any remaining GMO materials in the laboratory before leaving.",
+        "Standard laboratory antibiotics are used for routine molecular cloning experiments. Media and waste containing antibiotics will be disposed of in accordance with the biosafety regulations of the laboratory to reduce the risk of antibiotic resistance."
       ]
     },
     {
       "id": "access-control-and-biosecurity",
       "title": "Access Control and Biosecurity",
       "paragraphs": [
-        "Laboratory access is controlled through facial recognition, allowing entry only to registered personnel. Visitors must apply in advance and be accompanied by laboratory personnel. Entry and exit records are automatically logged.",
-        "Traditional locks are also used, with keys distributed only to a limited number of authorized personnel. Our project focuses on developing tools for DNA manipulation, and the team's work in this project does not involve DURC-related issues."
+        "Facial recognition is used for laboratory access control, and only registered personnel are allowed entry. The visitor needs to apply in advance and be accompanied by a laboratory staff member. Automatically record the time of entry and exit.",
+        "Traditionally, locks have also been employed, and only a few authorised personnel possess the keys. Our project will build tools for DNA modification, and the work of this team in the project does not involve DURC problems."
       ]
     },
     {
       "id": "ethical-considerations",
       "title": "Ethical Considerations",
       "paragraphs": [
-        "The project does not involve animal experiments or samples derived from animals or humans. No research involving human participants, including questionnaires or interviews, is planned.",
-        "The team's work in this project does not involve ethical issues arising from these activities. The project aims to develop tools for manipulating large DNA fragments, with potential benefits for biotechnology practitioners and, in the longer term, patients with genetic diseases."
+        "The project will not use animals or samples from animals and humans. There will be no research on human subjects in the form of questionnaires or interviews.",
+        "The team's work in this project will not raise any ethical problems due to these activities. The project hopes to develop tools for manipulating large DNA fragments and, in the future, benefit biotechnology researchers and patients with genetic diseases."
       ]
     }
   ]

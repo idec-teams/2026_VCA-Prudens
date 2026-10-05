@@ -1,0 +1,12 @@
+.team-intro { display: grid; grid-template-columns: 1.4fr 1fr; align-items: center; gap: 4rem; margin: 0 auto clamp(70px,8vw,130px); max-width: 1480px; padding: clamp(28px,4vw,64px); position: relative; border: 1px solid #cbded3; border-radius: 36px 36px 110px 36px; background: radial-gradient(ellipse at 85% 25%,#d8cee6 0,transparent 60%),linear-gradient(135deg,#fffdf5,#e6f1e9); box-shadow: 0 12px 0 #dbe3d5,0 30px 60px -36px #07544060; }
+.team-intro p { margin: 0 0 26px; font: 600 .9rem/1.6 Arial,sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+.team-intro h1 { margin: 0; font: 400 clamp(3rem,6vw,6.5rem)/1.04 Georgia,serif; letter-spacing: -.04em; }
+.team-intro h1 span { color: #725298; }
+.team-intro nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+.team-intro nav a { padding: 12px 16px; border: 1px solid #afcabb; border-radius: 99px; background: #ffffffe0; font-size: .9rem; }
+.team-intro nav a:hover,.team-intro nav a:focus-visible { background: #075440; color: #fff; outline-offset: 4px; }
+.team-intro-art { position: relative; padding: 18px; }
+.team-intro-art img { position: relative; width: 100%; border-radius: 50%; box-shadow: 12px 18px 0 #a193b12b; }
+.team-intro-art span { position: absolute; inset: -4%; border: 1px solid #9275b2; border-radius: 50%; transform: rotate(-25deg) scaleY(.8); }
+.team-roster-group > h2 { scroll-margin-top: 130px; }
+@media(max-width:760px) { .team-intro { grid-template-columns: 1fr; gap: 25px; padding: 28px 22px; border-radius: 28px 28px 70px 28px; } .team-intro-art { width: min(65%,260px); margin: auto; } .team-intro h1 { font-size: clamp(2.5rem,10vw,4rem); } }

@@ -9,6 +9,22 @@ const routes = [
   "/results", "/contribution", "/notebook", "/protocol", "/mutation-selection", "/safety", "/supplement-files",
 ];
 
+test("shared page introductions preserve titles and use the two-font design system", async () => {
+  for (const slug of ["description", "design", "methods", "engineering", "results", "analysis", "safety", "supplement-files", "contribution"]) {
+    const html = await (await render("/" + slug)).text();
+    assert.match(html, /class="page-hero"/);
+    assert.equal((html.match(/<h1[ >]/g) ?? []).length, 1);
+    assert.match(html, /class="wiki-theme antialiased"/);
+  }
+  const description = await (await render("/description")).text();
+  assert.match(description, /Dive deep into our project/);
+  const css = readFileSync(new URL("../app/design-system.css", import.meta.url), "utf8");
+  assert.match(css, /--font-display: Georgia, serif/);
+  assert.match(css, /--font-body: Arial, sans-serif/);
+  assert.match(css, /prefers-reduced-motion:reduce/);
+  assert.match(css, /motion-paused/);
+});
+
 test("Notebook and Protocol preserve the full supplied documents with scoped layouts", async () => {
   const data = JSON.parse(readFileSync(new URL('../app/lab-documents.json', import.meta.url), 'utf8'));
   const audit = JSON.parse(readFileSync(new URL('../docs/lab-documents-source-audit-20261004.json', import.meta.url), 'utf8'));
@@ -262,7 +278,7 @@ test("Project order, relocated Method, and new Documents pages match the request
   for (const slug of ["safety", "supplement-files"]) {
     assert.ok(html.includes(`href="/${slug}"`));
     const page = await (await render(`/${slug}`)).text();
-    assert.match(page, /class="document-cover"/);
+    assert.match(page, /class="page-hero"/);
     assert.match(page, /Open full PDF/);
   }
 });

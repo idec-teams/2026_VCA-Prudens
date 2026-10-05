@@ -5,6 +5,9 @@ export function PageHero({ title, subtitle, image, id }: {
   title: string; subtitle?: string; image: string; id?: string;
 }) {
   return <header className="page-hero" aria-label={title + " cover"}>
+    <div className="page-hero-midfield" aria-hidden="true">
+      <span /><span /><span /><i />
+    </div>
     <div className="page-hero-copy">
       <span className="page-hero-rule" aria-hidden="true" />
       <h1 id={id}>{title}</h1>

@@ -57,6 +57,11 @@
 @media(max-width:600px) { .home-page .home-hero { padding-top:65px; } .home-page .home-hero h1 { font-size:clamp(2.55rem,12vw,4.5rem); } .home-page .home-hero-art { min-height:300px; margin:0; } .home-page .hero-orbit { inset:-10px; } .home-page .track-cards { grid-template-columns:1fr; gap:24px; } .home-page .precision-card,.home-page .cargo-card { min-height:280px; } .home-page .story-section { padding-right:56px; } .home-page .evidence-orb { width:165px; } }
 @media(prefers-reduced-motion:reduce) { .home-page *, .home-page *::before,.home-page *::after { animation:none!important; transition:none!important; } .home-loader { display:none; } }
 /* Decorative hand-painted assets; existing diagrams and copy remain untouched. */
+.home-page .story-footer { grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(24px,3vw,50px); }
+.home-page .footer-quicklinks ul { list-style:none; padding:0; margin:0; display:grid; gap:6px; }
+.home-page .footer-quicklinks a { display:inline-block; padding:3px 0; text-underline-offset:4px; }
+@media(max-width:1000px) { .home-page .story-footer { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:600px) { .home-page .story-footer { grid-template-columns:1fr; } }
 .home-page .home-painted-art { pointer-events:none; user-select:none; object-fit:contain; filter:drop-shadow(0 12px 12px #225c4c18); }
 .home-page .painted-dna { float:right; width:clamp(240px,28vw,420px); height:auto; margin:-25px 0 20px 35px; }
 .home-page .editing-copy { clear:both; }

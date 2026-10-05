@@ -1,6 +1,7 @@
 import { sitePath } from "./site-path";
 import safety from "./safety-article.json";
 import "./document-landing.css";
+import { PageHero } from "./PageHero";
 
 const folder = "/assets/documents-20261004";
 const researchPdf = `${folder}/responsible-research-form.pdf`;
@@ -17,10 +18,7 @@ export function DocumentLanding({ slug }: { slug: "safety" | "supplement-files" 
   const title = slug === "safety" ? "Safety" : "Supplement Files";
   const icon = slug === "safety" ? "shield-check" : "file-stack";
   return <main className="ppt-deck document-landing" aria-label={title}>
-    <section className="document-cover" aria-labelledby="document-title">
-      <h1 id="document-title">{title}</h1>
-      <img src={sitePath(`/assets/report-20261004/${icon}.svg`)} alt="" />
-    </section>
+    <PageHero title={title} id="document-title" image={`/assets/report-20261004/${icon}.svg`} />
     {slug === "safety" ? <div className="safety-layout">
       <nav className="document-outline" aria-label="Safety sections">
         {safety.sections.map(section => <a key={section.id} href={`#${section.id}`}>{section.title}</a>)}

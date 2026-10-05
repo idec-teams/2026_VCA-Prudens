@@ -1,11 +1,12 @@
 import data from "./contribution-data.json";
 import { sitePath } from "./site-path";
 import "./contribution.css";
+import { PageHero } from "./PageHero";
 
 export function Contribution() {
   return <main className="ppt-deck contribution-page">
+    <PageHero title="Contribution" image="/assets/contribution.webp" />
     <div className="contribution-content">
-      <header className="contribution-title"><h1>Contribution</h1></header>
       <div className="contribution-table-shell">
         <div className="contribution-table-scroll" tabIndex={0} role="region" aria-label="Team contribution table — scroll to view all columns and members">
           <table className="contribution-table">

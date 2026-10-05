@@ -200,6 +200,7 @@ Sites 项目保持原项目 ID 和原访问范围。只有通过 Sites 正式流
 ## 十一、统一浅色页头与两字体系统（2026-10-05 晚间）
 
 - 用户指定的最终颜色是奶白、浅薄荷绿和淡紫渐变；不要改回深色页头。全站视觉变量和新样式集中在 app/design-system.css。
+- 后续追加的分层要求：导航栏使用暖白底与米灰胶囊菜单，页头偏淡紫渐变，阅读区域灰绿底配乳白正文卡片，目录为浅紫面板；通过柔和阴影和细线分隔，不整体加深颜色。菜单文字、跳转逻辑和正文内容保持不变。
 - 标题使用 Georgia；正文、按钮、目录和图内可编辑标签使用 Arial。同类标题/正文由 --type-page、--type-section、--type-subsection、--type-copy 控制。不得随意在单页增加第三款字体；原始图片/PDF 中已有字体不属于网页可编辑文字，不应重绘。
 - 统一页头组件为 app/PageHero.tsx。title、subtitle 只使用既有原文；image 指向 public 下已有素材。ReportArticle.tsx 的 coverArt 决定 Design/Methods/Engineering 的插图；Contribution 使用原拼图。装饰轨道和小卡片对辅助技术隐藏，不表示新的科研数据。
 - 页头入场动效在 3.8 秒内结束；Home 背景与悬浮效果继续由 Pause motion 控制，系统减少动态效果设置可关闭新增动画。不要让装饰阻挡链接或遮住文字。

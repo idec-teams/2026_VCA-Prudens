@@ -76,7 +76,7 @@ const projectDetails: Record<string, ProjectDetailData> = {
     ], footer: "Statistics",
   },
   contribution: {
-    slug: "contribution", title: "What We Contribute", detailTitle: "Contribution Overview",
+    slug: "contribution", title: "Attribution", detailTitle: "Attribution Overview",
     body: "VCA-Prudens establishes a practical framework for improving ISCro4 in E. coli through mutation stacking and host optimization. The project connects human-cell DMS evidence with bacterial validation, develops a qPCR-centered workflow, and documents a strategy adaptable to other bridge recombinases.",
     sections: [
       { label: "Scientific", lines: ["Cross-host validation", "of DMS mutations"] },

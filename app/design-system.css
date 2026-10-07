@@ -147,6 +147,30 @@ body.wiki-theme :is(.wiki-article-outline,.document-outline) {
 }
 body.wiki-theme :is(.wiki-article-outline,.document-outline) a { color: #294e46; transition: background .2s,color .2s; }
 body.wiki-theme :is(.wiki-article-outline,.document-outline) a:hover { background: #dceae2; }
+/* Decorative section markers preserve native anchors and wrapped text alignment. */
+body.wiki-theme :is(.wiki-article-outline,.document-outline) a {
+  position: relative; min-width: 0; padding-inline-start: 30px;
+}
+body.wiki-theme :is(.wiki-article-outline,.document-outline) a::before,
+body.wiki-theme .lab-notebook-index a > span:last-child::before {
+  content: ""; position: absolute; width: 8px; height: 8px;
+  inset-inline-start: 10px; top: calc(.75em + 10px); transform: translateY(-50%) rotate(45deg);
+  border: 1px solid #7c639e; border-radius: 2px; background: #927caf;
+  box-shadow: 0 0 0 3px #927caf18; pointer-events: none;
+}
+body.wiki-theme .document-outline a::before { top: calc(.75em + 12px); }
+body.wiki-theme .outline-children a::before {
+  width: 6px; height: 6px; top: calc(.75em + 9px); background: transparent; box-shadow: none;
+}
+body.wiki-theme :is(.wiki-article-outline,.document-outline) a:is(:hover,:focus-visible)::before,
+body.wiki-theme .lab-notebook-index a:is(:hover,:focus-visible) > span:last-child::before {
+  border-color: #427d6e; background: #427d6e;
+}
+body.wiki-theme .lab-notebook-index a > span:last-child { display: block; position: relative; padding-inline-start: 22px; }
+body.wiki-theme .lab-notebook-index a > span:last-child::before { inset-inline-start: 2px; top: .75em; }
+@media (max-width: 760px) {
+  body.wiki-theme .document-outline a::before { top: calc(.75em + 9px); }
+}
 body.wiki-theme .outline-parent button { background: #f1eaf8; border-color: #bdacce; }
 body.wiki-theme :is(.wiki-article-copy,.safety-copy) {
   color: var(--reading-ink); border: 1px solid #ceded5; border-top: 5px solid #427d6e;

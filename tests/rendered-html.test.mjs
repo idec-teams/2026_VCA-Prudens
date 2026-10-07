@@ -339,7 +339,7 @@ test("Method outline has an accessible disclosure and subordinate body headings"
   assert.equal((html.match(/<h3 id="/g) ?? []).length, 4);
 });
 
-test("Contribution preserves every source cell, flower position, and guidance paragraph", async () => {
+test("Attribution preserves every source cell, flower position, guidance paragraph, and existing URL", async () => {
   const data = JSON.parse(readFileSync(new URL('../app/contribution-data.json', import.meta.url), 'utf8'));
   const audit = JSON.parse(readFileSync(new URL('../docs/contribution-source-audit-20261007.json', import.meta.url), 'utf8'));
   const escape = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#x27;');
@@ -348,6 +348,10 @@ test("Contribution preserves every source cell, flower position, and guidance pa
   assert.equal(data.columns.length, 11);
   assert.equal(data.members.reduce((sum, member) => sum + member.roles.length, 0), 76);
   const html = await (await render("/contribution")).text();
+  assert.match(html, /<h1[^>]*>Attribution<\/h1>/);
+  assert.match(html, /<title>Attribution \| VCA-Prudens<\/title>/);
+  assert.match(html, /href="\/contribution"[^>]*>Attribution<\/a>/);
+  assert.doesNotMatch(html, />Contribution<\//);
   for (const column of data.columns) assert.ok(html.includes(escape(column.label)));
   for (const member of data.members) {
     assert.ok(html.includes(`<th scope="row">${escape(member.name)}</th>`));

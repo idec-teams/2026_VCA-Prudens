@@ -5,12 +5,12 @@ import { PageHero } from "./PageHero";
 
 export function Contribution() {
   return <main className="ppt-deck contribution-page">
-    <PageHero title="Contribution" image="/assets/contribution.webp" />
+    <PageHero title="Attribution" image="/assets/contribution.webp" />
     <div className="contribution-content">
       <div className="contribution-table-shell">
-        <div className="contribution-table-scroll" tabIndex={0} role="region" aria-label="Team contribution table — scroll to view all columns and members">
+        <div className="contribution-table-scroll" tabIndex={0} role="region" aria-label="Team attribution table — scroll to view all columns and members">
           <table className="contribution-table">
-            <caption className="contribution-sr-only">Team contribution</caption>
+            <caption className="contribution-sr-only">Team attribution</caption>
             <thead><tr><th scope="col">{data.memberHeading}</th>{data.columns.map(column => <th scope="col" key={column.id}>{column.label}</th>)}</tr></thead>
             <tbody>{data.members.map(member => <tr key={member.name}>
               <th scope="row">{member.name}</th>

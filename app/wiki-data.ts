@@ -22,7 +22,7 @@ const archivedProjectPages: SlidePage[] = [
 
 export const teamPages: SlidePage[] = [
   { slug: "members", label: "Members", title: "Members", slides: [10] },
-  { slug: "contribution", label: "Contribution", title: "Contribution", slides: [28, 29] },
+  { slug: "contribution", label: "Attribution", title: "Attribution", slides: [28, 29] },
   { slug: "descriptions", label: "Instructors", title: "Team Supervisor", slides: [8] },
   { slug: "attributions", label: "Attributions", title: "Attributions", slides: [12] },
   { slug: "work-distribution", label: "Work Distribution", title: "Work Distribution", slides: [13] },

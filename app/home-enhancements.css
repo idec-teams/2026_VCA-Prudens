@@ -57,11 +57,28 @@
 @media(max-width:600px) { .home-page .home-hero { padding-top:65px; } .home-page .home-hero h1 { font-size:clamp(2.55rem,12vw,4.5rem); } .home-page .home-hero-art { min-height:300px; margin:0; } .home-page .hero-orbit { inset:-10px; } .home-page .track-cards { grid-template-columns:1fr; gap:24px; } .home-page .precision-card,.home-page .cargo-card { min-height:280px; } .home-page .story-section { padding-right:56px; } .home-page .evidence-orb { width:165px; } }
 @media(prefers-reduced-motion:reduce) { .home-page *, .home-page *::before,.home-page *::after { animation:none!important; transition:none!important; } .home-loader { display:none; } }
 /* Decorative hand-painted assets; existing diagrams and copy remain untouched. */
-.home-page .story-footer { grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(24px,3vw,50px); }
+/* Home refinements: quiet title artwork, a shared section-heading treatment, and clear footer groups. */
+.home-page .hero-title-scene { position:relative; isolation:isolate; }
+.home-page .hero-title-art { position:absolute; z-index:-1; pointer-events:none; width:116%; max-width:none; height:130%; left:-8%; top:-15%; object-fit:contain; opacity:.16; }
+.home-page .hero-keywords { grid-column:1/-1; position:relative; z-index:2; display:flex; flex-wrap:wrap; justify-content:center; gap:10px 14px; list-style:none; margin:-14px 0 -30px; padding:0; }
+.home-page .hero-keywords li { padding:10px 20px; border:1px solid #547c6c30; border-radius:12px; background:#ffffff42; color:#526e63; font:400 .9rem/1.4 var(--home-body); box-shadow:0 4px 12px #07544004; }
+body.wiki-theme .home-page .story-section h2 { color:#ad6210; font-weight:700; padding-bottom:22px; position:relative; }
+.home-page .story-section h2::after { content:""; display:block; position:absolute; left:0; bottom:0; width:76px; height:4px; border-radius:5px; background:linear-gradient(90deg,#ad6210,#e5ba75); box-shadow:12px 5px 0 #e5ba751f; }
+.home-page .story-footer { grid-template-columns:1fr 1.1fr 1.2fr 1.05fr; gap:16px; align-items:stretch; }
+.home-page .story-footer > * { min-width:0; padding:26px 22px; border:1px solid #ffffffb8; border-top:3px solid var(--footer-accent,#609083); border-radius:6px 22px 22px 22px; background:#fffefa9c; box-shadow:0 10px 22px -18px #28544770; text-decoration:none; }
+.home-page .story-footer > :nth-child(2) { --footer-accent:#ad96bd; }
+.home-page .story-footer > :nth-child(3) { --footer-accent:#d5ae70; }
+.home-page .story-footer > :nth-child(4) { --footer-accent:#7b9caa; }
+body.wiki-theme .home-page .story-footer h3 { font-size:1.45rem; font-weight:700; line-height:1.3; margin:0 0 20px; }
+body.wiki-theme .home-page .story-footer p,body.wiki-theme .home-page .story-footer a { font-size:1rem; line-height:1.65; }
+.home-page .story-footer > a:hover { background:#fffefa; text-decoration:none; border-color:var(--footer-accent,#609083); }
+.home-page .story-footer a:hover p { text-decoration:underline; text-underline-offset:4px; }
+.home-page .story-footer > div > a { overflow-wrap:anywhere; }
 .home-page .footer-quicklinks ul { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:2px 16px; }
-.home-page .footer-quicklinks a { display:inline-block; padding:3px 0; text-underline-offset:4px; }
+.home-page .footer-quicklinks a { display:block; padding:5px 0; text-underline-offset:4px; border-bottom:1px solid #547c6c20; }
 @media(max-width:1000px) { .home-page .story-footer { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:600px) { .home-page .story-footer { grid-template-columns:1fr; } }
+@media(max-width:600px) { .home-page .hero-keywords { margin:0; justify-content:flex-start; gap:8px; } .home-page .hero-keywords li { padding:8px 12px; font-size:.8rem; } }
 .home-page .home-painted-art { pointer-events:none; user-select:none; object-fit:contain; filter:drop-shadow(0 12px 12px #225c4c18); }
 .home-page .painted-dna { float:right; width:clamp(240px,28vw,420px); height:auto; margin:-25px 0 20px 35px; }
 .home-page .editing-copy { clear:both; }

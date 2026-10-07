@@ -19,7 +19,10 @@ export default function Home() {
         <section className="home-hero">
           <div className="home-hero-copy">
             <span className="hero-accent" aria-hidden="true" />
-            <h1>Directed Evolution<br />of ISCro4</h1>
+            <div className="hero-title-scene">
+              <img className="hero-title-art" src={sitePath("/assets/home-genetic-health-20261007.png")} width={1536} height={1024} alt="" aria-hidden="true" />
+              <h1>Directed Evolution<br />of ISCro4</h1>
+            </div>
             <p className="home-hero-lead">Biomni-assisted, DMS-guided directed evolution in <em>E. coli</em></p>
             <div className="strategy-card">
               <strong>AI proposes, human verifies</strong>
@@ -36,6 +39,9 @@ export default function Home() {
             <img src={sitePath("/assets/iscro4-bridge.webp")} alt="ISCro4 bridge RNA-guided recombination diagram" />
             <strong>bridge RNA-guided recombination</strong>
           </div>
+          <ul className="hero-keywords" aria-label="Project keywords">
+            {["Directed evolution", "AI scientific agent", "ISCro4", "Genome editing", "RNA-guided recombination"].map(keyword => <li key={keyword}>{keyword}</li>)}
+          </ul>
           <div className="hero-wave hero-wave-one" aria-hidden="true" />
           <div className="hero-wave hero-wave-two" aria-hidden="true" />
         </section>

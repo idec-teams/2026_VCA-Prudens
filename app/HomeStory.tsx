@@ -24,7 +24,7 @@ export function HomeStory() {
   return <div className="home-story" ref={root}>
     <section className="story-section editing-section" id="slide-2" aria-labelledby="editing-title">
       <img className="home-painted-art painted-dna" src={sitePath("/assets/illustrations-20261005/home-dna-ribbon.webp")} width={1200} height={600} loading="lazy" alt="" aria-hidden="true" />
-      <h2 id="editing-title">Editing small changes is no longer the hardest part.</h2>
+      <h2 id="editing-title">Editing small changes is no longer the hardest part</h2>
       <div className="editing-copy"><p className="serif-copy">Our interest in large-fragment DNA editing led us to ISCro4.</p><p>With Biomni’s guidance and our own literature review, we compared emerging DNA-editing systems and chose ISCro4 for directed evolution. The project tested whether its recombination activity could be further improved in E. coli.</p><p>Research interest → Literature review → Experimental validation</p></div>
       <div className="editing-flow">
         <img className="research-photo raised" src={sitePath("/assets/research.webp")} alt="Clinical researchers caring for a child" />

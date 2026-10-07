@@ -21,6 +21,11 @@ export function Contribution() {
           </table>
         </div>
       </div>
+      <header className="contribution-guidance-intro">
+        <p className="guidance-eyebrow">SCIENTIFIC MENTORSHIP</p>
+        <h2>Support across the research process</h2>
+        <p>Our work on Biomni-assisted ISCro4 directed evolution combined literature evaluation, plasmid and mutant construction, qPCR-based activity screening, and interpretation of the results. Our supervisor and advisors helped the team assess AI-generated recommendations, refine experimental approaches, and communicate the evidence clearly. Their individual contributions are outlined below.</p>
+      </header>
       <div className="contribution-guidance">
         {data.guidance.map((section, index) => <section key={section.heading} className="guidance-section" aria-labelledby={`contribution-guidance-${index}`}>
           <h2 id={`contribution-guidance-${index}`}>{section.heading}</h2>

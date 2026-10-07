@@ -214,7 +214,7 @@ test("revised manuscript pages preserve assigned text and every embedded figure"
         } else if (block.type === 'figure') {
           used.push(block.figure);
           const fig = data.figures[block.figure];
-          if (stillRendered) assert.ok(html.includes(`<figcaption>${escape(fig.caption)}</figcaption>`));
+          if (stillRendered) assert.ok(html.replace(/<\/?strong>/g, '').includes(`<figcaption>${escape(fig.caption)}</figcaption>`));
           if (fig.src) {
             if (stillRendered) assert.ok(html.includes(`src="${fig.src}"`));
             const bytes = readFileSync(new URL(`../public${fig.src}`, import.meta.url));
@@ -269,8 +269,10 @@ test("uploaded reports preserve all source text and images with native section l
       if (source.text) {
         const matched = blocks.filter(b => b.sourceParagraph === source.paragraph && b.text !== undefined);
         assert.equal(matched.length, 1);
-        assert.equal(matched[0].text, source.text);
-        assert.ok(html.includes(escape(source.text)), `${slug} paragraph ${source.paragraph}`);
+        // User-approved correction on 2026-10-07; all other source text stays verbatim.
+        const expected = slug === 'methods' ? source.text.replace(/Fig\. 11(?=[AB]?\b)/g, 'Fig. 1') : source.text;
+        assert.equal(matched[0].text, expected);
+        assert.ok(html.replace(/<\/?strong>/g, '').includes(escape(expected)), `${slug} paragraph ${source.paragraph}`);
       }
       for (const image of source.images) {
         imageCount++;
@@ -339,11 +341,12 @@ test("Method outline has an accessible disclosure and subordinate body headings"
 
 test("Contribution preserves every source cell, flower position, and guidance paragraph", async () => {
   const data = JSON.parse(readFileSync(new URL('../app/contribution-data.json', import.meta.url), 'utf8'));
-  const audit = JSON.parse(readFileSync(new URL('../docs/contribution-source-audit-20261004.json', import.meta.url), 'utf8'));
+  const audit = JSON.parse(readFileSync(new URL('../docs/contribution-source-audit-20261007.json', import.meta.url), 'utf8'));
   const escape = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#x27;');
   assert.deepEqual(data, audit.original);
   assert.equal(data.members.length, 17);
   assert.equal(data.columns.length, 11);
+  assert.equal(data.members.reduce((sum, member) => sum + member.roles.length, 0), 76);
   const html = await (await render("/contribution")).text();
   for (const column of data.columns) assert.ok(html.includes(escape(column.label)));
   for (const member of data.members) {

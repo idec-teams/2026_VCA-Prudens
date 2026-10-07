@@ -63,6 +63,7 @@
       "roles": [
         "team-leader",
         "literature-ai-design",
+        "assay-development",
         "data-analysis",
         "manuscript",
         "presentation"
@@ -72,6 +73,7 @@
       "name": "Lifei, Shu",
       "roles": [
         "team-leader",
+        "literature-ai-design",
         "assay-development",
         "manuscript",
         "wiki",
@@ -94,6 +96,7 @@
       "roles": [
         "plasmid-construction",
         "assay-development",
+        "qpcr-screening",
         "poster"
       ]
     },
@@ -101,6 +104,7 @@
       "name": "Chenfan, Wu",
       "roles": [
         "plasmid-construction",
+        "mutant-construction",
         "qpcr-screening",
         "wiki"
       ]
@@ -109,6 +113,7 @@
       "name": "Yuxi, Bai",
       "roles": [
         "literature-ai-design",
+        "assay-development",
         "manuscript",
         "presentation"
       ]
@@ -118,13 +123,13 @@
       "roles": [
         "assay-development",
         "data-analysis",
-        "manuscript"
+        "manuscript",
+        "poster"
       ]
     },
     {
       "name": "Xiaohan Sophie, Wang",
       "roles": [
-        "literature-ai-design",
         "assay-development",
         "mutant-construction",
         "qpcr-screening",
@@ -152,7 +157,6 @@
     {
       "name": "Fengwu, Wang",
       "roles": [
-        "plasmid-construction",
         "assay-development",
         "mutant-construction",
         "wiki",
@@ -162,6 +166,7 @@
     {
       "name": "Muyan, Wang",
       "roles": [
+        "literature-ai-design",
         "plasmid-construction",
         "qpcr-screening",
         "wiki"
@@ -190,6 +195,7 @@
       "roles": [
         "mutant-construction",
         "qpcr-screening",
+        "manuscript",
         "wiki"
       ]
     },

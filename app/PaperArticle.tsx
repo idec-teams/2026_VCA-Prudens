@@ -1,6 +1,7 @@
 import manuscript from "./paper-articles.json";
 import "./wiki-article.css";
 import { PageHero } from "./PageHero";
+import { CaptionText } from "./CaptionText";
 import { sitePath } from "./site-path";
 
 type Block = { type: string; text?: string; figure?: number; sourceParagraph?: number };
@@ -32,7 +33,7 @@ export function PaperArticle({ slug }: { slug: string }) {
                 {figure.src && <a href={sitePath(figure.src)} target="_blank" rel="noopener noreferrer" aria-label={`Open full-resolution Figure ${figure.number}`}>
                   <img src={sitePath(figure.src)} width={figure.width} height={figure.height} loading="lazy" alt={figure.caption.split('. ').slice(0, 2).join('. ')} />
                 </a>}
-                <figcaption>{figure.caption}</figcaption>
+                <figcaption><CaptionText text={figure.caption} /></figcaption>
                 {figure.note && <p className="paper-note">{figure.note}</p>}
                 {figure.src && <a className="figure-original" href={sitePath(figure.src)} target="_blank" rel="noopener noreferrer">View full-size figure {figure.number}</a>}
               </figure>;

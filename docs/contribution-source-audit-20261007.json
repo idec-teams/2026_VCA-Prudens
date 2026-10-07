@@ -1,0 +1,232 @@
+{
+  "source": "/Users/5raylene2/Downloads/VCA-Prudens Contribution.docx",
+  "sourceSha256": "a964b180b664ec02ad46b1a52b252c36cf09e78cea9a832719fd0d4eb7e11ee6",
+  "flowerSha256": "830cde3d3b0390d2a8e3ad5523030154cde6370e5abeaa3dcd8a6dde20a9a8ef",
+  "original": {
+    "memberHeading": "Members",
+    "columns": [
+      {
+        "id": "team-leader",
+        "label": "Team\nLeader"
+      },
+      {
+        "id": "literature-ai-design",
+        "label": "Literature & AI-Assisted Design"
+      },
+      {
+        "id": "plasmid-construction",
+        "label": "Plasmid Construction"
+      },
+      {
+        "id": "assay-development",
+        "label": "Assay Development & Validation"
+      },
+      {
+        "id": "mutant-construction",
+        "label": "Mutant Construction"
+      },
+      {
+        "id": "qpcr-screening",
+        "label": "qPCR Activity Screening"
+      },
+      {
+        "id": "data-analysis",
+        "label": "Data Analysis & Visualization"
+      },
+      {
+        "id": "manuscript",
+        "label": "Manuscript Writing & Editing"
+      },
+      {
+        "id": "wiki",
+        "label": "Wiki\nTeam"
+      },
+      {
+        "id": "poster",
+        "label": "Poster\nTeam"
+      },
+      {
+        "id": "presentation",
+        "label": "Presentation\nPreparation"
+      }
+    ],
+    "members": [
+      {
+        "name": "Zimeng Jessie, Yu",
+        "roles": [
+          "team-leader",
+          "plasmid-construction",
+          "mutant-construction",
+          "qpcr-screening",
+          "data-analysis",
+          "presentation"
+        ]
+      },
+      {
+        "name": "Kele, Zhang",
+        "roles": [
+          "team-leader",
+          "literature-ai-design",
+          "assay-development",
+          "data-analysis",
+          "manuscript",
+          "presentation"
+        ]
+      },
+      {
+        "name": "Lifei, Shu",
+        "roles": [
+          "team-leader",
+          "literature-ai-design",
+          "assay-development",
+          "manuscript",
+          "wiki",
+          "presentation"
+        ]
+      },
+      {
+        "name": "Shiya, Da",
+        "roles": [
+          "team-leader",
+          "plasmid-construction",
+          "mutant-construction",
+          "qpcr-screening",
+          "poster",
+          "presentation"
+        ]
+      },
+      {
+        "name": "Celine, Zhang",
+        "roles": [
+          "plasmid-construction",
+          "assay-development",
+          "qpcr-screening",
+          "poster"
+        ]
+      },
+      {
+        "name": "Chenfan, Wu",
+        "roles": [
+          "plasmid-construction",
+          "mutant-construction",
+          "qpcr-screening",
+          "wiki"
+        ]
+      },
+      {
+        "name": "Yuxi, Bai",
+        "roles": [
+          "literature-ai-design",
+          "assay-development",
+          "manuscript",
+          "presentation"
+        ]
+      },
+      {
+        "name": "Haotian, Lu",
+        "roles": [
+          "assay-development",
+          "data-analysis",
+          "manuscript",
+          "poster"
+        ]
+      },
+      {
+        "name": "Xiaohan Sophie, Wang",
+        "roles": [
+          "assay-development",
+          "mutant-construction",
+          "qpcr-screening",
+          "presentation"
+        ]
+      },
+      {
+        "name": "Zhecheng, Yue",
+        "roles": [
+          "literature-ai-design",
+          "data-analysis",
+          "manuscript",
+          "presentation"
+        ]
+      },
+      {
+        "name": "Lingwei, Li",
+        "roles": [
+          "literature-ai-design",
+          "data-analysis",
+          "poster",
+          "presentation"
+        ]
+      },
+      {
+        "name": "Fengwu, Wang",
+        "roles": [
+          "assay-development",
+          "mutant-construction",
+          "wiki",
+          "presentation"
+        ]
+      },
+      {
+        "name": "Muyan, Wang",
+        "roles": [
+          "literature-ai-design",
+          "plasmid-construction",
+          "qpcr-screening",
+          "wiki"
+        ]
+      },
+      {
+        "name": "Ruixi, Huang",
+        "roles": [
+          "mutant-construction",
+          "data-analysis",
+          "wiki",
+          "poster"
+        ]
+      },
+      {
+        "name": "Yichen, Sun",
+        "roles": [
+          "literature-ai-design",
+          "plasmid-construction",
+          "assay-development",
+          "poster"
+        ]
+      },
+      {
+        "name": "Yiding, Yuan",
+        "roles": [
+          "mutant-construction",
+          "qpcr-screening",
+          "manuscript",
+          "wiki"
+        ]
+      },
+      {
+        "name": "Ruohan, Shen",
+        "roles": [
+          "plasmid-construction",
+          "mutant-construction",
+          "qpcr-screening",
+          "manuscript"
+        ]
+      }
+    ],
+    "guidance": [
+      {
+        "heading": "Supervisor — [Jian, Mo]",
+        "text": "Dr. Mo provided overall scientific supervision for the Biomni-assisted ISCro4 directed-evolution project. He helped the team define the research objectives, assess the feasibility of the study, and review progress at key stages. He also emphasized the need to verify AI-generated suggestions through literature review and experimental evidence, and provided critical feedback on the interpretation of the results and the final manuscript."
+      },
+      {
+        "heading": "Advisor — [Zhiheng, Xu] — Experimental Guidance",
+        "text": "Xu provided practical guidance on plasmid construction, mutant validation, and the development of the ISCro4 activity assay. He supported the students in evaluating the limitations of the chloramphenicol-based readout and implementing the qPCR-based DNA deletion assay. He also advised on experimental controls, replicate design, and laboratory record keeping throughout the screening of the candidate variants."
+      },
+      {
+        "heading": "Advisor — [Zedong, Jin] — Data Analysis and Scientific Writing",
+        "text": "Jin advised the team on literature evaluation, interpretation of the published DMS data, and critical assessment of Biomni-generated recommendations. He guided the analysis and visualization of the qPCR results, with particular attention to comparing A225S with the engineered parental variant and distinguishing the measured DNA deletion activity from broader genome-editing applications. He also provided feedback on manuscript organization, figure legends, and the presentation of the project on the wiki and in presentation materials."
+      }
+    ],
+    "flower": "/assets/contribution-20261004/flower.png"
+  }
+}

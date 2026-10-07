@@ -17,10 +17,10 @@ export default function Home() {
       <main className="home-page">
         <HomeExperience />
         <section className="home-hero">
+          <img className="hero-backdrop-art" src={sitePath("/assets/home-health-monochrome-20261007.png")} width={1672} height={941} alt="" aria-hidden="true" />
           <div className="home-hero-copy">
             <span className="hero-accent" aria-hidden="true" />
             <div className="hero-title-scene">
-              <img className="hero-title-art" src={sitePath("/assets/home-genetic-health-20261007.png")} width={1536} height={1024} alt="" aria-hidden="true" />
               <h1>Directed Evolution<br />of ISCro4</h1>
             </div>
             <p className="home-hero-lead">Biomni-assisted, DMS-guided directed evolution in <em>E. coli</em></p>

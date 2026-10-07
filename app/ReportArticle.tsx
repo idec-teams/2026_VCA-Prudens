@@ -33,7 +33,7 @@ export function ReportArticle({ slug }: { slug: string }) {
                 <img src={sitePath(block.src!)} width={block.width} height={block.height} loading="lazy" alt={block.alt ?? ""} />
               </a>
             </figure>
-          ) : <p key={index} className={block.type === "caption" ? "report-caption" : undefined}>{block.type === "caption" ? <CaptionText text={block.text ?? ""} /> : block.text}</p>)}
+          ) : <p key={index} className={block.type === "caption" || block.type === "caption-note" ? "report-caption" : undefined}>{block.type === "caption" ? <CaptionText text={block.text ?? ""} /> : block.text}</p>)}
         </section>)}
       </article>
     </div>

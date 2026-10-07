@@ -22,7 +22,7 @@ body.wiki-theme :is(.home-hero-lead,.strategy-card span,.lab-document-intro,.sto
 body.wiki-theme :is(.wiki-article-outline,.document-outline,.lab-notebook-index) a { font-size: 1rem; line-height: 1.5; font-weight: 700; }
 body.wiki-theme :is(.report-caption,.paper-figure figcaption,.document-reader-help) { font-size: 1rem; line-height: 1.7; }
 body.wiki-theme .wiki-article-copy .report-caption,
-body.wiki-theme .paper-figure figcaption { font-size: .9rem; line-height: 1.65; }
+body.wiki-theme .paper-figure figcaption { font-size: .8125rem; line-height: 1.65; color: #767676; }
 body.wiki-theme :is(.report-caption,.paper-figure figcaption) strong { font-weight: 700; }
 body.wiki-theme .outline-children a { font-size: .925rem; }
 body.wiki-theme .brand span { letter-spacing: -.025em; }

@@ -307,12 +307,12 @@
             "sourceParagraph": 9
           },
           {
-            "type": "paragraph",
+            "type": "caption",
             "text": "Table.S1 Primers designed for site-directed mutagenesis of ten DMS-selected ISCro4 variants.",
             "sourceParagraph": 10
           },
           {
-            "type": "paragraph",
+            "type": "caption-note",
             "text": "The table lists amino acid substitutions and positions, original and substituted codons, and forward and reverse primer sequences (5′–3′). Primer lengths (nt), GC contents (%), predicted melting temperatures (Tm, °C) of the forward primer 3′ annealing regions and reverse primers, and overlap lengths (bp) and predicted Tm values are provided. DMS, deep mutational scanning.",
             "sourceParagraph": 11
           }

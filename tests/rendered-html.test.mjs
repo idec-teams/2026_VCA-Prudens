@@ -286,6 +286,15 @@ test("uploaded reports preserve all source text and images with native section l
   assert.equal(data.analysis.sections.length, 6);
 });
 
+test("table annotations use the smaller gray caption style without changing body paragraphs", async () => {
+  const html = await (await render("/methods")).text();
+  assert.match(html, /<p class="report-caption"><strong>Table\.S1 Primers[^<]+<\/strong><\/p>/);
+  assert.match(html, /<p class="report-caption">The table lists amino acid substitutions/);
+  assert.match(html, /<p>Each pID05 variant was co-transformed/);
+  const css = readFileSync(new URL("../app/design-system.css", import.meta.url), "utf8");
+  assert.match(css, /font-size: \.8125rem; line-height: 1\.65; color: #767676/);
+});
+
 test("Project order, relocated Method, and new Documents pages match the requested scope", async () => {
   const html = await (await render("/description")).text();
   const copy = html.slice(html.indexOf('<article'));

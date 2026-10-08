@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
+import { notebookPages, notebookPageForHash } from "../app/notebook-pagination.mjs";
 
 const routes = [
   "/", "/members", "/descriptions", "/attributions", "/work-distribution",
@@ -45,11 +46,19 @@ test("shared page introductions preserve titles and use the two-font design syst
 
 test("Notebook and Protocol preserve the full supplied documents with scoped layouts", async () => {
   const data = JSON.parse(readFileSync(new URL('../app/lab-documents.json', import.meta.url), 'utf8'));
-  const audit = JSON.parse(readFileSync(new URL('../docs/lab-documents-source-audit-20261004.json', import.meta.url), 'utf8'));
+  const audit = JSON.parse(readFileSync(new URL('../docs/lab-documents-source-audit-20261008.json', import.meta.url), 'utf8'));
+  const oldAudit = JSON.parse(readFileSync(new URL('../docs/lab-documents-source-audit-20261004.json', import.meta.url), 'utf8'));
   const escape = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#x27;');
   for (const [slug, page] of Object.entries(data)) {
-    assert.deepEqual([page.title, page.subtitle, page.intro, ...page.sections.flatMap(s => [s.sourceHeading, ...s.paragraphs])], audit[slug].paragraphs);
-    assert.equal(page.sections.length, 7);
+    const flatten = blocks => blocks.flatMap(b => b.rows ? b.rows.flatMap(row => row.flatMap(c => flatten(c.blocks))) : b.text ? [b.text] : []);
+    if (slug === 'notebook') {
+      assert.deepEqual([page.title, page.subtitle, page.intro], oldAudit.notebook.paragraphs.slice(0, 3), 'Existing notebook header must not change');
+      assert.deepEqual([page.sourceTitle, ...page.sections.flatMap(s => [s.sourceHeading, ...flatten(s.blocks)])], audit.notebook.paragraphs);
+      assert.equal(page.sections.length, 8);
+    } else {
+      assert.deepEqual([page.title, page.subtitle, page.intro, ...page.sections.flatMap(s => [s.sourceHeading, ...s.paragraphs])], audit.protocol.paragraphs);
+      assert.equal(page.sections.length, 9);
+    }
     const html = await (await render('/' + slug)).text();
     assert.ok(html.includes(escape(page.title)));
     assert.ok(html.includes(escape(page.subtitle)));
@@ -58,17 +67,42 @@ test("Notebook and Protocol preserve the full supplied documents with scoped lay
       assert.ok(html.includes(`id="${section.id}" tabindex="-1"`));
       assert.ok(html.includes(escape(section.title)));
       if (slug === 'notebook') {
-        assert.equal(section.date + '  ' + section.title, section.sourceHeading);
+        assert.equal('Date: ' + section.date, section.sourceHeading);
         assert.ok(html.includes(`href="#${section.id}"`));
         assert.ok(html.includes(escape(section.date)));
       } else {
         assert.equal(section.title, section.sourceHeading.replace(/^\d+\s+/, ''));
         assert.doesNotMatch(section.title, /^\d+\s/);
       }
-      for (const p of section.paragraphs) assert.ok(html.includes(`<p>${escape(p)}</p>`));
+      for (const p of slug === 'notebook' ? flatten(section.blocks) : section.paragraphs) assert.ok(html.includes(escape(p)), p);
     }
-    assert.equal((html.match(new RegExp('class="' + (slug === 'notebook' ? 'lab-notebook-entry' : 'lab-protocol-note') + '"', 'g')) ?? []).length, 7);
+    assert.equal((html.match(new RegExp('class="' + (slug === 'notebook' ? 'lab-notebook-entry' : 'lab-protocol-note') + '"', 'g')) ?? []).length, slug === 'notebook' ? notebookPages(page.sections).length : 9);
     assert.doesNotMatch(html, /XXXXXX|protocol直接跳转/);
+  }
+});
+
+test("notebook pagination preserves all blocks, date links, table grids and original photographs", async () => {
+  const data = JSON.parse(readFileSync(new URL('../app/lab-documents.json', import.meta.url), 'utf8')).notebook;
+  const audit = JSON.parse(readFileSync(new URL('../docs/lab-documents-source-audit-20261008.json', import.meta.url), 'utf8')).notebook;
+  const pages = notebookPages(data.sections);
+  assert.equal(pages.length, 28);
+  assert.deepEqual(pages.flatMap(p => p.blocks), data.sections.flatMap(s => s.blocks));
+  assert.equal(new Set(pages.map(p => p.id)).size, pages.length);
+  pages.forEach((p, index) => {
+    assert.equal(notebookPageForHash(pages, '#' + p.id), index);
+    assert.equal(notebookPageForHash(pages, '#' + encodeURIComponent(p.id)), index);
+  });
+  for (const section of data.sections) assert.ok(notebookPageForHash(pages, '#' + section.id) >= 0);
+  assert.equal(notebookPageForHash(pages, '#%broken'), -1);
+  const html = await (await render('/notebook')).text();
+  assert.equal((html.match(/class="lab-record-table(?: lab-record-table-wide)?"/g) ?? []).length, 34);
+  assert.equal((html.match(/class="lab-record-gallery"/g) ?? []).length, 11);
+  assert.equal((html.match(/class="lab-record-image"/g) ?? []).length, 50);
+  assert.match(html, /rowSpan="2"/i);
+  assert.match(html, /colSpan="2"/i);
+  for (const img of audit.images) {
+    assert.ok(html.includes(`src="${img.src}"`));
+    assert.equal(createHash('sha256').update(readFileSync(new URL('../public' + img.src, import.meta.url))).digest('hex'), img.sha256);
   }
 });
 

@@ -1,0 +1,92 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { sitePath } from "./site-path";
+import { notebookPages, notebookPageForHash } from "./notebook-pagination.mjs";
+
+type Cell = { colSpan: number; rowSpan?: number; merge?: string; blocks: Block[] };
+type Block = { type: string; text?: string; prefix?: string; src?: string; width?: number; height?: number; alt?: string; rows?: Cell[][] };
+type Section = { id: string; sourceHeading: string; title: string; date: string; blocks: Block[] };
+type Page = { id: string; sectionIndex: number; part: number; blocks: Block[] };
+
+function Blocks({ blocks }: { blocks: Block[] }) {
+  return <>{blocks.map((block, index) => {
+    if (block.type === "image") return <figure className="lab-record-image" key={index}>
+      <a href={sitePath(block.src!)} target="_blank" rel="noopener noreferrer" aria-label="Open laboratory image at full size">
+        <img src={sitePath(block.src!)} width={block.width} height={block.height} alt={block.alt} loading="lazy" />
+      </a>
+    </figure>;
+    if (block.type === "gallery") return <div className="lab-record-gallery" key={index}>
+      {block.rows!.flat().map((cell, cellIndex) => <div key={cellIndex}><Blocks blocks={cell.blocks} /></div>)}
+    </div>;
+    if (block.type === "table") return <div className="lab-record-table-scroll" key={index} role="region" aria-label="Laboratory data table, scroll horizontally for all columns" tabIndex={0}>
+      <table className={`lab-record-table${block.rows![0].length > 4 ? " lab-record-table-wide" : ""}`}><tbody>{block.rows!.map((row, rowIndex) => <tr key={rowIndex}>
+        {row.map((cell, cellIndex) => {
+          if (cell.merge === "continue") return null;
+          const Tag = rowIndex === 0 ? "th" : "td";
+          return <Tag key={cellIndex} colSpan={cell.colSpan} rowSpan={cell.rowSpan} scope={rowIndex === 0 ? "col" : undefined}><Blocks blocks={cell.blocks} /></Tag>;
+        })}
+      </tr>)}</tbody></table>
+    </div>;
+    return <p key={index} className={block.type === "caption" ? "lab-record-caption" : undefined}>
+      {block.prefix && <span className="lab-record-step">{block.prefix}</span>}
+      {block.type === "caption" ? <strong>{block.text}</strong> : block.text}
+    </p>;
+  })}</>;
+}
+
+export function NotebookReader({ sections, sourceTitle }: { sections: Section[]; sourceTitle: string }) {
+  const pages: Page[] = notebookPages(sections);
+  const [active, setActive] = useState<number | null>(null);
+  const book = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const readHash = () => {
+      const found = notebookPageForHash(pages, window.location.hash);
+      setActive(found < 0 ? 0 : found);
+      if (found >= 0) requestAnimationFrame(() => {
+        document.getElementById(pages[found].id)?.scrollIntoView({ block: "start" });
+      });
+    };
+    readHash();
+    window.addEventListener("hashchange", readHash);
+    return () => window.removeEventListener("hashchange", readHash);
+  // Document data stays fixed for this reader's lifetime.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  function turn(index: number) {
+    setActive(index);
+    // Native hash links preserve refresh, sharing, and browser Back/Forward.
+    requestAnimationFrame(() => {
+      const heading = document.getElementById(pages[index].id);
+      heading?.focus({ preventScroll: true });
+      book.current?.scrollIntoView({ block: "start" });
+    });
+  }
+  const current = active ?? 0;
+  function controls(position: string) {
+    return <nav className="lab-page-controls" aria-label={`Notebook pages, ${position}`}>
+      {current > 0 ? <a href={`#${pages[current - 1].id}`} onClick={() => turn(current - 1)}>Previous page</a> : <span aria-disabled="true">Previous page</span>}
+      <span className="lab-page-count" aria-live="polite" aria-atomic="true">Page {current + 1} / {pages.length}</span>
+      {current < pages.length - 1 ? <a href={`#${pages[current + 1].id}`} onClick={() => turn(current + 1)}>Next page</a> : <span aria-disabled="true">Next page</span>}
+    </nav>;
+  }
+  return <div className={`lab-notebook-layout${active === null ? "" : " lab-paginated"}`}>
+    <nav className="lab-notebook-index" aria-label="Notebook sections">
+      {sections.map((section, index) => {
+        const target = pages.findIndex(page => page.sectionIndex === index);
+        return <a key={section.id} href={`#${section.id}`} onClick={() => turn(target)} aria-current={active !== null && pages[current].sectionIndex === index ? "location" : undefined}>
+          <span className="lab-entry-date">{section.date}</span><span>{section.title}</span>
+        </a>;
+      })}
+    </nav>
+    <article className="lab-notebook-pages" aria-label="Dated laboratory records" ref={book}>
+      {active !== null && controls("top")}
+      {pages.map((page, index) => <section className="lab-notebook-entry" key={page.id} hidden={active !== null && current !== index} aria-labelledby={page.id}>
+        {index === 0 && <p className="lab-record-source-title">{sourceTitle}</p>}
+        <h2 id={page.id} tabIndex={-1}>{sections[page.sectionIndex].sourceHeading}</h2>
+        <Blocks blocks={page.blocks} />
+      </section>)}
+      {active !== null && controls("bottom")}
+    </article>
+  </div>;
+}

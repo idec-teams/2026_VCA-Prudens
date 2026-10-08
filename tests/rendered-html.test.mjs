@@ -10,6 +10,17 @@ const routes = [
   "/results", "/contribution", "/notebook", "/protocol", "/mutation-selection", "/safety", "/report", "/supplement-files",
 ];
 
+test("every route shares the small native evolution cursor", async () => {
+  const png = readFileSync(new URL("../public/assets/cursor-20261008/evolution-starburst.png", import.meta.url));
+  assert.equal(png.readUInt32BE(16), 40);
+  assert.equal(png.readUInt32BE(20), 40);
+  for (const route of routes) {
+    const html = await (await render(route)).text();
+    assert.match(html, /--wiki-cursor:/, route);
+    assert.match(html, /cursor-20261008\/evolution-starburst\.png/, route);
+  }
+});
+
 test("October additions preserve document metadata, the original PDF, and additive Home design", async () => {
   const notebook = await (await render("/notebook")).text();
   assert.equal((notebook.match(/class="lab-record-meta"/g) ?? []).length, 28);

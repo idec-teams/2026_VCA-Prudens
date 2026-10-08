@@ -1,0 +1,16 @@
+Tool: built-in image_gen, one generation. User-approved concept: evolution starburst.
+Web asset: public/assets/cursor-20261008/evolution-starburst.png
+40 x 40 transparent PNG; native CSS hotspot (4, 3) at the upper-left tip.
+Master preserved outside deployment: /private/tmp/vca-evolution-cursor/evolution-starburst.png
+
+Exact generation prompt:
+Use case: stylized-concept
+Asset type: one transparent raster native CSS mouse cursor for a hand-painted scientific wiki, designed to remain legible at 32 by 32 pixels.
+Scene/backdrop: genuinely transparent alpha background, absolutely no background plane.
+Subject: one small asymmetric FOUR-point evolution sparkle, rotated diagonally. Its upper-left point is distinctly longest and ends in a sharp precise click hotspot; the other three points are shorter. A compact short curved brushstroke is attached to and trails from the lower-right of the sparkle, forming one connected silhouette.
+Style/medium: hand-painted oil-pastel and crayon, tactile dry pigment texture inside broad solid shapes; simple bold silhouette and restrained detail suitable for a tiny cursor.
+Color palette: deep teal green primary body, restrained violet shading, cream highlights, one tiny muted gold accent at the upper-left tip. Keep the tip sharply readable.
+Composition/framing: exactly one isolated bounded icon, full silhouette visible, square canvas, snug framing with modest transparent padding around all edges; upper-left pointing tip around 15% from the canvas left and top. Strong opaque silhouette with natural painted edges, no detached flecks.
+Constraints: exactly four sparkle points; no DNA, no pipette, no flower, no face, no literal arrow, no text, no watermark, no border, no scattered or disconnected dots, no glow, no cast shadow, no multiple icons or variants. Preserve genuine transparent alpha.
+
+Inspection: four-point central sparkle with an additional elongated upper-left click tip and attached curved tail. Teal, violet, gold and cream pastel texture, genuine alpha. Downsampled once with sips to 40 px for the native cursor; no page content changed.

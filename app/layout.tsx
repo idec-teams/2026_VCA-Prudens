@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./home-story.css";
 import "./design-system.css";
+import "./wiki-cursor.css";
 import { ReadingControls } from "./ReadingControls";
 import { sitePath } from "./site-path";
 
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className="wiki-theme antialiased"
+        style={{ "--wiki-cursor": `url("${sitePath("/assets/cursor-20261008/evolution-starburst.png")}") 4 3` } as React.CSSProperties}
       >
         {children}
         <ReadingControls />

@@ -1,0 +1,22 @@
+/* Native cursor only: no overlay, tracking script, or change to page layout. */
+@media (any-hover: hover) and (any-pointer: fine) {
+  body.wiki-theme,
+  body.wiki-theme * {
+    cursor: var(--wiki-cursor), auto;
+  }
+
+  body.wiki-theme :is(a, button, summary, select, label[for], [role="button"], input[type="checkbox"], input[type="radio"]),
+  body.wiki-theme :is(a, button, summary, [role="button"]) * {
+    cursor: var(--wiki-cursor), pointer;
+  }
+
+  body.wiki-theme :is(textarea, input:not([type]), input[type="text"], input[type="search"], input[type="email"], input[type="password"], input[type="url"], input[type="tel"], input[type="number"], [contenteditable="true"]),
+  body.wiki-theme [contenteditable="true"] * {
+    cursor: text;
+  }
+
+  body.wiki-theme :is(:disabled, [aria-disabled="true"]),
+  body.wiki-theme :is(:disabled, [aria-disabled="true"]) * {
+    cursor: not-allowed;
+  }
+}

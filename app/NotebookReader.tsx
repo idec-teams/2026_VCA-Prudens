@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { sitePath } from "./site-path";
 import { notebookPages, notebookPageForHash } from "./notebook-pagination.mjs";
 import { LabRichText, type LabRun } from "./LabRichText";
@@ -54,9 +54,14 @@ export function NotebookReader({ sections, sourceTitle, sourceTitleRuns }: { sec
   // Document data stays fixed for this reader's lifetime.
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  function turn(index: number) {
+  function turn(event: MouseEvent<HTMLAnchorElement>, index: number) {
+    // Preserve new-tab/modified clicks, but cancel the normal anchor default
+    // before React changes this control's href to the following page.
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    window.location.hash = pages[index].id;
     setActive(index);
-    // Native hash links preserve refresh, sharing, and browser Back/Forward.
+    // A single hash navigation preserves refresh, sharing and Back/Forward.
     requestAnimationFrame(() => {
       const heading = document.getElementById(pages[index].id);
       heading?.focus({ preventScroll: true });
@@ -66,16 +71,16 @@ export function NotebookReader({ sections, sourceTitle, sourceTitleRuns }: { sec
   const current = active ?? 0;
   function controls(position: string) {
     return <nav className="lab-page-controls" aria-label={`Notebook pages, ${position}`}>
-      {current > 0 ? <a href={`#${pages[current - 1].id}`} onClick={() => turn(current - 1)}>Previous page</a> : <span aria-disabled="true">Previous page</span>}
+      {current > 0 ? <a href={`#${pages[current - 1].id}`} onClick={event => turn(event, current - 1)}>Previous page</a> : <span aria-disabled="true">Previous page</span>}
       <span className="lab-page-count" aria-live="polite" aria-atomic="true">Page {current + 1} / {pages.length}</span>
-      {current < pages.length - 1 ? <a href={`#${pages[current + 1].id}`} onClick={() => turn(current + 1)}>Next page</a> : <span aria-disabled="true">Next page</span>}
+      {current < pages.length - 1 ? <a href={`#${pages[current + 1].id}`} onClick={event => turn(event, current + 1)}>Next page</a> : <span aria-disabled="true">Next page</span>}
     </nav>;
   }
   return <div className={`lab-notebook-layout${active === null ? "" : " lab-paginated"}`}>
     <nav className="lab-notebook-index" aria-label="Notebook sections">
       {sections.map((section, index) => {
         const target = pages.findIndex(page => page.sectionIndex === index);
-        return <a key={section.id} href={`#${section.id}`} onClick={() => turn(target)} aria-current={active !== null && pages[current].sectionIndex === index ? "location" : undefined}>
+        return <a key={section.id} href={`#${section.id}`} onClick={event => turn(event, target)} aria-current={active !== null && pages[current].sectionIndex === index ? "location" : undefined}>
           <span className="lab-entry-date">{section.date}</span><span>{section.title}</span>
         </a>;
       })}

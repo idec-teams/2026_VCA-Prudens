@@ -132,6 +132,30 @@ test("notebook pagination preserves all blocks, date links, table grids and orig
   }
 });
 
+test("notebook clicks cancel the changing anchor default before selecting exactly one adjacent page", () => {
+  const source = readFileSync(new URL('../app/NotebookReader.tsx', import.meta.url), 'utf8');
+  const handler = source.slice(source.indexOf('  function turn('), source.indexOf('  const current ='));
+  assert.ok(handler.indexOf('event.preventDefault()') < handler.indexOf('window.location.hash = pages[index].id'));
+  assert.ok(handler.indexOf('window.location.hash = pages[index].id') < handler.indexOf('setActive(index)'));
+  assert.match(handler, /event\.metaKey \|\| event\.ctrlKey \|\| event\.shiftKey \|\| event\.altKey/);
+  assert.match(source, /onClick=\{event => turn\(event, current - 1\)\}/);
+  assert.match(source, /onClick=\{event => turn\(event, current \+ 1\)\}/);
+  assert.match(source, /onClick=\{event => turn\(event, target\)\}/);
+  assert.match(source, /window\.addEventListener\("hashchange", readHash\)/);
+  const data = JSON.parse(readFileSync(new URL('../app/lab-documents.json', import.meta.url), 'utf8')).notebook;
+  const pages = notebookPages(data.sections);
+  assert.deepEqual(data.sections.map(section => notebookPageForHash(pages, '#' + section.id)), [0, 1, 2, 6, 11, 16, 21, 25]);
+});
+
+test("Protocol uses compact sequential rows and retains all nine full-text sections", async () => {
+  const html = await (await render('/protocol')).text();
+  assert.equal((html.match(/class="lab-protocol-content"/g) ?? []).length, 9);
+  const css = readFileSync(new URL('../app/lab-documents.css', import.meta.url), 'utf8');
+  assert.match(css, /\.lab-protocol-board \{[^}]*grid-template-columns: minmax\(0, 1fr\)/);
+  assert.match(css, /\.lab-protocol-note \{[^}]*align-items: start/);
+  assert.doesNotMatch(css, /\.lab-protocol-note[^}]*min-height:/);
+});
+
 async function render(pathname) {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}-${pathname}`);

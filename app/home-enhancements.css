@@ -33,7 +33,7 @@
 .home-page .question-photo { grid-template-columns:1fr; }
 .home-page .petri-photo { max-height:270px; width:min(100%,360px); aspect-ratio:1.4; border-radius:6px 32px; }
 .home-page .story-footer { background:linear-gradient(115deg,#d2dccc,#e6dbc5); border-top:1px solid #afc5b8; }
-.home-page .home-reveal { opacity:0; transform:translateY(38px); transition:opacity .65s ease-out,transform .7s cubic-bezier(.2,.7,.2,1); transition-delay:var(--reveal-delay,0ms); }
+.home-page .home-reveal { opacity:0; transform:translateY(var(--reveal-offset,38px)); transition:opacity .65s ease-out,transform .7s cubic-bezier(.2,.7,.2,1); transition-delay:var(--reveal-delay,0ms); }
 .home-page .home-hero-copy > .home-reveal { animation:none; }
 .home-page .home-reveal.home-revealed,.home-page .home-reveal:focus-within,.home-page.motion-paused .home-reveal { opacity:1; transform:none; }
 .home-motion-ready .story-section.is-in-view::after { animation:home-signal 3s ease-in-out infinite alternate; }

@@ -62,6 +62,8 @@ export function HomeExperience() {
           entry.target.classList.add("home-revealed");
         } else {
           // Reset only after leaving the viewport, so either scroll direction replays.
+          // Move away from the nearest edge to avoid an observer/transform feedback loop.
+          (entry.target as HTMLElement).style.setProperty("--reveal-offset", entry.boundingClientRect.bottom <= 0 ? "-38px" : "38px");
           entry.target.classList.remove("home-revealed");
         }
       });
@@ -88,7 +90,7 @@ export function HomeExperience() {
       observer.disconnect();
       page.removeEventListener("focusin", focus);
       reduced.removeEventListener("change", preference);
-      elements.forEach(element => { element.classList.remove("home-reveal", "home-revealed"); element.style.removeProperty("--reveal-delay"); });
+      elements.forEach(element => { element.classList.remove("home-reveal", "home-revealed"); element.style.removeProperty("--reveal-delay"); element.style.removeProperty("--reveal-offset"); });
     };
   }, []);
   return <>

@@ -3,10 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import { sitePath } from "./site-path";
 import { notebookPages, notebookPageForHash } from "./notebook-pagination.mjs";
+import { LabRichText, type LabRun } from "./LabRichText";
 
 type Cell = { colSpan: number; rowSpan?: number; merge?: string; blocks: Block[] };
-type Block = { type: string; text?: string; prefix?: string; src?: string; width?: number; height?: number; alt?: string; rows?: Cell[][] };
-type Section = { id: string; sourceHeading: string; title: string; date: string; blocks: Block[] };
+type Block = { type: string; text?: string; runs?: LabRun[]; sourceIndex?: number; prefix?: string; src?: string; width?: number; height?: number; alt?: string; rows?: Cell[][] };
+type Section = { id: string; sourceHeading: string; headingRuns: LabRun[]; sourceIndex: number; title: string; date: string; blocks: Block[] };
 type Page = { id: string; sectionIndex: number; part: number; blocks: Block[] };
 
 function Blocks({ blocks }: { blocks: Block[] }) {
@@ -28,14 +29,14 @@ function Blocks({ blocks }: { blocks: Block[] }) {
         })}
       </tr>)}</tbody></table>
     </div>;
-    return <p key={index} className={block.type === "caption" ? "lab-record-caption" : undefined}>
+    return <p key={index} data-source-paragraph={block.sourceIndex} className={block.type === "caption" ? "lab-record-caption" : undefined}>
       {block.prefix && <span className="lab-record-step">{block.prefix}</span>}
-      {block.type === "caption" ? <strong>{block.text}</strong> : block.text}
+      {block.type === "caption" ? <strong><LabRichText runs={block.runs} text={block.text} /></strong> : <LabRichText runs={block.runs} text={block.text} />}
     </p>;
   })}</>;
 }
 
-export function NotebookReader({ sections, sourceTitle }: { sections: Section[]; sourceTitle: string }) {
+export function NotebookReader({ sections, sourceTitle, sourceTitleRuns }: { sections: Section[]; sourceTitle: string; sourceTitleRuns: LabRun[] }) {
   const pages: Page[] = notebookPages(sections);
   const [active, setActive] = useState<number | null>(null);
   const book = useRef<HTMLElement>(null);
@@ -82,8 +83,12 @@ export function NotebookReader({ sections, sourceTitle }: { sections: Section[];
     <article className="lab-notebook-pages" aria-label="Dated laboratory records" ref={book}>
       {active !== null && controls("top")}
       {pages.map((page, index) => <section className="lab-notebook-entry" key={page.id} hidden={active !== null && current !== index} aria-labelledby={page.id}>
-        {index === 0 && <p className="lab-record-source-title">{sourceTitle}</p>}
-        <h2 id={page.id} tabIndex={-1}>{sections[page.sectionIndex].sourceHeading}</h2>
+        {index === 0 && <p className="lab-record-source-title" data-source-paragraph={0}><LabRichText runs={sourceTitleRuns} text={sourceTitle} /></p>}
+        <h2 id={page.id} tabIndex={-1} data-source-paragraph={page.part === 0 ? sections[page.sectionIndex].sourceIndex : undefined}><LabRichText runs={sections[page.sectionIndex].headingRuns} /></h2>
+        {page.part > 0 && <div className="lab-page-participants">
+          {sections[page.sectionIndex].blocks.filter(block => block.text?.startsWith("Participants:")).map(block =>
+            <p key={block.sourceIndex}><LabRichText runs={block.runs} text={block.text} /></p>)}
+        </div>}
         <Blocks blocks={page.blocks} />
       </section>)}
       {active !== null && controls("bottom")}

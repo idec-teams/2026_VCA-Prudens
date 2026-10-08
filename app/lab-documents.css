@@ -58,7 +58,11 @@ body.wiki-theme .lab-notebook-entry .lab-record-source-title { font-size: .875re
 body.wiki-theme .lab-notebook-entry .lab-record-table p { font-size: .875rem; line-height: 1.6; overflow-wrap: anywhere; min-width: 0; white-space: pre-wrap; }
 .lab-record-table-wide td, .lab-record-table-wide th { min-width: 155px; }
 .lab-record-step { color: #755c8d; font-weight: 700; }
+.lab-document .lab-source-bold { font-weight: 700; }
+.lab-page-participants { display: none; }
+.lab-paginated .lab-page-participants { display: block; margin-bottom: 24px; }
 @media print {
+  .lab-paginated .lab-page-participants { display: none; }
   .lab-notebook-entry[hidden] { display: block; }
   .lab-notebook-index, .lab-page-controls { display: none; }
   .lab-notebook-layout { display: block; }

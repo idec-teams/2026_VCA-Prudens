@@ -943,6 +943,5674 @@
       "A225S + pID06 co-transformation",
       "Figure 19. Co-transformation results for E60Q, pID05, and A225S with pID07 or pID06."
     ],
+    "richParagraphs": [
+      [
+        {
+          "text": "iDEC Laboratory Notebook",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Date: June 22–July 3",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Participants:",
+          "bold": true
+        },
+        {
+          "text": " Zimeng Jessie Yu, Zedong Jin, Celine Zhang, Chenfan Wu, Yuxi Bai, Haotian Lu, Xiaohan Sophie Wang, Kele Zhang, Zhiheng Xu, Zhecheng Yue",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Experiment:",
+          "bold": true
+        },
+        {
+          "text": " Transformation (k+ s+)",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "1. Retrieve DH5α competent cells from storage at −80 °C and thaw on ice for 5 min. Add 2 μL of plasmid DNA and incubate on ice for 30 min.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2. Heat-shock the cells in a water bath at 42 °C for 90 s, then place on ice for 2 min.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "3. In a laminar-flow clean bench, add 700 μL of antibiotic-free LB broth. Incubate at 37 °C with shaking at 200 rpm for 1 h.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "4. In the clean bench, mix the cell suspension by pipetting. Spread 20 μL onto LB agar containing the appropriate antibiotic. Incubate the plate inverted at 37 °C overnight for 14–16 h.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Date: July 3–9",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Participants: ",
+          "bold": true
+        },
+        {
+          "text": "Kele Zhang, Zhiheng Xu, Zhecheng Yue, Lingwei Li, Fengwu Wang, Muyan Wang, Ruixi Huang, Shiya Da, Haotian Lu, Yichen Sun, Ruohan Shen",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Experimental procedures:",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Culture the bacteria carrying individually transformed plasmids in liquid medium at 37 °C for 16 h.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Preserve the bacterial strains.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Inoculate 50 mL of LB broth with 500 μL of bacterial culture and grow to an OD600 of 0.3–0.5.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Centrifuge at 2,000 × g for 5 min at 4 °C.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Resuspend the bacteria in pre-chilled LB broth. Add 5 mL of competent-cell preparation reagent, mix, and incubate on ice for 5 min.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Mix gently, dispense 100 μL aliquots into pre-chilled centrifuge tubes, and store at −80 °C.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Date: August 3–7",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Participants: ",
+          "bold": true
+        },
+        {
+          "text": "Lifei Shu, Zedong Jin, Yichen Sun, Yiding Yuan, Ruohan Shen, Celine Zhang, Chenfan Wu, Shiya Da, Yuxi Bai, Haotian Lu, Xiaohan Sophie Wang, Zhecheng Yue",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Experimental procedures:",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Table 1. PCR amplification of the pID01 vector fragment (3,332 bp)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Component",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Volume (μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "pID01 plasmid",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID03-BB-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID03-BB-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Enzyme reagent",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "25",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "ddH2O",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "19",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 2. PCR amplification of fragment 1 (1,243 bp)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Component",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Volume (μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "pID01 plasmid",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID03-CmR-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID03-CmR-R1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "0.3",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID03-CmR-R1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "1.5",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Enzyme reagent",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "25",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "ddH2O",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "19.2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 3. PCR amplification of fragment 2 (1,067 bp)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Component",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Volume (μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "pID02 plasmid",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID03-ISCro4-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID03-ISCro4-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Enzyme reagent",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "25",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "ddH2O",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "19",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Agarose gel electrophoresis results:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 1. Agarose gel electrophoresis of the three PCR-amplified fragments.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Gel extraction results:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 4. DNA concentrations after gel extraction",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Sample",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Concentration (ng/μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "pID01 vector fragment",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "113.039",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Fragment 1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "51.948",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Fragment 2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "168.623",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "DNA assembly and transformation results:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 2. Transformation results after assembly of pID01 with the two fragments.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Ten single colonies were picked and cultured with shaking. All 10 cultures grew. Plasmid isolation results are shown below:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 5. DNA concentrations after plasmid isolation",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Sample",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Concentration (ng/μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "pID01-CmR-ISCro4-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "174.381",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID01-CmR-ISCro4-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "118.21",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID01-CmR-ISCro4-3",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "78.403",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID01-CmR-ISCro4-4",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "97.175",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID01-CmR-ISCro4-5",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "100.07",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID01-CmR-ISCro4-6",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "118.763",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID01-CmR-ISCro4-7",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "93.589",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID01-CmR-ISCro4-8",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "101.925",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID01-CmR-ISCro4-9",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "184.148",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID01-CmR-ISCro4-10",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "114.951",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "The 10 plasmid preparations were amplified by PCR using primers pID03-CmR-F and pID03-Cro4-R. The agarose gel electrophoresis results are shown below:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 3. Colony PCR results.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Bacterial culture samples corresponding to lanes 1, 3, 7, and 8 were submitted for whole-plasmid sequencing. (Sequencing confirmed the expected sequence for idec-8.7-7, which was suitable for subsequent use.)",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Date: August 10–14",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Participants: ",
+          "bold": true
+        },
+        {
+          "text": "Shiya Da, Zhiheng Xu, Yuxi Bai, Haotian Lu, Xiaohan Sophie Wang, Zhecheng Yue, Lingwei Li, Zimeng Jessie Yu, Lifei Shu, Fengwu Wang, Muyan Wang, Ruixi Huang, Yiding Yuan",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "PCR amplification of the target fragments:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 6. PCR amplification of the pID05/03-ISCro4 fragment",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Component",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Volume (μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "idec-8.7-7 plasmid",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "8.3 pID03-ISCro4-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Enzyme reagent",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "25",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "ddH2O",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "19",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 7. PCR amplification of the pID05/03-BB fragment",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Component",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Volume (μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "idec-8.7-7 plasmid",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "8.3 pID03-BB-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Enzyme reagent",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "25",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "ddH2O",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "19",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 8. PCR amplification of the pID05/03-BB fragment",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Component",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Volume (μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "PUC19 plasmid",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "8.9 pID06-BB-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "8.9 pID06-BB-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Enzyme reagent",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "25",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "ddH2O",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "19",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 9. PCR amplification of the pID06 fragment",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Component",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Volume (μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "PUC19 plasmid",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "8.9 pID06-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "8.9 pID06-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Enzyme reagent",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "25",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "ddH2O",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "19",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 10. PCR amplification of the pID06/07 fragment",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Component",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Volume (μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "PUC19 plasmid",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "8.9 pID06-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID07-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Enzyme reagent",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "25",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "ddH2O",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "19",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Analyze the PCR products by agarose gel electrophoresis.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Perform gel extraction.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Prepare the DNA assembly reactions as follows:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 11. DNA assembly reaction for pID05",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Component",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Volume (μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "pID05/03-ISCro4",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "5",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05/03-BB",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "5",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2×CE Mix",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "10",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 12. DNA assembly reaction for pID06",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Component",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Volume (μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "pID06-BB",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "5",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID06",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "5",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2×CE Mix",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "10",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 13. DNA assembly reaction for pID07",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Component",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Volume (μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "pID06-BB",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "5",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID06/07",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "5",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2×CE Mix",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "10",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Incubate at 50 °C for 1 h.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Transform the assembly products into DH5α competent cells.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05: kanamycin resistance (Kan)",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID06: ampicillin resistance (Amp)",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID07: ampicillin resistance (Amp)",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Incubate the plates inverted at 37 °C overnight and examine the results the next day.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Culture six pID05 colonies and three pID06 colonies with shaking.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Preserve the bacterial strains and submit the cultures for sequencing: six pID05 samples and three pID06 samples.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Submit the pID07 culture plate for sequencing.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Results:",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Agarose gel electrophoresis of the PCR-amplified target fragments",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 4. PCR amplification results for the target fragments.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "DNA concentrations after gel extraction are shown below:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 14. DNA concentrations after gel extraction",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Sample",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Concentration (ng/μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "pID05/03-ISCro4",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "58.419",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05/03-BB",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "50.326",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID06-BB",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "34.182",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID06",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "37.488",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID06/07",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "39.111",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "DNA assembly and transformation results:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 5. DNA assembly and transformation results for pID05.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 6. DNA assembly and transformation results for pIDO6.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 7. DNA assembly and transformation results for pID07.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "DNA assembly and transformation results for pID07:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 8. DNA assembly and transformation results for pID07.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Date: August 17–21",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Participants: ",
+          "bold": true
+        },
+        {
+          "text": "Zimeng Jessie Yu, Zedong Jin, Fengwu Wang, Muyan Wang, Ruixi Huang, Yichen Sun, Yiding Yuan, Kele Zhang, Lifei Shu, Chenfan Wu",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Sequencing confirmed the expected sequences for pID05-1, pID05-2, pID05-3, pID06-1, pID06-2, and pID06-3. Isolate plasmid DNA from these sequence-verified clones.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Co-transformation: Co-transform pID05 and pID06 into DH5α competent cells and select with both ampicillin and kanamycin. Add 50 μL each of Amp and Kan to 100 mL of agar medium. Examine the results the next day.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Pick three single colonies from the co-transformation plate and culture with shaking.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "PCR amplification of the target fragments:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 15. PCR reaction composition",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Component",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Volume (μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "pID05 plasmid",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Forward primer",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "mutate-BB-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Enzyme reagent",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "25",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "ddH2O",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "19",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "The amplified fragments were designated as follows:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "1: R238M-F; 2: A248I-F; 3: S244A-F; 4: R237H-F; 5: S249D-F; 6: A254H-F; 7: R250C-F; 8: A225S-F; 9: Y239T-F; 10: H224A-F.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 16. PCR reaction composition",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Component",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Volume (μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "pID05 plasmid",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "mutate-BB-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Reverse primer",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Enzyme reagent",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "25",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "ddH2O",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "19",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "The amplified fragments were designated as follows:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "11: R238M-R; 12: A248I-R; 13: S244A-R; 14: R237H-R; 15: S249D-R; 16: A254H-R; 17: R250C-R; 18: A225S-R; 19: Y239T-R; 20: H224A-R.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "DNA assembly and transformation.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Perform PCR using bacterial cultures co-transformed with pID05 and pID06, followed by agarose gel electrophoresis, gel extraction, and sequencing.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Pick three single colonies from each of the 10 transformation plates, culture with shaking, and submit samples for sequencing. (For each set of samples, sample 1 had the expected sequence and could be retained.)",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Results:",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Plasmid isolation results:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 16. DNA concentrations after plasmid isolation",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Sample",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Concentration (ng/μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "pID05-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "114.387",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "148.055",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05-3",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "144.391",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID06-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "155.204",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID06-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "131.09",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID06-3",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "116.856",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Co-transformation results for pID05 and pID06:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 9. Plate results for co-transformation with pID05 and pID06.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Agarose gel electrophoresis results for PCR amplification of the target gene are shown below:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 10. Agarose gel electrophoresis of the PCR-amplified target gene.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Gel extraction results:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 17. DNA concentrations after gel extraction",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Sample",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Concentration (ng/μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "1: R238M-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "71.625",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2: A248I-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "86.819",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "3: S244A-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "100.18",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "4: R237H-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "85.869",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "5: S249D-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "98.253",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "6: A254H-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "70.234",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "7: R250C-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "104.253",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "8: A225S-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "96.654",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "9: Y239T-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "104.678",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "10: H224A-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "113.20",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "11: R238M-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "55.964",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "12: A248I-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "84.645",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "13: S244A-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "65.422",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "14: R237H-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "91.067",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "15: S249D-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "85.65",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "16: A254H-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "74.824",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "17: R250C-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "86.769",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "18: A225S-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "63.189",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "19: Y239T-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "79.985",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "20: H224A-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "59.412",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "DNA assembly and transformation results:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M assembly and transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I assembly and transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A assembly and transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H assembly and transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D assembly and transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H assembly and transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C assembly and transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S assembly and transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T assembly and transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A assembly and transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 11. DNA assembly and transformation results for the individual fragments.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Colony PCR results for pID05 and pID06 co-transformants:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 12. Agarose gel electrophoresis of colony PCR products from pID05 and pID06 co-transformants.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Gel extraction results for PCR products from pID05 and pID06 co-transformants:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 18. DNA concentrations after gel extraction",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Sample",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Concentration (ng/μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "58.684",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "51.44",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-3",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "65.551",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Date: August 24–28",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Participants: ",
+          "bold": true
+        },
+        {
+          "text": "Kele Zhang, Zhiheng Xu, Ruohan Shen, Celine Zhang, Chenfan Wu, Yuxi Bai, Haotian Lu, Zimeng Jessie Yu, Lingwei Li, Fengwu Wang, Ruixi Huang.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Perform PCR using bacterial cultures co-transformed with pID05 and pID06, followed by agarose gel electrophoresis, gel extraction, and sequencing.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Culture bacteria carrying pID06 or pID07 with shaking. Isolate plasmid DNA the next day in preparation for co-transformation.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "PCR amplification of the target fragments:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 19. PCR reaction composition",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Component",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Volume (μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "pID05 plasmid",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Forward primer",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "7.24 E60Q-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Enzyme reagent",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "25",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "ddH2O",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "19",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "The amplified fragments were designated as follows:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "1: R238M-F; 2: A248I-F; 3: S244A-F; 4: R237H-F; 5: S249D-F; 6: A254H-F; 7: R250C-F; 8: A225S-F; 9: Y239T-F; 10: H224A-F.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 20. PCR reaction composition",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Component",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Volume (μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "pID05 plasmid",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "7.24 E60Q-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Reverse primer",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Enzyme reagent",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "25",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "ddH2O",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "19",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "The amplified fragments were designated as follows:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "11: R238M-R; 12: A248I-R; 13: S244A-R; 14: R237H-R; 15: S249D-R; 16: A254H-R; 17: R250C-R; 18: A225S-R; 19: Y239T-R; 20: H224A-R.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "DNA assembly and transformation:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 21. DNA assembly of fragments R238M-F and R238M-R",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Component",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Volume (μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "R238M-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2.5",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2.5",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2×CE Mix",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "5",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Incubate the assembly reaction at 50 °C for 1 h, then transform the products into DH5α competent cells.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Incubate at 37 °C overnight (plate labeled E60A) and examine the results the next day.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Pick three single E60Q colonies and culture with shaking.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Isolate the E60Q plasmids and submit them for sequencing. All three samples had the expected sequence.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Results:",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Agarose gel electrophoresis of PCR products from bacterial cultures co-transformed with pID05 and pID06:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 13. Agarose gel electrophoresis of colony PCR products from pID05 and pID06 co-transformants.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Gel extraction results are shown below:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 22. DNA concentrations after gel extraction",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Sample",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Concentration (ng/μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "49.102",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "33.888",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-3",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "49.657",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Plasmid isolation results:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 23. DNA concentrations after plasmid isolation",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Sample",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Concentration (ng/μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "pID06",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "126.371",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID07",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "121.349",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Agarose gel electrophoresis of PCR products:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 14. Agarose gel electrophoresis after amplification of the target gene.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Gel extraction results are shown below:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 24. DNA concentrations after gel extraction",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Sample",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Concentration (ng/μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "1: R238M-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "64.252",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2: A248I-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "64.466",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "3: S244A-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "42.908",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "4: R237H-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "42.107",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "5: S249D-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "63.068",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "6: A254H-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "71.44",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "7: R250C-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "69.984",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "8: A225S-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "64.096",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "9: Y239T-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "78.708",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "10: H224A-F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "64.527",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "11: R238M-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "83.861",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "12: A248I-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "88.048",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "13: S244A-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "90.036",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "14: R237H-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "100.929",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "15: S249D-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "95.911",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "16: A254H-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "96.178",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "17: R250C-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "98.09",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "18: A225S-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "107.245",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "19: Y239T-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "123.701",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "20: H224A-R",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "157.453",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "DNA assembly and transformation results for E60Q:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 15. DNA assembly and transformation results for E60A.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q plasmid isolation results:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 25. DNA concentrations after plasmid isolation",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Sample",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Concentration (ng/μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "E60Q-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "154.4",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "169.45",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q-3",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "165.52",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Date: August 31–September 4",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Participants: ",
+          "bold": true
+        },
+        {
+          "text": "Lifei Shu, Zedong Jin, Xiaohan Sophie Wang, Zhecheng Yue, Lingwei Li, Fengwu Wang, Muyan Wang, Zimeng Jessie Yu, Kele Zhang, Shiya Da, Celine Zhang, Chenfan Wu",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Co-transformation:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Co-transform the E60Q and pID06 plasmids into DH5α competent cells.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Co-transform the pID05 and pID06 plasmids into DH5α competent cells.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Isolate plasmid DNA for R238M, A248I, S244A, R237H, S249D, A254H, R250C, A225S, Y239T, and H224A.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Pick three single colonies from the E60Q + pID06 co-transformation plate and three single colonies from the pID05 + pID06 co-transformation plate. Culture each colony with shaking.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Quantitative PCR (qPCR) workflow:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 26. Sample layout",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "1",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "3",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "4",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "5",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "6",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "A",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-1-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-1-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-1-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-1-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-1-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "B",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-2-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-2-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-2-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-2-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-2-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-2-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "C",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-3-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-3-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-3-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-3-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-3-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-3-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "D",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-1-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-1-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-1-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-1-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-1-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-2-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-2-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-2-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-2-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-2-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-2-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-3-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-3-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-3-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-3-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-3-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-3-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 27. qPCR reaction composition",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Component",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Volume (μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Hieff UNICON® Universal Blue qPCR SYBR Green Master Mix",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "10",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Forward Primer (10 μM)",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "0.4",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Reverse Primer (10 μM)",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "0.4",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Template DNA",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Sterile ultrapure water",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "8.2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 28. qPCR cycling conditions",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Cycling step",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Temperature",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Time",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Cycles",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Initial denaturation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "95 °C",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2 min",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Denaturation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "95 °C",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "10 s",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "40",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Annealing/extension",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "60 °C",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "30 s*",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Melting curve",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Instrument default settings",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Co-transform each of the R238M, A248I, S244A, R237H, S249D, A254H, R250C, A225S, Y239T, and H224A plasmids with pID06.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 29. Co-transformation sample identifiers",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "No.",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Plasmid combination",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "3",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "4",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "5",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "6",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "7",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "8",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "9",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T+pID06",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "10",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Use 3 μL of each plasmid for each co-transformation.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Experimental results:",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Co-transformation results are shown below:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 16. Co-transformation of E60Q and pID06 into DH5α competent cells.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 17. Co-transformation of pID05 and pID06 into DH5α competent cells.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Plasmid isolation results are shown below:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 29. DNA concentrations after isolation of the 10 plasmids",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Sample",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Concentration (ng/μL)",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "R238M",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "122.268",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "103.691",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "122.411",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "131.197",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "149.307",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "170.422",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "149.156",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "142.16",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "142.108",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "193.163",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "qPCR results:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "[admin_2026-09-03 14-12-24_BR001408 -  End Point Results.xlsx]",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "[admin_2026-09-03 14-12-24_BR001408 -  Quantification Cq Results.xlsx]",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Co-transformation results:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06 co-transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06 co-transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06 co-transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06 co-transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06 co-transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06 co-transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06 co-transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06 co-transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T+pID06 co-transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06 co-transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 18. Co-transformation results for each of the 10 plasmids with pID06.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Date: September 7–11",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Participants: Shiya Da, Zhiheng Xu, Ruixi Huang, Yichen Sun, Yiding Yuan, Ruohan Shen, Celine Zhang, Lifei Shu, Zedong Jin, Yuxi Bai, Xiaohan Sophie Wang, Lingwei Li, Muyan Wang",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Pick single colonies from each plate: (1) R238M + pID06, (2) A248I + pID06, (3) S244A + pID06, (4) R237H + pID06, (5) S249D + pID06, (6) A254H + pID06, (7) R250C + pID06, (8) A225S + pID06, (9) Y239T + pID06, and (10) H224A + pID06. Culture with shaking. The next day, preserve the bacterial strains and adjust the OD600 values.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Take 1 mL from each of the 30 cultures derived from the selected single colonies and concentrate the cells. After concentration, dilute each suspension to an OD600 of approximately 0.035, then perform qPCR.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "The qPCR sample loading order is shown in the following tables:",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 30. qPCR plate layout 1",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "1",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "3",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "4",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "5",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "6",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "7",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "8",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "9",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "10",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "11",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "12",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "A",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06-1-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06-1-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06-1-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06-1-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06-1-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06-1-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06-1-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06-1-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06-1-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06-1-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "B",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06-2-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06-2-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06-2-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06-2-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06-2-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06-2-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06-2-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06-2-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06-2-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06-2-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "C",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06-3-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06-3-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06-3-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06-3-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06-3-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R238M+pID06-3-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06-3-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06-3-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06-3-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06-3-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06-3-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A248I+pID06-3-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "D",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06-1-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06-1-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06-1-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06-1-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06-1-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06-1-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06-1-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06-1-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06-1-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06-1-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06-2-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06-2-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06-2-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06-2-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06-2-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06-2-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06-2-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06-2-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06-2-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06-2-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06-2-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06-3-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06-3-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06-3-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06-3-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06-3-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S244A+pID06-3-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06-3-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06-3-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06-3-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06-3-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06-3-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06-3-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "G",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06-1-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06-2-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06-3-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06-1-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06-2-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06-3-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06-1-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06-2-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06-3-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "N/A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "ddH2O 20 μL",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06-1-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06-2-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06-3-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06-2-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06-3-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06-1-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06-2-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "S249D+pID06-3-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "N/A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "ddH2O 20 μL",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 31. qPCR plate layout 2",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "1",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "3",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "4",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "5",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "6",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "7",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "8",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "9",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "10",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "11",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "12",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "A",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06-1-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06-1-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06-1-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06-1-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06-1-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06-1-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06-1-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06-1-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06-1-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06-1-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "B",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06-2-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06-2-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06-2-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06-2-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06-2-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06-2-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06-2-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06-2-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06-2-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06-2-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "C",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06-3-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06-3-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06-3-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06-3-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06-3-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A254H+pID06-3-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06-3-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06-3-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06-3-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06-3-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06-3-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R250C+pID06-3-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "D",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06-1-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06-1-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06-1-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06-1-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06-1-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T+pID06+pID06-1-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T+pID06+pID06-1-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T+pID06+pID06-1-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T+pID06+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T+pID06+pID06-1-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T+pID06+pID06-1-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06-2-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06-2-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06-2-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06-2-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06-2-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T+pID06+pID06-2-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T+pID06+pID06-2-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T+pID06+pID06-2-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T+pID06+pID06-2-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T+pID06+pID06-2-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T+pID06+pID06-2-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06-3-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06-3-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06-3-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06-3-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06-3-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S+pID06-3-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "R237H+pID06-3-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T+pID06+pID06-3-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T+pID06+pID06-3-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T+pID06+pID06-3-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T+pID06+pID06-3-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Y239T+pID06+pID06-3-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "G",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06+pID06-1-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06+pID06-2-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06+pID06-3-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06+pID06-1-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06+pID06-2-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06+pID06-3-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06+pID06-1-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06+pID06-2-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06+pID06-3-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "N/A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "ddH2O 20 μL",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06+pID06-1-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06+pID06-2-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06+pID06-3-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06+pID06-2-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06+pID06-3-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06+pID06-1-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06+pID06-2-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "H224A+pID06+pID06-3-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "N/A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "ddH2O 20 μL",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Table 32. qPCR plate layout 3",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "1",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "2",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "3",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "4",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "5",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "6",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "A",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-1-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-1-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-1-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-1-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-1-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "B",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-2-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-2-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-2-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-2-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-2-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-2-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "C",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-3-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-3-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-3-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-3-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-3-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q+pID06-3-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "D",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-1-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-1-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-1-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-1-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-1-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-1-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-2-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-2-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-2-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-2-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-2-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-2-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "F",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-3-A-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-3-A-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-3-AmpR-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-3-AmpR-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-3-B-1",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05+pID06-3-B-2",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Co-transform A225S, E60Q, and pID05 separately with pID06.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Co-transform A225S, E60Q, and pID05 separately with pID07.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Experimental results:",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "E60Q + pID07 co-transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05 + pID07 co-transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S + pID07 co-transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "E60Q + pID06 co-transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "pID05 + pID06 co-transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "A225S + pID06 co-transformation",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 19. Co-transformation results for E60Q, pID05, and A225S with pID07 or pID06.",
+          "bold": false
+        }
+      ]
+    ],
     "images": [
       {
         "src": "/assets/notebook-20261008/image1.png",
@@ -1183,6 +6851,200 @@
       "Use qPCR-A-F/-R and qPCR-AmpR-F/-R to detect the signal of the area targeted for deletion and the plasmid backbone, respectively. Carry out 2 technical replicates per sample and record Cq values.",
       "9 Data comparison",
       "Calculate ΔCq = Cq(qPCR-A) - Cq(qPCR-AmpR). Summarise the results of candidates and parents using independent colonies as the unit of comparison. Based on the report, variants with a higher ΔCq than the parent are positive candidates; this index is relatively lower for plasmid DNA deletion. Save sequencing results, raw qPCR data and analysis files."
+    ],
+    "richParagraphs": [
+      [
+        {
+          "text": "2026 Laboratory Protocol",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "VCA_Prudens  |  ISCro4",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "This workflow includes the construction and activity comparison of ISCro4 candidates, as well as an initial resistance background check and a final dual-plasmid qPCR assay.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "1 Experimental materials",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Use ISCro4(S30T/P54Q/S243H) as the parent, pID05 as the expression and mutagenesis vector, and pUC19-d-T as the substrate plasmid. Compare the parent, 10 candidate variants, and the E60Q negative control.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2 Plasmid extraction",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Purpose and materials：Prepare pUC19-d-T, pID05, and sequence-verified pID05 variants from separate E. coli DH5α cultures for cloning and sequencing. Use a silica-column plasmid miniprep kit, microcentrifuge, sterile tubes, and a DNA quantification instrument. The example below follows the QIAprep Spin Miniprep high-yield workflow; use its buffer volumes only with the corresponding kit.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "1. Grow a single colony in 5 mL 2×YT with the plasmid-specific antibiotic for 12–16 h at 37 °C. Pellet the culture at approximately 6,800 × g for 3 min and discard the supernatant.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2. Resuspend completely in 250 μL Buffer P1 containing RNase A. Add 250 μL Buffer P2, mix gently by inversion, and lyse for no longer than 5 min. Avoid vortexing after lysis.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "3. Add 350 μL Buffer N3 and immediately invert to mix. Centrifuge for 10 min at approximately 17,900 × g. Transfer the clear supernatant to the spin column without disturbing the pellet.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "4. Centrifuge for 30–60 s and discard the flow-through. Wash with 500 μL Buffer PB, followed by 750 μL ethanol-supplemented Buffer PE, centrifuging after each wash. Perform an additional 1-min dry spin.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "5. Transfer the column to a clean tube. Add 60 μL Buffer EB to the membrane, wait 1 min, and centrifuge for 1 min to elute DNA.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "6. Measure DNA concentration and record sample identity. Use purified DNA for Sanger sequencing of assembly junctions and the ISCro4 coding sequence, including the parent substitutions and each intended additional mutation. Store aliquots at −20 °C. ",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "3 Gibson assembly",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Purpose and materials： Assemble the DNA fragments needed for pUC19-d-T, pID05, or the revised expression and reporter constructs. Required materials include a linear vector, purified insert fragments, a 2× Gibson Assembly master mix, nuclease-free water, and competent E. coli DH5α. The reaction below is an example for NEB Gibson Assembly Master Mix.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "1. Design adjacent fragments with approximately 20–40 bp terminal overlaps. Generate fragments with a high-fidelity polymerase and linearize the vector by PCR or restriction digestion. Check fragment sizes by agarose gel electrophoresis, purify, and quantify. Where PCR uses a methylated parental plasmid, treat with DpnI before purification to reduce template carryover.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "2. Set up a 20 μL reaction with 10 μL 2× master mix, DNA fragments, and water to volume. For two or three total fragments, use 50–100 ng vector and a two- to threefold molar excess of each insert; keep total DNA at 0.02–0.5 pmol. Calculate insert mass as vector mass × (insert length/vector length) × desired molar ratio. For four to six total fragments, use approximately equimolar fragments with total DNA at 0.2–1.0 pmol.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "3. Incubate at 50 °C for 15 min for two or three fragments, or 60 min for four to six fragments. Count the vector as one fragment.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "4. Transform 2 μL reaction into competent DH5α using the supplier’s transformation and recovery instructions. Plate on LB agar with the antibiotic matching the vector’s selectable marker. Include a vector-only assembly control.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "5. Screen colonies by PCR across assembly junctions. Purify candidate plasmids using Section 4.6 and confirm junctions, regulatory elements, and the relevant coding sequence by Sanger sequencing. For pID05 mutants, verify the intended substitution while retaining the parent S30T/P54Q/S243H background. Confirm the donor and target sites and the intervening deletion substrate in pUC19-d-T. Use sequence-verified constructs for subsequent assays.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "4 Plasmid construction and verification",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Construct the designed plasmids using Gibson assembly and then perform transformation and clone propagation. Confirm the correctness of the construct by Sanger sequencing before starting the rest of the experiments.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "5 Initial resistance background check",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Remove the ISCro4 expression cassette from the single-plasmid system. Observe the growth of cells carrying this control under different chloramphenicol conditions to determine whether the resistance readout has background. Evaluate the first Design of the assay.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "6 Candidate variant construction",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Biomni can help with the selection of candidates based on deep mutational scanning data and primer design. Introduce each candidate substitution independently into the parental pID05 background, construct the E60Q control, and verify the resulting sequences.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "7 Cotransformation and sample preparation",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Cotransform each expression plasmid with pUC19-d-T into E. coli. Select three independent colonies for each variant, culture them, normalise according to OD600, and prepare samples for qPCR.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "8 qPCR measurement",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Use qPCR-A-F/-R and qPCR-AmpR-F/-R to detect the signal of the area targeted for deletion and the plasmid backbone, respectively. Carry out 2 technical replicates per sample and record Cq values.",
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "9 Data comparison",
+          "bold": true
+        }
+      ],
+      [
+        {
+          "text": "Calculate ΔCq = Cq(qPCR-A) - Cq(qPCR-AmpR). Summarise the results of candidates and parents using independent colonies as the unit of comparison. Based on the report, variants with a higher ΔCq than the parent are positive candidates; this index is relatively lower for plasmid DNA deletion. Save sequencing results, raw qPCR data and analysis files.",
+          "bold": false
+        }
+      ]
     ],
     "images": [],
     "tables": 0

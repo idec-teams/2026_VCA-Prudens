@@ -74,11 +74,37 @@ test("Notebook and Protocol preserve the full supplied documents with scoped lay
         assert.equal(section.title, section.sourceHeading.replace(/^\d+\s+/, ''));
         assert.doesNotMatch(section.title, /^\d+\s/);
       }
-      for (const p of slug === 'notebook' ? flatten(section.blocks) : section.paragraphs) assert.ok(html.includes(escape(p)), p);
+      for (const p of slug === 'notebook' ? flatten(section.blocks) : section.paragraphs) assert.ok(html.replace(/<[^>]*>/g, '').includes(escape(p)), p);
     }
     assert.equal((html.match(new RegExp('class="' + (slug === 'notebook' ? 'lab-notebook-entry' : 'lab-protocol-note') + '"', 'g')) ?? []).length, slug === 'notebook' ? notebookPages(page.sections).length : 9);
     assert.doesNotMatch(html, /XXXXXX|protocol直接跳转/);
   }
+});
+
+test("lab documents retain every source paragraph and each Word bold span in rendered markup", async () => {
+  const audit = JSON.parse(readFileSync(new URL('../docs/lab-documents-source-audit-20261008.json', import.meta.url), 'utf8'));
+  const data = JSON.parse(readFileSync(new URL('../app/lab-documents.json', import.meta.url), 'utf8'));
+  const escape = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#x27;');
+  for (const slug of ['notebook', 'protocol']) {
+    const html = await (await render('/' + slug)).text();
+    const paragraphs = [...html.matchAll(/<(p|h[12])\b[^>]*data-source-paragraph="(\d+)"[^>]*>([\s\S]*?)<\/\1>/g)];
+    assert.equal(paragraphs.length, audit[slug].paragraphs.length);
+    assert.equal(new Set(paragraphs.map(p => p[2])).size, paragraphs.length);
+    for (const [, , index, markup] of paragraphs) {
+      const heading = slug === 'protocol' && data.protocol.sections.some(s => s.sourceIndex === Number(index));
+      const expectedRuns = audit[slug].richParagraphs[index].map((run, i) => ({ ...run, text: heading && i === 0 ? run.text.replace(/^\d+ /, '') : run.text }));
+      const withoutStepNumber = markup.replace(/<span class="lab-record-step">[\s\S]*?<\/span>/g, '');
+      assert.equal(withoutStepNumber.replace(/<[^>]*>/g, ''), escape(expectedRuns.map(r => r.text).join('')), slug + ' paragraph ' + index);
+      assert.deepEqual([...markup.matchAll(/<strong class="lab-source-bold">([\s\S]*?)<\/strong>/g)].map(m => m[1]), expectedRuns.filter(r => r.bold).map(r => escape(r.text)), slug + ' bold spans ' + index);
+    }
+  }
+  const html = await (await render('/notebook')).text();
+  const pages = notebookPages(data.notebook.sections);
+  const entries = [...html.matchAll(/<section class="lab-notebook-entry"[\s\S]*?<\/section>/g)].map(m => m[0]);
+  entries.forEach((entry, index) => {
+    const participants = data.notebook.sections[pages[index].sectionIndex].blocks.find(b => b.text?.startsWith('Participants:')).text;
+    assert.ok(entry.replace(/<[^>]*>/g, '').includes(escape(participants)), 'Participants on ' + pages[index].id);
+  });
 });
 
 test("notebook pagination preserves all blocks, date links, table grids and original photographs", async () => {

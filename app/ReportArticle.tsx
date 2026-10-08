@@ -3,6 +3,7 @@ import { sitePath } from "./site-path";
 import "./wiki-article.css";
 import { PageHero } from "./PageHero";
 import { CaptionText } from "./CaptionText";
+import { ScientificText } from "./ScientificText";
 
 type Block = { type: string; text?: string; src?: string; width?: number; height?: number; alt?: string };
 type Page = { title: string; sections: { id: string; title: string; blocks: Block[] }[] };
@@ -33,7 +34,7 @@ export function ReportArticle({ slug }: { slug: string }) {
                 <img src={sitePath(block.src!)} width={block.width} height={block.height} loading="lazy" alt={block.alt ?? ""} />
               </a>
             </figure>
-          ) : <p key={index} className={block.type === "caption" || block.type === "caption-note" ? "report-caption" : undefined}>{block.type === "caption" ? <CaptionText text={block.text ?? ""} /> : block.text}</p>)}
+          ) : <p key={index} className={block.type === "caption" || block.type === "caption-note" ? "report-caption" : undefined}>{block.type === "caption" ? <CaptionText text={block.text ?? ""} /> : <ScientificText text={block.text} />}</p>)}
         </section>)}
       </article>
     </div>

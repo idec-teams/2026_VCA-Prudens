@@ -10,6 +10,35 @@ const routes = [
   "/results", "/contribution", "/notebook", "/protocol", "/mutation-selection", "/safety", "/report", "/supplement-files",
 ];
 
+// Source-text checks allow only the newly added taxonomic formatting tags.
+const withoutScientificItalics = html => html.replace(/<i class="scientific-name" style="font-style:italic">([\s\S]*?)<\/i>/g, '$1');
+
+test("all readable organism names are italic, while strain IDs stay roman", async () => {
+  let count = 0;
+  for (const route of routes) {
+    const html = (await (await render(route)).text()).replace(/<script\b[^>]*>[\s\S]*?<\/script>|<style\b[^>]*>[\s\S]*?<\/style>|<head\b[^>]*>[\s\S]*?<\/head>/g, '');
+    let italicDepth = 0;
+    let text = '';
+    const italic = [];
+    for (const token of html.match(/<[^>]*>|[^<]+/g) ?? []) {
+      if (/^<(?:i|em)(?:\s|>)/.test(token)) italicDepth++;
+      else if (/^<\/(?:i|em)>/.test(token)) italicDepth--;
+      else if (!token.startsWith('<')) {
+        text += token;
+        italic.push(...Array(token.length).fill(italicDepth > 0));
+      }
+    }
+    for (const match of text.matchAll(/\b(?:Escherichia\s+coli|E\.\s*coli|Citrobacter\s+rodentium|C\.\s*rodentium)\b/g)) {
+      assert.ok(italic.slice(match.index, match.index + match[0].length).every(Boolean), route + ': ' + match[0]);
+      count++;
+    }
+    for (const match of text.matchAll(/\b(?:DH5α|BL21(?:\(DE3\))?)\b/g)) {
+      assert.ok(italic.slice(match.index, match.index + match[0].length).every(value => !value), route + ': strain ' + match[0]);
+    }
+  }
+  assert.ok(count > 20, 'Expected organism mentions throughout the wiki');
+});
+
 test("every route shares the small native evolution cursor", async () => {
   const png = readFileSync(new URL("../public/assets/cursor-20261008/evolution-starburst.png", import.meta.url));
   assert.equal(png.readUInt32BE(16), 40);
@@ -136,7 +165,7 @@ test("lab documents retain every source paragraph and each Word bold span in ren
       const expectedRuns = audit[slug].richParagraphs[index].map((run, i) => ({ ...run, text: heading && i === 0 ? run.text.replace(/^\d+ /, '') : run.text }));
       const withoutStepNumber = markup.replace(/<span class="lab-record-step">[\s\S]*?<\/span>/g, '');
       assert.equal(withoutStepNumber.replace(/<[^>]*>/g, ''), escape(expectedRuns.map(r => r.text).join('')), slug + ' paragraph ' + index);
-      assert.deepEqual([...markup.matchAll(/<strong class="lab-source-bold">([\s\S]*?)<\/strong>/g)].map(m => m[1]), expectedRuns.filter(r => r.bold).map(r => escape(r.text)), slug + ' bold spans ' + index);
+      assert.deepEqual([...markup.matchAll(/<strong class="lab-source-bold">([\s\S]*?)<\/strong>/g)].map(m => withoutScientificItalics(m[1])), expectedRuns.filter(r => r.bold).map(r => escape(r.text)), slug + ' bold spans ' + index);
     }
   }
   const html = await (await render('/notebook')).text();
@@ -285,7 +314,7 @@ test("document articles keep every paragraph and heading-only native anchor navi
       assert.ok(html.includes(`href="#${section.id}">${escape(section.title)}</a>`));
       const level = slug === 'methods' ? 'h3' : 'h2';
       assert.ok(html.includes(`id="${section.id}" tabindex="-1">${escape(section.title)}</${level}>`));
-      for (const paragraph of section.paragraphs) assert.ok(html.includes(`<p>${escape(paragraph)}</p>`), section.title);
+      for (const paragraph of section.paragraphs) assert.ok(withoutScientificItalics(html).includes(`<p>${escape(paragraph)}</p>`), section.title);
     }
     const nav = html.match(/<nav class="project-outline wiki-article-outline"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
     assert.ok(nav);
@@ -335,11 +364,11 @@ test("revised manuscript pages preserve assigned text and every embedded figure"
       for (const block of section.blocks) {
         if (block.type === 'paragraph') {
           assert.equal(block.text, audit.paragraphs[block.sourceParagraph]);
-          if (stillRendered) assert.ok(html.includes(`<p>${escape(block.text)}</p>`));
+          if (stillRendered) assert.ok(withoutScientificItalics(html).includes(`<p>${escape(block.text)}</p>`));
         } else if (block.type === 'figure') {
           used.push(block.figure);
           const fig = data.figures[block.figure];
-          if (stillRendered) assert.ok(html.replace(/<\/?strong>/g, '').includes(`<figcaption>${escape(fig.caption)}</figcaption>`));
+          if (stillRendered) assert.ok(withoutScientificItalics(html).replace(/<\/?strong>/g, '').includes(`<figcaption>${escape(fig.caption)}</figcaption>`));
           if (fig.src) {
             if (stillRendered) assert.ok(html.includes(`src="${fig.src}"`));
             const bytes = readFileSync(new URL(`../public${fig.src}`, import.meta.url));
@@ -397,7 +426,7 @@ test("uploaded reports preserve all source text and images with native section l
         // User-approved correction on 2026-10-07; all other source text stays verbatim.
         const expected = slug === 'methods' ? source.text.replace(/Fig\. 11(?=[AB]?\b)/g, 'Fig. 1') : source.text;
         assert.equal(matched[0].text, expected);
-        assert.ok(html.replace(/<\/?strong>/g, '').includes(escape(expected)), `${slug} paragraph ${source.paragraph}`);
+        assert.ok(withoutScientificItalics(html).replace(/<\/?strong>/g, '').includes(escape(expected)), `${slug} paragraph ${source.paragraph}`);
       }
       for (const image of source.images) {
         imageCount++;
@@ -448,7 +477,7 @@ test("Safety preserves the complete Word text and both original PDFs remain byte
   for (const section of data.sections) {
     assert.ok(safetyHtml.includes(`href="#${section.id}"`));
     assert.ok(safetyHtml.includes(`id="${section.id}" tabindex="-1">${escape(section.title)}</h2>`));
-    for (const p of section.paragraphs) assert.ok(safetyHtml.includes(`<p>${escape(p)}</p>`));
+    for (const p of section.paragraphs) assert.ok(withoutScientificItalics(safetyHtml).includes(`<p>${escape(p)}</p>`));
   }
   assert.ok(safetyHtml.indexOf('id="ethical-considerations"') < safetyHtml.indexOf('id="responsible-research-form"'));
   for (const pdf of audit.pdfs) {

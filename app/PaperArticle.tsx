@@ -3,6 +3,7 @@ import "./wiki-article.css";
 import { PageHero } from "./PageHero";
 import { CaptionText } from "./CaptionText";
 import { sitePath } from "./site-path";
+import { ScientificText } from "./ScientificText";
 
 type Block = { type: string; text?: string; figure?: number; sourceParagraph?: number };
 type PaperPage = { title: string; sections: { id: string; title: string; blocks: Block[] }[] };
@@ -34,11 +35,11 @@ export function PaperArticle({ slug }: { slug: string }) {
                   <img src={sitePath(figure.src)} width={figure.width} height={figure.height} loading="lazy" alt={figure.caption.split('. ').slice(0, 2).join('. ')} />
                 </a>}
                 <figcaption><CaptionText text={figure.caption} /></figcaption>
-                {figure.note && <p className="paper-note">{figure.note}</p>}
+                {figure.note && <p className="paper-note"><ScientificText text={figure.note} /></p>}
                 {figure.src && <a className="figure-original" href={sitePath(figure.src)} target="_blank" rel="noopener noreferrer">View full-size figure {figure.number}</a>}
               </figure>;
             }
-            return <p key={index} className={block.type === "note" ? "paper-note" : undefined}>{block.text}</p>;
+            return <p key={index} className={block.type === "note" ? "paper-note" : undefined}><ScientificText text={block.text} /></p>;
           })}
         </section>)}
       </article>

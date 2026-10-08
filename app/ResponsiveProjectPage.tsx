@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { sitePath } from "./site-path";
+import { ScientificText } from "./ScientificText";
 
 export type ProjectDetailData = {
   slug: string;
@@ -44,7 +45,7 @@ export function ResponsiveProjectPage({ coverSlide, data }: { coverSlide: number
           {data.sections.map((section) => (
             <div className="outline-block" key={section.label}>
               <h3>{section.label}</h3>
-              {section.lines.map((line) => <p key={line}>{line}</p>)}
+              {section.lines.map((line) => <p key={line}><ScientificText text={line} /></p>)}
             </div>
           ))}
           <h3 className="outline-footer">{data.footer}</h3>
@@ -53,7 +54,7 @@ export function ResponsiveProjectPage({ coverSlide, data }: { coverSlide: number
           <h1>{data.title}</h1>
           <div className="project-copy-inner">
             <h2>{data.detailTitle}</h2>
-            {data.body && <p>{data.body}</p>}
+            {data.body && <p><ScientificText text={data.body} /></p>}
           </div>
         </article>
       </section>

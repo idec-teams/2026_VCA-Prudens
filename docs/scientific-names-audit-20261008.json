@@ -1,0 +1,11 @@
+{
+  "scope": "Wiki HTML text only; original PDFs, raster figures, source JSON and research content unchanged",
+  "references": [
+    "https://wwwnc.cdc.gov/eid/page/scientific-nomenclature",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC2812299/"
+  ],
+  "rule": "Italicize scientific genus/species names and abbreviated binomials; strain designations remain roman. Do not change protein names or scientific claims.",
+  "namesFound": ["E. coli", "Escherichia coli", "Citrobacter rodentium"],
+  "renderedOccurrenceCounts": {"/":4,"/description":11,"/methods":4,"/design":1,"/model":1,"/engineering":1,"/experiment":4,"/analysis":1,"/protocol":3,"/mutation-selection":1,"/safety":2},
+  "verification": "20 routes checked; all 33 rendered organism-name occurrences italicized, including compatibility alias. Word bold runs and source text remain intact. 25 tests passed; browser computed styles verified on Safety."
+}

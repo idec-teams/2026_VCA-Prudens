@@ -2,6 +2,7 @@ import { sitePath } from "./site-path";
 import safety from "./safety-article.json";
 import "./document-landing.css";
 import { PageHero } from "./PageHero";
+import { ScientificText } from "./ScientificText";
 
 const folder = "/assets/documents-20261004";
 const researchPdf = `${folder}/responsible-research-form.pdf`;
@@ -28,7 +29,7 @@ export function DocumentLanding({ slug }: { slug: "safety" | "supplement-files" 
         <article className="safety-copy" aria-label="Safety document">
           {safety.sections.map(section => <section key={section.id} aria-labelledby={section.id}>
             <h2 id={section.id} tabIndex={-1}>{section.title}</h2>
-            {section.paragraphs.map((text, index) => <p key={index}>{text}</p>)}
+            {section.paragraphs.map((text, index) => <p key={index}><ScientificText text={text} /></p>)}
           </section>)}
         </article>
         <section className="research-document" aria-labelledby="responsible-research-form">

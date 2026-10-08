@@ -2,6 +2,7 @@ import articles from "./wiki-articles.json";
 import "./wiki-article.css";
 import { PageHero } from "./PageHero";
 import { ArticleOutline } from "./ArticleOutline";
+import { ScientificText } from "./ScientificText";
 
 export function WikiArticle({ slug }: { slug: "description" | "methods" }) {
   const original = articles[slug];
@@ -23,7 +24,7 @@ export function WikiArticle({ slug }: { slug: "description" | "methods" }) {
         <article className="project-copy-card wiki-article-copy">
           {data.sections.map(section => <section key={section.id} className={"isChild" in section ? "method-subsection" : undefined} aria-labelledby={section.id}>
             {"isChild" in section ? <h3 id={section.id} tabIndex={-1}>{section.title}</h3> : <h2 id={section.id} tabIndex={-1}>{section.title}</h2>}
-            {section.paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+            {section.paragraphs.map((paragraph, index) => <p key={index}><ScientificText text={paragraph} /></p>)}
           </section>)}
         </article>
       </div>

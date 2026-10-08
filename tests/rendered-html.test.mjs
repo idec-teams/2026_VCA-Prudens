@@ -7,8 +7,32 @@ import { notebookPages, notebookPageForHash } from "../app/notebook-pagination.m
 const routes = [
   "/", "/members", "/descriptions", "/attributions", "/work-distribution",
   "/description", "/methods", "/design", "/model", "/engineering", "/experiment", "/analysis",
-  "/results", "/contribution", "/notebook", "/protocol", "/mutation-selection", "/safety", "/supplement-files",
+  "/results", "/contribution", "/notebook", "/protocol", "/mutation-selection", "/safety", "/report", "/supplement-files",
 ];
+
+test("October additions preserve document metadata, the original PDF, and additive Home design", async () => {
+  const notebook = await (await render("/notebook")).text();
+  assert.equal((notebook.match(/class="lab-record-meta"/g) ?? []).length, 28);
+  const reader = readFileSync(new URL("../app/NotebookReader.tsx", import.meta.url), "utf8");
+  assert.doesNotMatch(reader, /controls\("top"\)/);
+  assert.match(reader, /controls\("bottom"\)/);
+  const report = await (await render("/report")).text();
+  assert.equal((report.match(/class="report-sheet"/g) ?? []).length, 14);
+  assert.equal((report.match(/aria-label="Go to report page /g) ?? []).length, 14);
+  const audit = JSON.parse(readFileSync(new URL("../docs/report-source-audit-20261008.json", import.meta.url), "utf8"));
+  const pdf = readFileSync(new URL("../public" + audit.publishedPdf, import.meta.url));
+  assert.equal(createHash("sha256").update(pdf).digest("hex"), audit.sha256);
+  assert.equal(pdf.length, audit.bytes);
+  assert.match(report, /Open original PDF/);
+  const home = await (await render("/")).text();
+  assert.match(home, /Safety<\/a>\s*<a href="\/report">Report<\/a>/);
+  assert.match(home, /home-challenge-workbench.png/);
+  assert.match(home, /This Wiki is also available on mobile devices\./);
+  assert.match(await (await render("/protocol")).text(), /protocol-still-life.png/);
+  const experience = readFileSync(new URL("../app/HomeExperience.tsx", import.meta.url), "utf8");
+  assert.match(experience, /observer.unobserve\(entry.target\)/);
+  assert.match(experience, /prefers-reduced-motion: reduce/);
+});
 
 test("each distinct article cover has unique artwork and Home keeps additive painted art", async () => {
   const seen = new Set();
@@ -173,7 +197,7 @@ test("all wiki routes server-render successfully", async () => {
     assert.equal(response.status, 200, route);
     const html = await response.text();
     assert.match(html, /class="site-header"/, route);
-    assert.match(html, /class="[^"]*(?:home-story|ppt-deck|team-members-page)/, route);
+    assert.match(html, /class="[^"]*(?:home-story|ppt-deck|team-members-page|report-library)/, route);
   }
 });
 

@@ -52,6 +52,7 @@ export function SiteHeader({ teamPages, projectPages }: { teamPages: NavPage[]; 
             <a href={sitePath("/notebook")}>Notebook</a>
             <a href={sitePath("/protocol")}>Protocol</a>
             <a href={sitePath("/safety")}>Safety</a>
+            <a href={sitePath("/report")}>Report</a>
             <a href={sitePath("/supplement-files")}>Supplement Files</a>
           </div>
         </div>
@@ -68,6 +69,7 @@ export function SiteHeader({ teamPages, projectPages }: { teamPages: NavPage[]; 
           <a href={sitePath("/notebook")}>Notebook</a>
           <a href={sitePath("/protocol")}>Protocol</a>
           <a href={sitePath("/safety")}>Safety</a>
+          <a href={sitePath("/report")}>Report</a>
           <a href={sitePath("/supplement-files")}>Supplement Files</a>
         </div>
       </div>

@@ -34,6 +34,7 @@ export const documentPages: SlidePage[] = [
   { slug: "notebook", label: "Notebook", title: "Notebook", slides: [31, 32] },
   { slug: "protocol", label: "Protocol", title: "Protocol", slides: [33] },
   { slug: "safety", label: "Safety", title: "Safety", slides: [] },
+  { slug: "report", label: "Report", title: "Report", slides: [] },
   { slug: "supplement-files", label: "Supplement Files", title: "Supplement Files", slides: [] },
 ];
 

@@ -64,6 +64,13 @@ body.wiki-theme .lab-notebook-entry .lab-record-table p { font-size: .875rem; li
 .lab-document .lab-source-bold { font-weight: 700; }
 .lab-page-participants { display: none; }
 .lab-paginated .lab-page-participants { display: block; margin-bottom: 24px; }
+.lab-record-meta { padding:22px 24px; margin:0 0 32px; border:1px solid #d4d1df; border-left:4px solid #9681b5; border-radius:4px 16px 16px 4px; background:linear-gradient(115deg,#f0eaf6,#eef4ec); }
+.lab-record-folio { display:block; margin-bottom:12px; color:#78678c; font:700 .72rem/1.5 Arial,sans-serif; letter-spacing:.1em; }
+body.wiki-theme .lab-record-meta h2 { margin:0 0 14px; }
+.lab-record-meta .lab-page-participants { margin-bottom:0; }
+body.wiki-theme .lab-record-meta p { font-size:.9375rem; line-height:1.75; }
+.lab-protocol .lab-document-heading { grid-template-columns:minmax(0,1fr) minmax(180px,25%); gap:24px; }
+.lab-protocol-art { width:100%; height:auto; object-fit:contain; filter:drop-shadow(0 12px 18px #45665313); pointer-events:none; }
 @media print {
   .lab-paginated .lab-page-participants { display: none; }
   .lab-notebook-entry[hidden] { display: block; }
@@ -75,6 +82,9 @@ body.wiki-theme .lab-notebook-entry .lab-record-table p { font-size: .875rem; li
 @media (max-width: 760px) {
   .lab-document { padding-bottom: 65px; }
   .lab-document-heading, .lab-notebook .lab-document-heading { grid-template-columns: minmax(0, 1fr); gap: 30px; padding: 34px 22px; }
+  .lab-protocol .lab-document-heading { grid-template-columns:minmax(0,1fr); }
+  .lab-protocol-art { width:min(70%,240px); justify-self:center; }
+  .lab-record-meta { padding:18px; }
   .lab-notebook-photo { width: min(86%, 400px); justify-self: center; }
   .lab-notebook-layout { grid-template-columns: minmax(0, 1fr); padding: 0 22px; gap: 24px; }
   .lab-notebook-index { position: static; max-height: none; padding-right: 0; }

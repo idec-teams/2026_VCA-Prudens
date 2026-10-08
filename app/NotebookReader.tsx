@@ -86,15 +86,18 @@ export function NotebookReader({ sections, sourceTitle, sourceTitleRuns }: { sec
       })}
     </nav>
     <article className="lab-notebook-pages" aria-label="Dated laboratory records" ref={book}>
-      {active !== null && controls("top")}
       {pages.map((page, index) => <section className="lab-notebook-entry" key={page.id} hidden={active !== null && current !== index} aria-labelledby={page.id}>
         {index === 0 && <p className="lab-record-source-title" data-source-paragraph={0}><LabRichText runs={sourceTitleRuns} text={sourceTitle} /></p>}
+        <header className="lab-record-meta">
+        <span className="lab-record-folio" aria-hidden="true">RECORD {String(page.sectionIndex + 1).padStart(2, "0")} · PAGE {index + 1} / {pages.length}</span>
         <h2 id={page.id} tabIndex={-1} data-source-paragraph={page.part === 0 ? sections[page.sectionIndex].sourceIndex : undefined}><LabRichText runs={sections[page.sectionIndex].headingRuns} /></h2>
+        {page.part === 0 && <Blocks blocks={page.blocks.filter(block => block.text?.startsWith("Participants:"))} />}
         {page.part > 0 && <div className="lab-page-participants">
           {sections[page.sectionIndex].blocks.filter(block => block.text?.startsWith("Participants:")).map(block =>
             <p key={block.sourceIndex}><LabRichText runs={block.runs} text={block.text} /></p>)}
         </div>}
-        <Blocks blocks={page.blocks} />
+        </header>
+        <Blocks blocks={page.blocks.filter(block => !block.text?.startsWith("Participants:"))} />
       </section>)}
       {active !== null && controls("bottom")}
     </article>

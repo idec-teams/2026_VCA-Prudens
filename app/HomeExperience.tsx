@@ -46,7 +46,47 @@ export function HomeExperience() {
   }, []);
   useEffect(() => {
     document.querySelector(".home-page")?.classList.toggle("motion-paused", paused);
+    if (paused) document.querySelectorAll(".home-reveal").forEach(element => element.classList.add("home-revealed"));
   }, [paused]);
+  useEffect(() => {
+    const page = document.querySelector(".home-page");
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (!page || reduced.matches || !("IntersectionObserver" in window)) return;
+    // Progressive enhancement: content stays readable without JS or motion.
+    const elements = [...page.querySelectorAll<HTMLElement>(
+      ".home-hero-copy > :not([aria-hidden]), .home-hero-art, .hero-keywords, .story-section > :not([aria-hidden]), .story-footer > *"
+    )];
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("home-revealed");
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0, rootMargin: "0px 0px -24px 0px" });
+    elements.forEach((element, index) => {
+      // Don't hide already visible content on hydration or a restored scroll.
+      if (element.getBoundingClientRect().top < window.innerHeight) return;
+      element.style.setProperty("--reveal-delay", `${index % 2 * 55}ms`);
+      element.classList.add("home-reveal");
+      observer.observe(element);
+    });
+    const revealAll = () => {
+      elements.forEach(element => element.classList.add("home-revealed"));
+      observer.disconnect();
+    };
+    const preference = () => { if (reduced.matches) revealAll(); };
+    const focus = (event: Event) => {
+      (event.target as Element)?.closest(".home-reveal")?.classList.add("home-revealed");
+    };
+    page.addEventListener("focusin", focus);
+    reduced.addEventListener("change", preference);
+    return () => {
+      observer.disconnect();
+      page.removeEventListener("focusin", focus);
+      reduced.removeEventListener("change", preference);
+      elements.forEach(element => { element.classList.remove("home-reveal", "home-revealed"); element.style.removeProperty("--reveal-delay"); });
+    };
+  }, []);
   return <>
     <button className="home-motion-toggle" type="button" aria-pressed={paused} onClick={() => setPaused(!paused)}>{paused ? "Resume motion" : "Pause motion"}</button>
     {loading && <div className="home-loader">

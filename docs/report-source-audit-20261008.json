@@ -1,0 +1,9 @@
+{
+  "source": "[VCA-Prudens]_2026_iDEC_Report.pdf",
+  "pages": 14,
+  "bytes": 6778778,
+  "sha256": "25972a9cc1bbe1e4af58da0b5cbf73e6cc77d088d25e610a01a5793bee906ba5",
+  "publishedPdf": "/assets/report-20261008/vca-prudens-2026-idec-report.pdf",
+  "render": "Poppler pdftoppm, 110 dpi, JPEG quality 85; thumbnail maximum dimension 260",
+  "contentChanges": "None. Original PDF copied byte-for-byte; all 14 pages rendered without cropping."
+}

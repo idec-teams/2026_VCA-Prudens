@@ -33,7 +33,8 @@
 .home-page .question-photo { grid-template-columns:1fr; }
 .home-page .petri-photo { max-height:270px; width:min(100%,360px); aspect-ratio:1.4; border-radius:6px 32px; }
 .home-page .story-footer { background:linear-gradient(115deg,#d2dccc,#e6dbc5); border-top:1px solid #afc5b8; }
-.home-motion-ready .story-section.is-in-view > * { animation:home-section-arrive .75s cubic-bezier(.16,1,.3,1) both; }
+.home-page .home-reveal { opacity:0; transform:translateY(18px); transition:opacity .38s ease-out,transform .42s cubic-bezier(.2,.7,.2,1); transition-delay:var(--reveal-delay,0ms); }
+.home-page .home-reveal.home-revealed,.home-page .home-reveal:focus-within,.home-page.motion-paused .home-reveal { opacity:1; transform:none; }
 .home-motion-ready .story-section.is-in-view::after { animation:home-signal 3s ease-in-out infinite alternate; }
 .home-motion-toggle { position:absolute; z-index:4; top:12px; right:clamp(18px,4vw,64px); border:1px solid #a7c4b7; border-radius:20px; background:#fffdf5e8; padding:8px 14px; font:500 .875rem/1.4 Arial,sans-serif; cursor:pointer; }
 .home-page.motion-paused *, .home-page.motion-paused *::before,.home-page.motion-paused *::after { animation-play-state:paused!important; }
@@ -60,6 +61,7 @@
 /* Home refinements: quiet title artwork, a shared section-heading treatment, and clear footer groups. */
 .home-page .hero-title-scene { position:relative; isolation:isolate; }
 .home-page .hero-backdrop-art { position:absolute; z-index:-1; pointer-events:none; user-select:none; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; opacity:.12; }
+.home-page .challenge-backdrop-art { position:absolute; z-index:-1; pointer-events:none; user-select:none; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; opacity:.14; }
 .home-page .hero-keywords { grid-column:1/-1; position:relative; z-index:2; display:flex; flex-wrap:wrap; justify-content:flex-start; gap:10px 14px; list-style:none; margin:-14px 0 -30px; padding:0; }
 .home-page .hero-keywords li { padding:10px 20px; border:1px solid #547c6c30; border-radius:12px; background:#ffffff42; color:#526e63; font:400 .9rem/1.4 var(--home-body); box-shadow:0 4px 12px #07544004; }
 body.wiki-theme .home-page .story-section h2 { color:#ad6210; font-weight:700; padding-bottom:22px; position:relative; }
@@ -71,6 +73,7 @@ body.wiki-theme .home-page .story-section h2 { color:#ad6210; font-weight:700; p
 .home-page .story-footer > :nth-child(4) { --footer-accent:#7b9caa; }
 body.wiki-theme .home-page .story-footer h3 { font-size:1.45rem; font-weight:700; line-height:1.3; margin:0 0 20px; }
 body.wiki-theme .home-page .story-footer p,body.wiki-theme .home-page .story-footer a { font-size:1rem; line-height:1.65; }
+body.wiki-theme .home-page .story-footer > .footer-mobile-note { grid-column:1/-1; margin:8px 0 0; padding:0; border:0; border-radius:0; background:none; box-shadow:none; color:#64716b; font-size:.8125rem; line-height:1.6; }
 .home-page .story-footer > a:hover { background:#fffefa; text-decoration:none; border-color:var(--footer-accent,#609083); }
 .home-page .story-footer a:hover p { text-decoration:underline; text-underline-offset:4px; }
 .home-page .story-footer > div > a { overflow-wrap:anywhere; }
@@ -98,3 +101,5 @@ body.wiki-theme .home-page .story-footer p,body.wiki-theme .home-page .story-foo
   .home-page .painted-dna { float:none; display:block; width:min(90%,320px); margin:0 auto 24px; }
   .home-page .painted-lab { width:min(78%,240px); }
 }
+@media(prefers-reduced-motion:reduce) { .home-page .home-reveal { opacity:1; transform:none; transition:none; } }
+@media print { .home-page .home-reveal { opacity:1; transform:none; } }

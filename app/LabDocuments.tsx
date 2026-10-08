@@ -15,6 +15,7 @@ export function LabDocuments({ slug }: { slug: "notebook" | "protocol" }) {
         <p className="lab-document-intro" data-source-paragraph={isNotebook ? undefined : 2}>{isNotebook ? data.intro : <LabRichText runs={documents.protocol.introRuns} />}</p>
       </div>
       {isNotebook && <img className="lab-notebook-photo" src={sitePath("/slides/slide-31.png")} alt="Recording observations in a laboratory notebook" />}
+      {!isNotebook && <img className="lab-protocol-art" src={sitePath("/assets/updates-20261008/protocol-still-life.png")} width={1254} height={1254} alt="" aria-hidden="true" />}
     </header>
     {isNotebook ? <NotebookReader sections={documents.notebook.sections} sourceTitle={documents.notebook.sourceTitle} sourceTitleRuns={documents.notebook.sourceTitleRuns} /> : <article className="lab-protocol-board" aria-label="Laboratory protocol">
       {documents.protocol.sections.map(section => <section className="lab-protocol-note" key={section.id} aria-labelledby={section.id}>

@@ -1,0 +1,15 @@
+{
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "path": "/private/tmp/vca-oct8-art/home-challenge-workbench.png",
+      "prompt": "Use case: stylized-concept\nAsset type: transparent landscape background illustration for the Home Challenge section of a genetics research website.\nPrimary request: a quiet experimental workbench, rendered as a sophisticated scientific editorial drawing. A micropipette angled over an array of small tubes, with a circular plasmid-inspired molecular loop and a few abstract data traces as peripheral accents.\nScene/backdrop: genuinely transparent background, no paper rectangle or solid backdrop.\nStyle/medium: monochrome charcoal and graphite, hand-drawn crayon and oil-pencil grain, expressive dry textured strokes, refined scientific editorial style.\nComposition/framing: landscape 16:9 canvas; large composition accents concentrated near the outer edges; a broad mostly empty central area for foreground website panels. Objects should feel spacious, not crowded, and remain legible when the entire artwork is displayed at low opacity. Only restrained traces suggest the workbench surface.\nColor palette: grayscale black, gray, and white only, no color.\nConstraints: no humans, faces, hands, portraits, letters, numbers, text, labels, logo, or watermark. No X-shaped chromosomes, no stethoscope, no DNA double helix as a central motif. No frames, no UI panels, no diagram labels. Preserve true transparent alpha around and between the drawn strokes.",
+      "transparent_background": true
+    },
+    {
+      "path": "/private/tmp/vca-oct8-art/protocol-still-life.png",
+      "prompt": "Use case: stylized-concept\nAsset type: transparent square editorial illustration for the right side of a genetics research website Protocol page header.\nPrimary request: scientific still-life featuring a closed laboratory protocol notebook with a completely blank cover, two glass sample tubes in a modest rack, one micropipette, and one small circular plasmid-inspired loop.\nScene/backdrop: genuinely transparent background, isolated objects with clean transparent outer edges, no solid backdrop or paper rectangle.\nStyle/medium: editorial hand-painted gouache with oil pastel and crayon texture, dimensional but refined forms, visible brush grain, sophisticated restrained scientific illustration.\nComposition/framing: square canvas, compact balanced cluster, clearly readable silhouette at small website header size; all objects comfortably inside the canvas. The notebook anchors the cluster, the two tubes and micropipette provide an upward accent, and the small circular loop is a quiet secondary detail.\nColor palette: forest green, sage, lavender, and warm gold, with natural light glass highlights.\nLighting/mood: quiet, thoughtful, warm scientific craft.\nConstraints: notebook cover entirely blank. No text, letters, numbers, labels, logos, or watermark. No people, hands, faces, portraits, or mascot. This is a decorative still-life, not a diagram or a step-by-step procedure. Preserve true transparent alpha around the objects and in open spaces.",
+      "transparent_background": true
+    }
+  ]
+}

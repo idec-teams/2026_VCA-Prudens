@@ -11,6 +11,7 @@ import { ReportArticle, reportSlugs } from "../ReportArticle";
 import { DocumentLanding } from "../DocumentLanding";
 import { Contribution } from "../Contribution";
 import { LabDocuments } from "../LabDocuments";
+import { ReportReader } from "../ReportReader";
 
 const projectDetails: Record<string, ProjectDetailData> = {
   description: {
@@ -115,6 +116,8 @@ export default async function SlugPage({ params }: { params: Promise<{ slug: str
         <WikiArticle slug={canonicalSlug} />
       ) : reportSlugs.includes(canonicalSlug) ? (
         <ReportArticle slug={canonicalSlug} />
+      ) : canonicalSlug === "report" ? (
+        <ReportReader />
       ) : canonicalSlug === "notebook" || canonicalSlug === "protocol" ? (
         <LabDocuments slug={canonicalSlug} />
       ) : canonicalSlug === "safety" || canonicalSlug === "supplement-files" ? (

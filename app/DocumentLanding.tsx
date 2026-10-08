@@ -33,7 +33,7 @@ export function DocumentLanding({ slug }: { slug: "safety" | "supplement-files" 
         </article>
         <section className="research-document" aria-labelledby="responsible-research-form">
           <a className="document-paper" href={sitePath(researchPdf)} target="_blank" rel="noopener noreferrer" aria-label="Open the complete 11-page Responsible Research Form PDF">
-            <img src={sitePath(`${folder}/responsible-research-cover.jpg`)} alt="First page of the iDEC Responsible Research Form" loading="lazy" />
+            <img src={sitePath(`${folder}/responsible-research-cover-hd.webp`)} alt="First page of the iDEC Responsible Research Form" loading="lazy" />
           </a>
           <div>
             <span className="document-label">PDF · 11 PAGES · 929 KB</span>
@@ -63,8 +63,8 @@ export function DocumentLanding({ slug }: { slug: "safety" | "supplement-files" 
         <div className="document-pages">
           {Array.from({ length: 8 }, (_, index) => <figure key={index} id={`supplement-page-${index + 1}`}>
             <figcaption>Page {index + 1} of 8 <a href={sitePath(supplementPdf) + `#page=${index + 1}`} target="_blank" rel="noopener noreferrer">Open in PDF ↗</a></figcaption>
-            <a href={sitePath(`${folder}/supplementary-page-${index + 1}.jpg`)} target="_blank" rel="noopener noreferrer" aria-label={`Enlarge supplementary page ${index + 1}`}>
-              <img src={sitePath(`${folder}/supplementary-page-${index + 1}.jpg`)} alt={`Original supplementary material, page ${index + 1} of 8. Use the full PDF for the original document.`} loading="lazy" />
+            <a href={sitePath(`${folder}/supplementary-page-${index + 1}-hd.webp`)} target="_blank" rel="noopener noreferrer" aria-label={`Enlarge supplementary page ${index + 1}`}>
+              <img src={sitePath(`${folder}/supplementary-page-${index + 1}-hd.webp`)} alt={`Original supplementary material, page ${index + 1} of 8. Use the full PDF for the original document.`} loading="lazy" />
             </a>
           </figure>)}
         </div>

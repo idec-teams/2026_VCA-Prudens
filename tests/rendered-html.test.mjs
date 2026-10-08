@@ -24,13 +24,19 @@ test("October additions preserve document metadata, the original PDF, and additi
   assert.equal(createHash("sha256").update(pdf).digest("hex"), audit.sha256);
   assert.equal(pdf.length, audit.bytes);
   assert.match(report, /Open original PDF/);
+  for (let page = 1; page <= 14; page++) {
+    const name = `page-${String(page).padStart(2, "0")}-hd.webp`;
+    assert.ok(report.includes(name));
+    assert.ok(readFileSync(new URL("../public/assets/report-20261008/" + name, import.meta.url)).length > 0);
+  }
   const home = await (await render("/")).text();
   assert.match(home, /Safety<\/a>\s*<a href="\/report">Report<\/a>/);
   assert.match(home, /home-challenge-workbench.png/);
   assert.match(home, /This Wiki is also available on mobile devices\./);
   assert.match(await (await render("/protocol")).text(), /protocol-still-life.png/);
   const experience = readFileSync(new URL("../app/HomeExperience.tsx", import.meta.url), "utf8");
-  assert.match(experience, /observer.unobserve\(entry.target\)/);
+  assert.doesNotMatch(experience, /observer.unobserve\(entry.target\)/);
+  assert.match(experience, /entry.target.classList.remove\("home-revealed"\)/);
   assert.match(experience, /prefers-reduced-motion: reduce/);
 });
 
@@ -444,7 +450,8 @@ test("Safety preserves the complete Word text and both original PDFs remain byte
   assert.equal((supplementHtml.match(/<figure id="supplement-page-/g) ?? []).length, 8);
   for (let page = 1; page <= 8; page++) {
     assert.ok(supplementHtml.includes(`href="#supplement-page-${page}"`));
-    assert.ok(readFileSync(new URL(`../public/assets/documents-20261004/supplementary-page-${page}.jpg`, import.meta.url)).length > 0);
+    assert.ok(supplementHtml.includes(`supplementary-page-${page}-hd.webp`));
+    assert.ok(readFileSync(new URL(`../public/assets/documents-20261004/supplementary-page-${page}-hd.webp`, import.meta.url)).length > 0);
   }
 });
 
@@ -469,6 +476,9 @@ test("Attribution preserves every source cell, flower position, guidance paragra
   assert.match(html, /<title>Attribution \| VCA-Prudens<\/title>/);
   assert.match(html, /href="\/contribution"[^>]*>Attribution<\/a>/);
   assert.doesNotMatch(html, />Contribution<\//);
+  assert.match(html, /Their individual Attributions are outlined below\./);
+  assert.match(html, /flower-hd\.png/);
+  assert.doesNotMatch(html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "").replace(/<[^>]*>/g, ""), /contributions?/i);
   for (const column of data.columns) assert.ok(html.includes(escape(column.label)));
   for (const member of data.members) {
     assert.ok(html.includes(`<th scope="row">${escape(member.name)}</th>`));

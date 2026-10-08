@@ -58,15 +58,19 @@ export function HomeExperience() {
     )];
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("home-revealed");
-        observer.unobserve(entry.target);
+        if (entry.isIntersecting || reduced.matches || page.classList.contains("motion-paused") || entry.target.contains(document.activeElement)) {
+          entry.target.classList.add("home-revealed");
+        } else {
+          // Reset only after leaving the viewport, so either scroll direction replays.
+          entry.target.classList.remove("home-revealed");
+        }
       });
-    }, { threshold: 0, rootMargin: "0px 0px -24px 0px" });
+    }, { threshold: 0 });
     elements.forEach((element, index) => {
       // Don't hide already visible content on hydration or a restored scroll.
-      if (element.getBoundingClientRect().top < window.innerHeight) return;
-      element.style.setProperty("--reveal-delay", `${index % 2 * 55}ms`);
+      const bounds = element.getBoundingClientRect();
+      if (bounds.top < window.innerHeight && bounds.bottom > 0) element.classList.add("home-revealed");
+      element.style.setProperty("--reveal-delay", `${index % 2 * 90}ms`);
       element.classList.add("home-reveal");
       observer.observe(element);
     });

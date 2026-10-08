@@ -1,0 +1,14 @@
+{
+  "pdfFiles": "All three original PDFs remain byte-identical; no text, figures, or pages altered.",
+  "reportPreviews": "14 full pages, Poppler 300 dpi, lossless WebP, 2481 x 3508; thumbnails up to 520 x 736.",
+  "supplementPreviews": "8 complete oversized pages, 2560 pixels wide, lossless WebP. Raster figure detail remains limited by original embedded images.",
+  "safetyCover": "First-page preview rendered at 300 dpi, lossless WebP.",
+  "flower": {
+    "original": "/assets/contribution-20261004/flower.png",
+    "enhanced": "/assets/contribution-20261004/flower-hd.png",
+    "pixels": [1254, 1254],
+    "method": "Built-in image generation restoration following user authorization to enhance without a high-resolution original. Generated detail is interpretive, not recovered source detail. Original 68 x 66 image retained.",
+    "promptFile": "flower-enhancement-prompt-20261008.txt",
+    "display": "Unchanged 40 x 40 CSS pixels; transparent PNG."
+  }
+}

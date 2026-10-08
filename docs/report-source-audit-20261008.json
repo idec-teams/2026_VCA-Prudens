@@ -4,6 +4,6 @@
   "bytes": 6778778,
   "sha256": "25972a9cc1bbe1e4af58da0b5cbf73e6cc77d088d25e610a01a5793bee906ba5",
   "publishedPdf": "/assets/report-20261008/vca-prudens-2026-idec-report.pdf",
-  "render": "Poppler pdftoppm, 110 dpi, JPEG quality 85; thumbnail maximum dimension 260",
+  "render": "Poppler pdftoppm, 300 dpi, lossless WebP; thumbnails up to 520 x 736 pixels. Original 110-dpi JPEGs retained for old URLs.",
   "contentChanges": "None. Original PDF copied byte-for-byte; all 14 pages rendered without cropping."
 }

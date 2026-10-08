@@ -7,7 +7,7 @@ import "./report-reader.css";
 const pages = Array.from({ length: 14 }, (_, index) => index + 1);
 const assetRoot = "/assets/report-20261008/";
 const pdf = assetRoot + "vca-prudens-2026-idec-report.pdf";
-const pageImage = (page: number, thumbnail = false) => sitePath(assetRoot + (thumbnail ? "thumb-" : "page-") + String(page).padStart(2, "0") + ".jpg");
+const pageImage = (page: number, thumbnail = false) => sitePath(assetRoot + (thumbnail ? "thumb-" : "page-") + String(page).padStart(2, "0") + "-hd.webp");
 
 export function ReportReader() {
   const [active, setActive] = useState<number | null>(null);

@@ -15,7 +15,7 @@ export function Contribution() {
             <tbody>{data.members.map(member => <tr key={member.name}>
               <th scope="row">{member.name}</th>
               {data.columns.map(column => <td key={column.id} data-member={member.name} data-role={column.id}>
-                {member.roles.includes(column.id) && <img className="contribution-flower" src={sitePath(data.flower)} alt="Contributed" width={40} height={40} />}
+                {member.roles.includes(column.id) && <img className="contribution-flower" src={sitePath("/assets/contribution-20261004/flower-hd.png")} alt="Attributed" width={40} height={40} />}
               </td>)}
             </tr>)}</tbody>
           </table>
@@ -24,7 +24,7 @@ export function Contribution() {
       <header className="contribution-guidance-intro">
         <p className="guidance-eyebrow">SCIENTIFIC MENTORSHIP</p>
         <h2>Support across the research process</h2>
-        <p>Our work on Biomni-assisted ISCro4 directed evolution combined literature evaluation, plasmid and mutant construction, qPCR-based activity screening, and interpretation of the results. Our supervisor and advisors helped the team assess AI-generated recommendations, refine experimental approaches, and communicate the evidence clearly. Their individual contributions are outlined below.</p>
+        <p>Our work on Biomni-assisted ISCro4 directed evolution combined literature evaluation, plasmid and mutant construction, qPCR-based activity screening, and interpretation of the results. Our supervisor and advisors helped the team assess AI-generated recommendations, refine experimental approaches, and communicate the evidence clearly. Their individual Attributions are outlined below.</p>
       </header>
       <div className="contribution-guidance">
         {data.guidance.map((section, index) => <section key={section.heading} className="guidance-section" aria-labelledby={`contribution-guidance-${index}`}>

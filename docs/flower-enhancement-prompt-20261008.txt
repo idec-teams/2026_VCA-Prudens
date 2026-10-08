@@ -1,0 +1,7 @@
+Use case: precise-object-edit
+Input: The original small 68×66 green icon is the ONLY edit target. Restore this exact original, not any earlier generated image.
+Primary request: faithful HD enhancement on a 1024×1024 transparent PNG canvas. Same icon, same orientation, proportions, silhouette, colors, hand-painted watercolor shading and green border strokes, with clearer high-resolution detail.
+EXACT STRUCTURE: exactly FOUR large rounded heart-shaped leaf lobes around the center: top-left, top-right, bottom-right, bottom-left. FOUR means four. There is NO fifth leaf, NO bottom-middle leaf, NO extra petal. Preserve the gaps and asymmetry shown in the original.
+STEM: preserve the original slender diagonal green stem extending from the central junction toward the bottom-right, visible beyond the four leaves. This is a narrow stem, not a leaf or petal. Preserve the small LEFT-facing branch with tiny pale green buds on the far left of the icon, in their original position and scale.
+Preserve the original pale yellow-green leaf interiors, irregular darker olive-green painted outlines, subtle green marks inside leaves, and watercolor softness. Enhance edge definition and surface detail without inventing features or adding realism. Keep original placement and tight transparent margins.
+Background: true alpha transparency. One icon only. No white fill, no black fill, no checkerboard artwork, no extra leaves, no fifth lobe, no text, no shadow, no frame, no watermark.
